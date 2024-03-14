@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public float chainStartYOffset = 0f;
     public float chainEndXOffset = 0f;
     public float chainEndYOffset = 0f;
+
+    public Vector2 direction;
     
 
     private Vector2 soulTarget; // The position the soul is moving towards
@@ -76,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandlePlayerMovement()
     {
-        Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
         body.velocity = direction * walkSpeed;
     }
 
