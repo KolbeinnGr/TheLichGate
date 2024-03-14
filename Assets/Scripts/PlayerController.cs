@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class PlayerController : MonoBehaviour
     public float soulMoveSpeed = 3f;
     public GameObject playerSoul;
     public float maxSoulDistance = 5f; // Maximum distance the soul can move from the player
+    public float chainStartXOffset = 0f; 
+    public float chainStartYOffset = 0f;
+    public float chainEndXOffset = 0f;
+    public float chainEndYOffset = 0f;
+    
 
     private Vector2 soulTarget; // The position the soul is moving towards
     private Coroutine returnSoulRoutine; 
@@ -55,8 +61,10 @@ public class PlayerController : MonoBehaviour
         if (chainRenderer != null && playerSoul.activeSelf)
         {
             chainRenderer.enabled = true;
-            chainRenderer.SetPosition(0, playerSoul.transform.position);
-            chainRenderer.SetPosition(1, transform.position);
+            Vector3 offsetChainEndPosition = new Vector3(playerSoul.transform.position.x + chainEndXOffset, playerSoul.transform.position.y + chainEndYOffset, playerSoul.transform.position.y);
+            chainRenderer.SetPosition(0, offsetChainEndPosition);
+            Vector3 offsetChainStartPosition = new Vector3(transform.position.x + chainStartXOffset, transform.position.y + chainStartYOffset, transform.position.y);
+            chainRenderer.SetPosition(1, offsetChainStartPosition);
             
         }
     }
