@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour
                 {
                     StopCoroutine(returnSoulRoutine);
                 }
-
                 returnSoulRoutine = StartCoroutine(ReturnSoulToPlayer());
             }
         }
@@ -65,14 +64,12 @@ public class PlayerController : MonoBehaviour
             chainRenderer.SetPosition(0, offsetChainEndPosition);
             Vector3 offsetChainStartPosition = new Vector3(transform.position.x + chainStartXOffset, transform.position.y + chainStartYOffset, transform.position.y);
             chainRenderer.SetPosition(1, offsetChainStartPosition);
-            
         }
     }
 
     void FixedUpdate()
     {
         HandlePlayerMovement();
-        UpdateSoulTargetPosition();
         MoveSoul();
     }
 
@@ -85,10 +82,15 @@ public class PlayerController : MonoBehaviour
 
     private void MoveSoul()
     {
-        if (isSoulActive){
-            if (Vector2.Distance(playerSoul.transform.position, body.position) > maxSoulDistance)
+        if (isSoulActive)
+        {
+            soulTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            Vector2 directionToTarget = soulTarget - (Vector2)transform.position;
+            float distanceToTarget = directionToTarget.magnitude;
+
+            if (distanceToTarget > maxSoulDistance)
             {
-                Vector2 directionToTarget = soulTarget - (Vector2)transform.position;
                 soulTarget = (Vector2)transform.position + directionToTarget.normalized * maxSoulDistance;
             }
 
@@ -96,13 +98,6 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-
-
-    private void UpdateSoulTargetPosition()
-    {
-        soulTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    }
-
     private IEnumerator ReturnSoulToPlayer()
     {
         while (Vector2.Distance(playerSoul.transform.position, transform.position) > 0.1f)
