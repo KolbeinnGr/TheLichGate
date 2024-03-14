@@ -36,8 +36,8 @@ public class PlayerController : MonoBehaviour
         if (chainRenderer != null && playerSoul.activeSelf)
         {
             chainRenderer.enabled = true;
-            chainRenderer.SetPosition(0, transform.position);
-            chainRenderer.SetPosition(1, playerSoul.transform.position);
+            chainRenderer.SetPosition(0, playerSoul.transform.position);
+            chainRenderer.SetPosition(1, transform.position);
             
         }
 
