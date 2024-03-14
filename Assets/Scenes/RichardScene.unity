@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 38345926}
   - component: {fileID: 38345925}
   - component: {fileID: 38345924}
+  - component: {fileID: 38345928}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -314,6 +315,51 @@ Transform:
   - {fileID: 1524952830}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &38345928
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38345923}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &51600044
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +483,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   currentChunk: {fileID: 0}
+  spawnedChunks:
+  - {fileID: 237270132}
+  latestChunk: {fileID: 0}
+  maxOpDist: 50
+  opCoolDownDur: 1
 --- !u!4 &150361830
 Transform:
   m_ObjectHideFlags: 0
@@ -536,6 +587,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &237270132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 903122275593872480, guid: 48e472c8257e61c4ea139fbdb4ee3a2e, type: 3}
+  m_PrefabInstance: {fileID: 6329348704196291726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1127942667
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,6 +855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TerrainChunk
       objectReference: {fileID: 0}
+    - target: {fileID: 6636977841285207541, guid: 48e472c8257e61c4ea139fbdb4ee3a2e, type: 3}
+      propertyPath: targetMap
+      value: 
+      objectReference: {fileID: 237270132}
     - target: {fileID: 6690221431121027448, guid: 48e472c8257e61c4ea139fbdb4ee3a2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
