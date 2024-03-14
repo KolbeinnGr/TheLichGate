@@ -504,9 +504,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 563639495}
   walkSpeed: 6
-  soulMoveSpeed: 8
+  soulMoveSpeed: 12
   playerSoul: {fileID: 1832566661}
-  maxSoulDistance: 12
+  maxSoulDistance: 8
   chainRenderer: {fileID: 563639497}
   chainMaterial: {fileID: 2100000, guid: 668ea8f55f101b14783a53a3c1547c59, type: 2}
 --- !u!120 &563639497

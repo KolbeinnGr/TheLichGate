@@ -9,8 +9,9 @@ public class PlayerController : MonoBehaviour
     public GameObject playerSoul;
     public float maxSoulDistance = 5f; // Maximum distance the soul can move from the player
 
-    private Vector2 soulTarget;
-    private Coroutine returnSoulRoutine;
+    private Vector2 soulTarget; // The position the soul is moving towards
+    private Coroutine returnSoulRoutine; 
+    private bool isSoulActive = false;
 
     // Optional: Line Renderer for visual representation
     public LineRenderer chainRenderer;
@@ -24,13 +25,31 @@ public class PlayerController : MonoBehaviour
         {
             chainRenderer.material = chainMaterial;
             chainRenderer.positionCount = 2;
-
         }
     }
 
     void Update()
     {
-        HandleSoulActivation();
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            isSoulActive = !isSoulActive;
+            
+            if (isSoulActive)
+            {
+                playerSoul.SetActive(true);
+                playerSoul.transform.position = transform.position; // Spawn at player's position
+            }
+            
+            if (!isSoulActive)
+            {
+                if (returnSoulRoutine != null)
+                {
+                    StopCoroutine(returnSoulRoutine);
+                }
+
+                returnSoulRoutine = StartCoroutine(ReturnSoulToPlayer());
+            }
+        }
 
         // Optional: Update the line renderer positions
         if (chainRenderer != null && playerSoul.activeSelf)
@@ -40,36 +59,15 @@ public class PlayerController : MonoBehaviour
             chainRenderer.SetPosition(1, transform.position);
             
         }
-
     }
 
     void FixedUpdate()
     {
         HandlePlayerMovement();
+        UpdateSoulTargetPosition();
+        MoveSoul();
     }
 
-    private void HandleSoulActivation()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            playerSoul.SetActive(true);
-            playerSoul.transform.position = transform.position; // Spawn at player's position
-            UpdateSoulTargetPosition();
-        }
-        else if (Input.GetKey(KeyCode.Space))
-        {
-            UpdateSoulTargetPosition();
-            MoveSoul();
-        }
-        else if (Input.GetKeyUp(KeyCode.Space))
-        {
-            if (returnSoulRoutine != null)
-            {
-                StopCoroutine(returnSoulRoutine);
-            }
-            returnSoulRoutine = StartCoroutine(ReturnSoulToPlayer());
-        }
-    }
 
     private void HandlePlayerMovement()
     {
@@ -79,13 +77,15 @@ public class PlayerController : MonoBehaviour
 
     private void MoveSoul()
     {
-        if (Vector2.Distance(playerSoul.transform.position, soulTarget) > maxSoulDistance)
-        {
-            Vector2 directionToTarget = soulTarget - (Vector2)transform.position;
-            soulTarget = (Vector2)transform.position + directionToTarget.normalized * maxSoulDistance;
-        }
+        if (isSoulActive){
+            if (Vector2.Distance(playerSoul.transform.position, body.position) > maxSoulDistance)
+            {
+                Vector2 directionToTarget = soulTarget - (Vector2)transform.position;
+                soulTarget = (Vector2)transform.position + directionToTarget.normalized * maxSoulDistance;
+            }
 
-        playerSoul.transform.position = Vector2.MoveTowards(playerSoul.transform.position, soulTarget, soulMoveSpeed * Time.deltaTime);
+            playerSoul.transform.position = Vector2.MoveTowards(playerSoul.transform.position, soulTarget, soulMoveSpeed * Time.deltaTime);
+        }
     }
     
 
