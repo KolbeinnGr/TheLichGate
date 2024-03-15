@@ -4,11 +4,18 @@ using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header ("Body")]
     public Rigidbody2D body;
     public float walkSpeed = 5f;
+    
+    [Header ("Soul")]
     public float soulMoveSpeed = 3f;
     public GameObject playerSoul;
     public float maxSoulDistance = 5f; // Maximum distance the soul can move from the player
+    public float soulXOffset = 0f; // Offset for the soul's position
+    public float soulYOffset = 0f;
+    
+    [Header ("Chain Renderer")]
     public float chainStartXOffset = 0f; 
     public float chainStartYOffset = 0f;
     public float chainEndXOffset = 0f;
@@ -45,7 +52,8 @@ public class PlayerController : MonoBehaviour
             if (isSoulActive)
             {
                 playerSoul.SetActive(true);
-                playerSoul.transform.position = transform.position; // Spawn at player's position
+                Vector2 playerLocationOffset = new Vector2(transform.position.x + soulXOffset, transform.position.y + soulYOffset);
+                playerSoul.transform.position = playerLocationOffset; // Spawn at player's position
             }
             
             if (!isSoulActive)
@@ -62,9 +70,10 @@ public class PlayerController : MonoBehaviour
         if (chainRenderer != null && playerSoul.activeSelf)
         {
             chainRenderer.enabled = true;
-            Vector3 offsetChainEndPosition = new Vector3(playerSoul.transform.position.x + chainEndXOffset, playerSoul.transform.position.y + chainEndYOffset, playerSoul.transform.position.y);
+            Vector2 soulPosition = playerSoul.transform.position;
+            Vector3 offsetChainEndPosition = new Vector3(soulPosition.x + chainEndXOffset, soulPosition.y + chainEndYOffset, 0);
             chainRenderer.SetPosition(0, offsetChainEndPosition);
-            Vector3 offsetChainStartPosition = new Vector3(transform.position.x + chainStartXOffset, transform.position.y + chainStartYOffset, transform.position.y);
+            Vector3 offsetChainStartPosition = new Vector3(transform.position.x + chainStartXOffset, transform.position.y + chainStartYOffset, 0);
             chainRenderer.SetPosition(1, offsetChainStartPosition);
         }
     }
@@ -74,7 +83,6 @@ public class PlayerController : MonoBehaviour
         HandlePlayerMovement();
         MoveSoul();
     }
-
 
     private void HandlePlayerMovement()
     {
@@ -101,14 +109,14 @@ public class PlayerController : MonoBehaviour
     }
     
     private IEnumerator ReturnSoulToPlayer()
-    {
-        while (Vector2.Distance(playerSoul.transform.position, transform.position) > 0.1f)
+    { 
+        while (Vector2.Distance(playerSoul.transform.position, new Vector2(transform.position.x + soulXOffset, transform.position.y + soulYOffset)) > 0.1f)
         {
-            playerSoul.transform.position = Vector2.MoveTowards(playerSoul.transform.position, transform.position, soulMoveSpeed * 3 * Time.deltaTime);
+            Vector2 playerLocationOffset2 = new Vector2(transform.position.x + soulXOffset, transform.position.y + soulYOffset);
+            playerSoul.transform.position = Vector2.MoveTowards(playerSoul.transform.position, playerLocationOffset2, soulMoveSpeed * 3 * Time.deltaTime);
             yield return null;
         }
         playerSoul.SetActive(false);
         chainRenderer.enabled = false;
-
     }
 }
