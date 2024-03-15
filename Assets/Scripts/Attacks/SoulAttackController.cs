@@ -33,7 +33,7 @@ public class SoulAttackController : AttackController
         base.Attack();
         
         GameObject closestEnemy = FindClosestEnemy();
-        if (closestEnemy != null)
+        if (closestEnemy)
         {
             GameObject spawnedProjectile = Instantiate(prefab, transform.position, Quaternion.identity);
             Vector3 attackDirection = (closestEnemy.transform.position - transform.position).normalized;

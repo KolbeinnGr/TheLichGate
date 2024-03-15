@@ -13,9 +13,8 @@ public class SoulAttackBehaviour : ProjectileAttackBehavior
         sc = FindObjectOfType<SoulAttackController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position += direction * sc.speed * Time.deltaTime;
+        transform.position += sc.speed * Time.deltaTime * direction;        
     }
 }

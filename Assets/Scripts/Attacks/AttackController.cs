@@ -7,11 +7,11 @@ public class AttackController : MonoBehaviour
     [Header ("Attack Stats")]
     public GameObject prefab;
     public float damage;
-    public float speed;
-    public float cooldownDuration;
-    private float currentCooldown;
-    public int pierce;
-    public int projectiles;
+    public float speed; 
+    public float cooldownDuration; // time between attacks
+    private float currentCooldown; // time until next attack
+    public int pierce; // amount of enemies the projectile can pierce
+    public int attacks; // amount of projectiles or attacks to spawn
     
     
     // Start is called before the first frame update
