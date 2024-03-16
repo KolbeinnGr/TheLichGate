@@ -107,6 +107,16 @@ public class EnemySkeletonArcher : MonoBehaviour, IEnemy
         {
             stateMachine.ChangeState(typeof(WalkState));
         }
+
+
+        // Flip sprite on the X axis when the enemy is on either side of the target
+        if (targetDestination.position.x > transform.position.x) {
+            // Target is to the right, ensure sprite is facing right
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        } else {
+            // Target is to the left, flip sprite to face left
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
     }
 
     // initialize state machine

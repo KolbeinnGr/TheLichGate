@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6263672931782099124}
   - component: {fileID: 6833907460290484738}
   - component: {fileID: 1736384234996583508}
+  - component: {fileID: 7436804832587627936}
   m_Layer: 0
   m_Name: Skeleton_Archer
   m_TagString: Untagged
@@ -194,5 +195,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetDestination: {fileID: 0}
+  animator: {fileID: 1770982539948373164}
+  rb: {fileID: 6833907460290484738}
   speed: 1.5
   attackRange: 5
+  arrowPrefab: {fileID: 0}
+  shootingPoint: {fileID: 5373955964845084738}
+  arrowSpeed: 3
+--- !u!114 &7436804832587627936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7462539429674757038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c197c99045cd24694d3ce9fc97a7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
