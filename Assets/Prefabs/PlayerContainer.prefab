@@ -79,11 +79,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4594712498299891911, guid: 07e03a952ee362e4eb78aee2197bf713, type: 3}
-  damage: 0
-  speed: 5
-  cooldownDuration: 1.5
-  pierce: 0
-  projectiles: 1
+  damage: 20
+  speed: 12
+  cooldownDuration: 1
+  pierce: 1
+  attacks: 1
 --- !u!58 &1148796285473301687
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 4099520916891494187}
   - component: {fileID: 9108470645967422330}
   - component: {fileID: 2949155776394070788}
+  - component: {fileID: 5859524106463041846}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -180,6 +181,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   chainRenderer: {fileID: 2949155776394070788}
   chainMaterial: {fileID: 2100000, guid: 668ea8f55f101b14783a53a3c1547c59, type: 2}
+  animator: {fileID: 0}
 --- !u!50 &9108470645967422330
 Rigidbody2D:
   serializedVersion: 4
@@ -311,6 +313,27 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!95 &5859524106463041846
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125185204766933283}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b306547b2b21c9408710d6f9ab18ca6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5906858550355506971
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +491,7 @@ SpriteRenderer:
   m_SortingLayerID: 2131619081
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1076232363, guid: 788f7960a74345f4cbb595edd97e3e74, type: 3}
+  m_Sprite: {fileID: 3560037279435851709, guid: 8ed1af05f4a3e1b45941ec9b3aa59e3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

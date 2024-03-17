@@ -6,10 +6,17 @@ using UnityEngine;
 public class SoulAttackController : AttackController
 {
     private List<GameObject> enemiesInRange = new List<GameObject>();
+    private AttackController ac; 
     
     protected override void Start()
     {
         base.Start();
+    }
+
+    protected void Awake()
+    {
+        ac = GetComponent<AttackController>();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -35,9 +42,18 @@ public class SoulAttackController : AttackController
         GameObject closestEnemy = FindClosestEnemy();
         if (closestEnemy)
         {
-            GameObject spawnedProjectile = Instantiate(prefab, transform.position, Quaternion.identity);
-            Vector3 attackDirection = (closestEnemy.transform.position - transform.position).normalized;
-            spawnedProjectile.GetComponent<ProjectileAttackBehavior>().DirectionChecker(attackDirection);
+            Debug.Log("enemy found.");
+            for (int i = 0; i < ac.attacks; i++)
+            {
+                GameObject spawnedProjectile = Instantiate(prefab, transform.position, Quaternion.identity);
+                Vector3 attackDirection = (closestEnemy.transform.position - transform.position).normalized;
+                ProjectileAttackBehavior projectile = spawnedProjectile.GetComponent<ProjectileAttackBehavior>();
+                if (projectile)
+                {
+                    projectile.InitializeProjectile(attackDirection, ac.pierce, ac.damage);
+                }
+            }
+
         }
     }
     
