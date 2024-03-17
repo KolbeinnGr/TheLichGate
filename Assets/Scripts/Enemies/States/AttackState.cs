@@ -25,6 +25,11 @@ public class AttackState : State
     {
         attackBehavior.Attack();
     }
+
+    public void PerformHit()
+    {
+        attackBehavior.PerformHit();
+    }
 }
 
 

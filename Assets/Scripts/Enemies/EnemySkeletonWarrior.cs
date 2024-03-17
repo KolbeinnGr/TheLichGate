@@ -12,6 +12,9 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed = 3f;
     [SerializeField] private float attackRange = 1.5f;
+    [SerializeField] private GameObject warningZone;
+    [SerializeField] private Transform enemyTransform;
+
 
     // state machine
     private StateMachine stateMachine;
@@ -67,7 +70,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         {   // WalkState is responsible for moving the enemy towards its target.
             { typeof(WalkState), new WalkState(this) },
             { typeof(IdleState), new IdleState(this) },
-            { typeof(AttackState), new AttackState(this, new MeleeAttack(animator)) } // MeleeAttack is a reference to the MeleeAttack script
+            { typeof(AttackState), new AttackState(this, new MeleeAttack(animator, warningZone, enemyTransform, targetDestination)) } // MeleeAttack is a reference to the MeleeAttack script
         };
         // set states
         stateMachine.SetStates(states);
@@ -98,6 +101,23 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
     public void Idle()
     {
         stateMachine.ChangeState(typeof(IdleState));
+    }
+
+    public void OnAttackHitboxAnimationEvent()
+    {
+        if (stateMachine.currentState is AttackState attackState)
+        {   
+            // if the attack state is active, perform the attack
+            attackState.PerformAttack();
+        }
+    }
+    public void OnAttackPerformHitAnimationEvent()
+    {
+        if (stateMachine.currentState is AttackState attackState)
+        {   
+            // if the attack state is active, perform the attack
+            attackState.PerformHit();
+        }
     }
 }
 

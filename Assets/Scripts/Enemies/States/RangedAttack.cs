@@ -29,5 +29,10 @@ public class RangedAttack : IAttackBehavior // implements IAttackBehavior to use
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         arrow.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
+
+    public void PerformHit()
+    {
+        
+    }
 }
 
