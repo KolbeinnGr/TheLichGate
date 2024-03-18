@@ -6,14 +6,19 @@ public class ProjectileAttackBehavior : MonoBehaviour
 {
     protected Vector3 direction;
     public float destroyAfterSeconds;
+    private Animator animator;
+    protected bool isMoving = true;
     
     // amount of enemies the projectile can pierce
     // ( think of it as the health of the projectile reduced by 1 after hitting an enemy )
     public int pierce;
     public float damage; 
+    
+    
 
     protected virtual void Start()
     {
+        animator = GetComponent<Animator>();
         Destroy(gameObject, destroyAfterSeconds);
     }
     
@@ -38,7 +43,10 @@ public class ProjectileAttackBehavior : MonoBehaviour
 
             if (pierce <= 0)
             {
-                Destroy(gameObject); // Destroy the projectile if pierce count is zero
+                // set the speed of the projectile to zero
+                isMoving = false;
+                animator.SetBool("IsEnding", true);
+                Destroy(gameObject, 0.3f); // Destroy the projectile if pierce count is zero
             }
         }
     }

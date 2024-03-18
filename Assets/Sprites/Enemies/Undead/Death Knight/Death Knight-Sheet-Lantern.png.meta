@@ -1,0 +1,1682 @@
+fileFormatVersion: 2
+guid: 58f3da57f3e2e884a8ec50699cd9ce6d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 55
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 576
+        width: 27
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ea305156915cc48be74c996afa846a
+      internalID: 33088631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 576
+        width: 27
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85fb1196e03a404d92a8d7a404195e7
+      internalID: 277178343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_2
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 576
+        width: 27
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60eeacfc1d0d96a4d8081cba24e69c9b
+      internalID: -303252028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_3
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 576
+        width: 27
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1abb54544313f43b31fcccb6d95379
+      internalID: -828993928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_4
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 576
+        width: 27
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02dfe275dde66f45b38b67cd476b218
+      internalID: 1183123661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_5
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 576
+        width: 27
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a0700e5fadc1e489d33d866dda409d
+      internalID: 1061771417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_6
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 576
+        width: 27
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e73162c1a3a2e140b25dedb5d9f91f0
+      internalID: 231874473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_7
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 576
+        width: 27
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1414c0670d57ed44f8fc181a3d86c138
+      internalID: -1529237203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_8
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 512
+        width: 33
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712a0eb452d9eef469e918d426bdfcb7
+      internalID: -1873163966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_9
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 512
+        width: 33
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45eba0048748d34d9543a2c515b356f
+      internalID: 40778594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_10
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 512
+        width: 37
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7621d68eaeb0b6040903580cbafeeb6e
+      internalID: 1334009986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_11
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 512
+        width: 37
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06eed5af38db5d42a176386063fb995
+      internalID: 604184479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_12
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 512
+        width: 37
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24010480652ae914aaae4f55f311683d
+      internalID: 2099416705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_13
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 512
+        width: 37
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f541c3db0ce8964984b8b4d54f3d85e
+      internalID: -736128803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_14
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 512
+        width: 37
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05012342285ac2408f214ec9b05285d
+      internalID: 140225433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_15
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 512
+        width: 33
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9921565ba8dbf343882449bb63fd0b1
+      internalID: 92091984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_16
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 448
+        width: 45
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49fd1b5bf5ad7b418cfc498a0d7efda
+      internalID: 1046780574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_17
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 448
+        width: 45
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d5ae8c89153b743a6a1629d6ebb634
+      internalID: 748349706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_18
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 448
+        width: 40
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67b6e23a753c2c43a3a647d78f2870b
+      internalID: 1898079956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_19
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 448
+        width: 44
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190ed0fb05ea30d478ae55e36ba8f907
+      internalID: 269816800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_20
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 448
+        width: 44
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64804978c50cfaf468ec2f28248d959a
+      internalID: -2002303106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_21
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 448
+        width: 44
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1835ccc44ce2f9439c9f1477ee2b77a
+      internalID: -329996545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_22
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 448
+        width: 40
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4bd7baccb566049b1327126e987e78
+      internalID: 1750290311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_23
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 448
+        width: 45
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e869ab13a16b242853aacb26d791b9
+      internalID: 1029427305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_24
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 384
+        width: 29
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2cd27a0d9abbf842aa0b0ede464b454
+      internalID: 1332215994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_25
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 384
+        width: 28
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31440c4da56a18418ff303d3ec8f47c
+      internalID: 1688834690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_26
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 384
+        width: 29
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f48d80195a3c94bb5133808697cb76
+      internalID: -905639549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_27
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 384
+        width: 29
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790875fc11ce05043a969652d47c0177
+      internalID: -1647266608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_28
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 320
+        width: 29
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1506457a6f3c7246a7edf1dc2066267
+      internalID: -1154270841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_29
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 320
+        width: 28
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b692c1195a6b75f40a9736d3db8b1af9
+      internalID: 866064967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_30
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 320
+        width: 29
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33cbb42a08c02646a0f309963b6c02f
+      internalID: 1297175550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_31
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 320
+        width: 29
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f3ae1486d91a94f84a8a038c026953
+      internalID: 338359842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_32
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 256
+        width: 29
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa86859f81ecd0468b85b36d8a57369
+      internalID: 744185430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_33
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 256
+        width: 28
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9174a3551af2274ebf1889c3ff22d03
+      internalID: 1268442694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_34
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 256
+        width: 29
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5955dffcfc46af4aa64759afa8282aa
+      internalID: -1117431296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_35
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 256
+        width: 29
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad39d4f308324c4449c3c2015f8b682a
+      internalID: -1882449645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_36
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 256
+        width: 30
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a5d4c3e2c8b054b99d0b282d3260db
+      internalID: 1261244806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_37
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 256
+        width: 34
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbab4eadf5687f6419ce02ebce78a0f7
+      internalID: 125245183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_38
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 256
+        width: 37
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fea32c18d41a7c44b9e29cd6ef10557
+      internalID: -1130126974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_39
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 256
+        width: 38
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf7206d18084594bb93a8ea19852764
+      internalID: -111456656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_40
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 256
+        width: 54
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea6d6a510b7e6647a8fea7959b29129
+      internalID: -1594057045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_41
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 256
+        width: 54
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6328abf5f02f84f9e3c4fc234933b2
+      internalID: 1065607753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_42
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 256
+        width: 54
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fd975b45fa24248a249859a57fb7ee
+      internalID: -205396301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_43
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 192
+        width: 29
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1b9d527efeb15459a5e66660f4c7cd
+      internalID: -948641289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_44
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 192
+        width: 28
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91a73527990a7e4b90e8abc194b8113
+      internalID: 428937990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_45
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 192
+        width: 29
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4672597ad8231947909b09ac14f00b6
+      internalID: -1276595684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_46
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 192
+        width: 29
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403a7f2ba97a17d4989472af73b5ede5
+      internalID: 171039332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_47
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 192
+        width: 31
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4b77472890ec14aa55661129e673d7
+      internalID: 1388229279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_48
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 192
+        width: 34
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca73abad3b5b3b44bdbc3db54794397
+      internalID: -1819708322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_49
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 192
+        width: 36
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39bc55b427edf54d82d6e1f7f0e3d6d
+      internalID: -253631847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_50
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 192
+        width: 38
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34231a45a7fd04f43860edb74a9ae02f
+      internalID: -1969311978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_51
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 192
+        width: 54
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc650122c9dbe842897887edc8d304f
+      internalID: -1193828270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_52
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 192
+        width: 54
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603fa544c89b0b843b41cc8b0e12363a
+      internalID: 1985225269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_53
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 192
+        width: 54
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9538efb8fbae8a47b46e9fee28c9378
+      internalID: -1528979114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_54
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 128
+        width: 26
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cf665195ea254438d0afda90193814
+      internalID: -731921962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_55
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 128
+        width: 26
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac60e3971aea6f34dbdc9826b31c06a2
+      internalID: -778946231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_56
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 128
+        width: 35
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f178410493b9b418f1b0fafd1cd656
+      internalID: -718889113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_57
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 128
+        width: 56
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fecba66a99f054049836dc27f214d3bd
+      internalID: 1186688656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_58
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 128
+        width: 51
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf92e5ea6c1b2c4a9889a65a17f327e
+      internalID: 664460345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_59
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 128
+        width: 46
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146dbbe43ce84f94b850c1fd586204ba
+      internalID: -901028836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_60
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 128
+        width: 26
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697be7b624281404fa38acf14d630bb5
+      internalID: 1293606643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_61
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 64
+        width: 45
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891c4074f8301d64a92515c9fc452f26
+      internalID: 632571602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_62
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 64
+        width: 45
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dbb7a63ad7c054449ac235fe04ebc87
+      internalID: 283779281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_63
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 64
+        width: 41
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d676dfdad77804ca037ce44796da86
+      internalID: -1027602371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_64
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 65
+        width: 44
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f507199d4a42e6e458ffb1bceadd8c36
+      internalID: 310345880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_65
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 3
+        width: 33
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0b5bb56fa60e242a27bb0c0c303026
+      internalID: 1135186787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_66
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 2
+        width: 42
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508a4779a45dd37439a555afc32e0b6e
+      internalID: -1920491440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_67
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1
+        width: 39
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8ac9bca13e7aa40804c80c4b0843d2
+      internalID: 479393446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_68
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1
+        width: 40
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4b2a0e7e87ec14b898626fab42d99b
+      internalID: -1964887672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death Knight-Sheet-Lantern_69
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1
+        width: 33
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71110a40bf2c1b34593d2e98e95a2718
+      internalID: -71226657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 774b182409bfc174a93010696a904b81, type: 3}
+      name: _Emission
+    nameFileIdTable:
+      Death Knight-Sheet-Lantern_0: 33088631
+      Death Knight-Sheet-Lantern_1: 277178343
+      Death Knight-Sheet-Lantern_10: 1334009986
+      Death Knight-Sheet-Lantern_11: 604184479
+      Death Knight-Sheet-Lantern_12: 2099416705
+      Death Knight-Sheet-Lantern_13: -736128803
+      Death Knight-Sheet-Lantern_14: 140225433
+      Death Knight-Sheet-Lantern_15: 92091984
+      Death Knight-Sheet-Lantern_16: 1046780574
+      Death Knight-Sheet-Lantern_17: 748349706
+      Death Knight-Sheet-Lantern_18: 1898079956
+      Death Knight-Sheet-Lantern_19: 269816800
+      Death Knight-Sheet-Lantern_2: -303252028
+      Death Knight-Sheet-Lantern_20: -2002303106
+      Death Knight-Sheet-Lantern_21: -329996545
+      Death Knight-Sheet-Lantern_22: 1750290311
+      Death Knight-Sheet-Lantern_23: 1029427305
+      Death Knight-Sheet-Lantern_24: 1332215994
+      Death Knight-Sheet-Lantern_25: 1688834690
+      Death Knight-Sheet-Lantern_26: -905639549
+      Death Knight-Sheet-Lantern_27: -1647266608
+      Death Knight-Sheet-Lantern_28: -1154270841
+      Death Knight-Sheet-Lantern_29: 866064967
+      Death Knight-Sheet-Lantern_3: -828993928
+      Death Knight-Sheet-Lantern_30: 1297175550
+      Death Knight-Sheet-Lantern_31: 338359842
+      Death Knight-Sheet-Lantern_32: 744185430
+      Death Knight-Sheet-Lantern_33: 1268442694
+      Death Knight-Sheet-Lantern_34: -1117431296
+      Death Knight-Sheet-Lantern_35: -1882449645
+      Death Knight-Sheet-Lantern_36: 1261244806
+      Death Knight-Sheet-Lantern_37: 125245183
+      Death Knight-Sheet-Lantern_38: -1130126974
+      Death Knight-Sheet-Lantern_39: -111456656
+      Death Knight-Sheet-Lantern_4: 1183123661
+      Death Knight-Sheet-Lantern_40: -1594057045
+      Death Knight-Sheet-Lantern_41: 1065607753
+      Death Knight-Sheet-Lantern_42: -205396301
+      Death Knight-Sheet-Lantern_43: -948641289
+      Death Knight-Sheet-Lantern_44: 428937990
+      Death Knight-Sheet-Lantern_45: -1276595684
+      Death Knight-Sheet-Lantern_46: 171039332
+      Death Knight-Sheet-Lantern_47: 1388229279
+      Death Knight-Sheet-Lantern_48: -1819708322
+      Death Knight-Sheet-Lantern_49: -253631847
+      Death Knight-Sheet-Lantern_5: 1061771417
+      Death Knight-Sheet-Lantern_50: -1969311978
+      Death Knight-Sheet-Lantern_51: -1193828270
+      Death Knight-Sheet-Lantern_52: 1985225269
+      Death Knight-Sheet-Lantern_53: -1528979114
+      Death Knight-Sheet-Lantern_54: -731921962
+      Death Knight-Sheet-Lantern_55: -778946231
+      Death Knight-Sheet-Lantern_56: -718889113
+      Death Knight-Sheet-Lantern_57: 1186688656
+      Death Knight-Sheet-Lantern_58: 664460345
+      Death Knight-Sheet-Lantern_59: -901028836
+      Death Knight-Sheet-Lantern_6: 231874473
+      Death Knight-Sheet-Lantern_60: 1293606643
+      Death Knight-Sheet-Lantern_61: 632571602
+      Death Knight-Sheet-Lantern_62: 283779281
+      Death Knight-Sheet-Lantern_63: -1027602371
+      Death Knight-Sheet-Lantern_64: 310345880
+      Death Knight-Sheet-Lantern_65: 1135186787
+      Death Knight-Sheet-Lantern_66: -1920491440
+      Death Knight-Sheet-Lantern_67: 479393446
+      Death Knight-Sheet-Lantern_68: -1964887672
+      Death Knight-Sheet-Lantern_69: -71226657
+      Death Knight-Sheet-Lantern_7: -1529237203
+      Death Knight-Sheet-Lantern_8: -1873163966
+      Death Knight-Sheet-Lantern_9: 40778594
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

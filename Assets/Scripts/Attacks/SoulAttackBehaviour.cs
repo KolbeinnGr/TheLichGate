@@ -15,6 +15,10 @@ public class SoulAttackBehaviour : ProjectileAttackBehavior
 
     void Update()
     {
-        transform.position += sc.speed * Time.deltaTime * direction;        
+        if (isMoving)
+        {
+            transform.position += sc.speed * Time.deltaTime * direction;        
+
+        }
     }
 }
