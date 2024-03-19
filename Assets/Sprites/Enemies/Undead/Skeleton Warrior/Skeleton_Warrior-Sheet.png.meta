@@ -1739,6 +1739,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Skeleton_Warrior-Swing_7
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 400
+        width: 110
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a555e014cb0284abfab6a1debf1b11
+      internalID: -747711710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Warrior-Swing_8
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 400
+        width: 110
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b39a6b0f832d4a449f417bc2a711e39
+      internalID: -1433757453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Warrior-Swing_9
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 160
+        width: 110
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39407ee91707d824f81ca15be096a10b
+      internalID: 1766054595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1819,6 +1882,9 @@ TextureImporter:
       Skeleton_Warrior-Swing_4: -763447477
       Skeleton_Warrior-Swing_5: -1560348007
       Skeleton_Warrior-Swing_6: -1177437981
+      Skeleton_Warrior-Swing_7: -747711710
+      Skeleton_Warrior-Swing_8: -1433757453
+      Skeleton_Warrior-Swing_9: 1766054595
       Skeleton_Warrior-Walk_0: 924830366
       Skeleton_Warrior-Walk_1: 452732758
       Skeleton_Warrior-Walk_2: -391605820
