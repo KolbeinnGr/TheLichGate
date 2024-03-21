@@ -42,7 +42,6 @@ public class SoulAttackController : AttackController
         GameObject closestEnemy = FindClosestEnemy();
         if (closestEnemy)
         {
-            Debug.Log("enemy found.");
             for (int i = 0; i < ac.attacks; i++)
             {
                 GameObject spawnedProjectile = Instantiate(prefab, transform.position, Quaternion.identity);
