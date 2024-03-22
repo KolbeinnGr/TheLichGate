@@ -24,9 +24,12 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
     public Animator Animator => animator;
     public Rigidbody2D Rb => rb;
     public float Speed => speed;
+    private GameObject player;
 
     private void Awake()
     {
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
+        targetDestination = player.transform;
         // initialize components
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +37,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         // state machine
         stateMachine = GetComponent<StateMachine>();
         InitializeStateMachine();
+        
     }
 
     private void Update()
