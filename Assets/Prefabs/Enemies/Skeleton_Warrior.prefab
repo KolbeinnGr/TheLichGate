@@ -70,11 +70,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 599191337
+  m_SortingLayer: 2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: a7d622b6f92f0984a8db863ae011c3d8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.039215688, b: 0, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,9 +99,10 @@ GameObject:
   - component: {fileID: 3012405933856511711}
   - component: {fileID: 7954977959441917976}
   - component: {fileID: 9114678221430301790}
+  - component: {fileID: -2259950718420734511}
   m_Layer: 0
   m_Name: Skeleton_Warrior
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,8 +161,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 599191337
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1180767809, guid: 0e02da61cb44665419a6d1496e055908, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -279,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b18ab92f2c90149927447639bae89b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDestination: {fileID: 0}
+  targetDestination: {fileID: 1086794829638588418, guid: b48032e35f5aef246ae643c7bd4ded57, type: 3}
   animator: {fileID: 1310837637960629764}
   rb: {fileID: 6401323755374258338}
   speed: 1.5
@@ -298,3 +299,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c197c99045cd24694d3ce9fc97a7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2259950718420734511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056465319511862673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c19b0b582ca7c49a4dbe5ea7b91f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
