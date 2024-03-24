@@ -40,6 +40,12 @@ public class Health : MonoBehaviour
     {
         onDeath.Invoke();
         // Here we would add additional logic for the death of the character such as playing a death animation or disabling the game object
+
+        // This is used to tell the enemy spawner to decrement the number of enemies on the field.
+        EnemySpawner es = FindObjectOfType<EnemySpawner>();
+        es.OnEnemyKilled();
+
         Destroy(gameObject); // TODO , remove once better death logic is implemented
     }
+
 }
