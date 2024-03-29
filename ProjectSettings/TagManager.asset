@@ -42,14 +42,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Chain
-    uniqueID: 1843105373
-    locked: 0
   - name: Enemies
     uniqueID: 599191337
     locked: 0
   - name: Player
     uniqueID: 2131619081
+    locked: 0
+  - name: Props
+    uniqueID: 204428845
+    locked: 0
+  - name: Chain
+    uniqueID: 1843105373
     locked: 0
   - name: Soul
     uniqueID: 2598683027

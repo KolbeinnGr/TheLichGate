@@ -5,6 +5,7 @@ using UnityEngine;
 public class MapController : MonoBehaviour
 {
     public List<GameObject> terrainChunks;
+    public List<int> terrainChunkWeights;
     public GameObject player;
     public float checkRadius;
     public LayerMask terrainMask;
@@ -22,6 +23,10 @@ public class MapController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (terrainChunks.Count != terrainChunkWeights.Count) {
+            Debug.LogError("TerrainChunks and TerrainChunkWeights lists must be of the same size.");
+            return;
+        }
         playerLastPosition = player.transform.position;
     }
 
@@ -256,11 +261,31 @@ public class MapController : MonoBehaviour
             }
         }
     }
+    GameObject ChooseWeightedTerrainChunk()
+    {
+        int totalWeight = 0;
+        foreach (int weight in terrainChunkWeights) {
+            totalWeight += weight;
+        }
 
+        int randomWeight = Random.Range(0, totalWeight);
+        int sum = 0;
+
+        for (int i = 0; i < terrainChunks.Count; i++) {
+            sum += terrainChunkWeights[i];
+            if (randomWeight < sum) {
+                return terrainChunks[i];
+            }
+        }
+
+        // Fallback, should not really happen
+        return terrainChunks[terrainChunks.Count - 1];
+    }
+    
     void SpawnChunk(Vector3 spawnPosition)
     {
-        int rand = Random.Range(0, terrainChunks.Count);
-        latestChunk = Instantiate(terrainChunks[rand], spawnPosition, Quaternion.identity);
+        GameObject chunkToSpawn = ChooseWeightedTerrainChunk();
+        latestChunk = Instantiate(chunkToSpawn, spawnPosition, Quaternion.identity);
         spawnedChunks.Add(latestChunk);
     }
 
