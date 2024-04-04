@@ -26,6 +26,7 @@ public class MeleeAttack : IAttackBehavior
 
     private void ShowWarningZone()
     {
+        
         warningZone.SetActive(true);
         Vector3 direction = targetTransform.position - enemyTransform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90; // Adjust based on your sprite orientation
