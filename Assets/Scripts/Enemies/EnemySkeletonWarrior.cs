@@ -25,6 +25,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
     public Rigidbody2D Rb => rb;
     public float Speed => speed;
     private GameObject player;
+    private bool IsCurrentlyAttacking = false;
 
     private void Awake()
     {
@@ -50,7 +51,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         {
             stateMachine.ChangeState(typeof(AttackState));
         } // else if the target is not within attack range and the enemy is not in walk state, change to walk state
-        else if (distanceToTarget > attackRange && !(stateMachine.currentState is WalkState))
+        else if (distanceToTarget > attackRange && !(stateMachine.currentState is WalkState) && !IsCurrentlyAttacking)
         {
             stateMachine.ChangeState(typeof(WalkState));
         }
@@ -112,6 +113,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         if (stateMachine.currentState is AttackState attackState)
         {   
             // if the attack state is active, perform the attack
+            IsCurrentlyAttacking = true;
             attackState.PerformAttack();
         }
     }
@@ -121,6 +123,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         {   
             // if the attack state is active, perform the attack
             attackState.PerformHit();
+            IsCurrentlyAttacking = false;
         }
     }
 }
