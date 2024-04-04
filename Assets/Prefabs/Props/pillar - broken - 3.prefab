@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2131619081
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 34ceaab7d83226046886676c9b86d209, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &4173440594759133472
 Rigidbody2D:
   serializedVersion: 4
@@ -157,11 +157,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.15625, y: 0.5}
-      - {x: -0.34375, y: 0.25}
-      - {x: -0.4375, y: 0}
-      - {x: -0.4375, y: -0.40625}
-      - {x: -0.40625, y: -0.5}
-      - {x: 0.4375, y: -0.5}
-      - {x: 0.4375, y: 0.5}
+    - - {x: -0.39383698, y: 0.05517292}
+      - {x: -0.38759613, y: -0.010591507}
+      - {x: 0.3915596, y: -0.010257721}
+      - {x: 0.3773842, y: 0.04290104}
   m_UseDelaunayMesh: 0
