@@ -6,10 +6,16 @@ public class PropsRandomizer : MonoBehaviour
 {
     public List<GameObject> propSpawnPoints;
     public List<GameObject> propPrefabs;
+    public List<int> propWeights; // List of weights for each prefab
 
     // Start is called before the first frame update
     void Start()
     {
+        if (propPrefabs.Count != propWeights.Count) {
+            Debug.LogError("PropPrefabs and PropWeights lists must be of the same size.");
+            return;
+        }
+
         SpawnProps();
     }
 
@@ -23,9 +29,29 @@ public class PropsRandomizer : MonoBehaviour
     {
         foreach(GameObject spawnpoint in propSpawnPoints)
         {
-            int rand = Random.Range(0, propPrefabs.Count);
-            GameObject prop = Instantiate(propPrefabs[rand], spawnpoint.transform.position, Quaternion.identity);
+            GameObject prop = Instantiate(ChooseWeightedPrefab(), spawnpoint.transform.position, Quaternion.identity);
             prop.transform.parent = spawnpoint.transform;
         }
+    }
+
+    GameObject ChooseWeightedPrefab()
+    {
+        int totalWeight = 0;
+        foreach (int weight in propWeights) {
+            totalWeight += weight;
+        }
+
+        int randomWeight = Random.Range(0, totalWeight);
+        int sum = 0;
+
+        for (int i = 0; i < propPrefabs.Count; i++) {
+            sum += propWeights[i];
+            if (randomWeight < sum) {
+                return propPrefabs[i];
+            }
+        }
+
+        // Fallback, should not really happen
+        return propPrefabs[propPrefabs.Count - 1];
     }
 }
