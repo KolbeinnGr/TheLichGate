@@ -12,6 +12,7 @@ public class AttackController : MonoBehaviour
     private float currentCooldown; // time until next attack
     public int pierce; // amount of enemies the projectile can pierce
     public int attacks; // amount of projectiles or attacks to spawn
+
     
     
     // Start is called before the first frame update
