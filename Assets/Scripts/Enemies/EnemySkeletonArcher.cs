@@ -104,11 +104,11 @@ public class EnemySkeletonArcher : MonoBehaviour, IEnemy
         float distanceToTarget = Vector3.Distance(transform.position, TargetDestination.position);
 
         // if the target is within attack range and the enemy is not in attack state, change to attack state
-        if (distanceToTarget <= attackRange && !(stateMachine.currentState is AttackState))
+        if (distanceToTarget <= attackRange && !(stateMachine.currentState is AttackState) && !(stateMachine.currentState is DeathState))
         {
             stateMachine.ChangeState(typeof(AttackState));
         } // else if the target is not within attack range and the enemy is not in walk state, change to walk state
-        else if (distanceToTarget > attackRange && !(stateMachine.currentState is WalkState))
+        else if (distanceToTarget > attackRange && !(stateMachine.currentState is WalkState) && !(stateMachine.currentState is DeathState))
         {
             stateMachine.ChangeState(typeof(WalkState));
         }
@@ -132,6 +132,7 @@ public class EnemySkeletonArcher : MonoBehaviour, IEnemy
         {   // WalkState is responsible for moving the enemy towards its target.
             { typeof(WalkState), new WalkState(this) },
             { typeof(IdleState), new IdleState(this) },
+            { typeof(DeathState), new DeathState(this) },
             { typeof(AttackState), new AttackState(this, new RangedAttack(arrowPrefab, shootingPoint, arrowSpeed, targetDestination)) } // RangedAttack is an example of an attack that uses a projectile.
         };
         // set states
@@ -173,6 +174,12 @@ public class EnemySkeletonArcher : MonoBehaviour, IEnemy
             // if the attack state is active, perform the attack
             attackState.PerformAttack();
         }
+    }
+
+    public void TriggerDeathState()
+    {
+        animator.Play("SkeletonArcherHitDeathFlash");
+        stateMachine.ChangeState(typeof(DeathState));
     }
 
 }

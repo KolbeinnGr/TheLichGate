@@ -100,6 +100,8 @@ GameObject:
   - component: {fileID: 7954977959441917976}
   - component: {fileID: 9114678221430301790}
   - component: {fileID: -2259950718420734511}
+  - component: {fileID: 8516074526463391342}
+  - component: {fileID: 3366998279839880378}
   m_Layer: 0
   m_Name: Skeleton_Warrior
   m_TagString: Enemy
@@ -312,9 +314,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
+  animator: {fileID: 1310837637960629764}
+  deathSounds:
+  - {fileID: 8300000, guid: e6b2383b1a5afbe4296aec97872d9422, type: 3}
+  - {fileID: 8300000, guid: 7ad5e9becafed2547a0686514396a3c3, type: 3}
+  - {fileID: 8300000, guid: 67d375368d565364d9e2d02079261260, type: 3}
+  - {fileID: 8300000, guid: cd33b5f2ac6e42e498609e87eca2e609, type: 3}
+  - {fileID: 8300000, guid: 0b1bb4a1425d67d4dbca2eb33df23a00, type: 3}
+  hurtSounds:
+  - {fileID: 8300000, guid: 52e60fe3de954cf41995e49b53f7210b, type: 3}
+  - {fileID: 8300000, guid: dfeab51371791de4b9c691a13fe95775, type: 3}
+  - {fileID: 8300000, guid: ed22dd6fa6b959c43bed5b7bf1a7e66f, type: 3}
+  - {fileID: 8300000, guid: 2a7ca687c93c0ed4a973b04fb1318420, type: 3}
+  - {fileID: 8300000, guid: e42c168d3db24cc4e9ab7b1813e40746, type: 3}
+  - {fileID: 8300000, guid: a6ffc2dffa63ba6428ba182998ac7c56, type: 3}
+  - {fileID: 8300000, guid: a829665438767ee4db1414492ad8b172, type: 3}
+  soundVolume: 0.3
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8516074526463391342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056465319511862673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4e27db750952e647bffe51f3cd1be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1213173963553044068}
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
+  flashDuration: 0.1
+--- !u!114 &3366998279839880378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056465319511862673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7438902e891d7134ba91778250c14eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1213173963553044068}
+  fadeToColor: {r: 1, g: 1, b: 1, a: 0}
+  fadeDuration: 0.5
