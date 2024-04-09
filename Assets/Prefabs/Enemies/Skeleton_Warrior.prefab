@@ -209,6 +209,8 @@ GameObject:
   - component: {fileID: -2259950718420734511}
   - component: {fileID: 8516074526463391342}
   - component: {fileID: 3366998279839880378}
+  - component: {fileID: 1639824555787023287}
+  - component: {fileID: 6804870369145493897}
   m_Layer: 0
   m_Name: Skeleton_Warrior
   m_TagString: Enemy
@@ -322,7 +324,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f0bbf7149e74bad4abc51c142c83e0fb, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -340,7 +342,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4056465319511862673}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -488,3 +490,50 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1213173963553044068}
   fadeToColor: {r: 1, g: 1, b: 1, a: 0}
   fadeDuration: 0.5
+--- !u!114 &1639824555787023287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056465319511862673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63570a00d9336394c952510e7d5190c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &6804870369145493897
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056465319511862673}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: f0bbf7149e74bad4abc51c142c83e0fb, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.069935374, y: 0.6800652}
+  serializedVersion: 2
+  m_Radius: 0.2226687
