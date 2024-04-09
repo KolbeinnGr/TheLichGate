@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
+public class EnemyBossNecromancer : MonoBehaviour, IEnemy
 {
     // initialize components
     [SerializeField] private Transform targetDestination;
@@ -12,9 +12,12 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed = 3f;
     [SerializeField] private float attackRange = 1.5f;
-    [SerializeField] private GameObject warningZone;
-    [SerializeField] private GameObject attackSlashGameObject;
-    private Animator attackSlashAnim;
+    [SerializeField] private GameObject warningZoneSpell;
+    [SerializeField] private GameObject SpellGameObject;
+    private Animator SpellAnimation;
+    [SerializeField] private GameObject warningZoneAttack;
+    [SerializeField] private GameObject AttackLightningGameObject;
+    private Animator attackLightningAnimation;
     [SerializeField] private Transform enemyTransform;
 
 
@@ -37,7 +40,8 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
-        attackSlashAnim = attackSlashGameObject.GetComponent<Animator>();
+        attackLightningAnimation = AttackLightningGameObject.GetComponent<Animator>();
+        SpellAnimation = SpellGameObject.GetComponent<Animator>();
 
         // state machine
         stateMachine = GetComponent<StateMachine>();
@@ -83,7 +87,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
             { typeof(WalkState), new WalkState(this) },
             { typeof(IdleState), new IdleState(this) },
             { typeof(DeathState), new DeathState(this) },
-            { typeof(AttackState), new AttackState(this, new MeleeAttack(this, animator, warningZone, enemyTransform, targetDestination, attackSlashGameObject, attackSlashAnim)) } // MeleeAttack is a reference to the MeleeAttack script
+            { typeof(AttackState), new AttackState(this, new MeleeAttack(this, animator, warningZoneAttack, enemyTransform, targetDestination, AttackLightningGameObject, attackLightningAnimation)) } // MeleeAttack is a reference to the MeleeAttack script
         };
         // set states
         stateMachine.SetStates(states);
@@ -130,7 +134,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         if (stateMachine.currentState is AttackState attackState)
         {   
             // if the attack state is active, perform the attack
-            attackState.PerformHit("SkeletonWarriorSwordSlash");
+            attackState.PerformHit("Necromancer_Lightning_attack");
             // this is where we used to change IsCurrentlyAttacking to false;
             
         }
@@ -146,8 +150,8 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
 
     public void TriggerDeathState()
     {
-        animator.Play("SkeletonWarriorHitDeathFlash");
-        Destroy(warningZone);
+        animator.Play("Necromancer_DeadFlash");
+        Destroy(warningZoneAttack);
         stateMachine.ChangeState(typeof(DeathState));
     }
 
