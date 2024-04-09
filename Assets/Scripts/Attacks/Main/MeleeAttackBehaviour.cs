@@ -6,6 +6,8 @@ public class MeleeAttackBehavior : MonoBehaviour
 
     private Animator animator; // To handle attack animations
     private Collider2D attackHitbox; // The Collider used as the hitbox
+    
+
 
     protected virtual void Start()
     {
@@ -18,6 +20,7 @@ public class MeleeAttackBehavior : MonoBehaviour
     {
         // Optional: Trigger an attack animation
         animator.SetTrigger("Attack");
+        
 
         // Enable the hitbox collider at the start of the attack
         attackHitbox.enabled = true;

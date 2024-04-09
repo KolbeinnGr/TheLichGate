@@ -20,19 +20,31 @@ public class PlayerController : MonoBehaviour
     public float chainStartYOffset = 0f;
     public float chainEndXOffset = 0f;
     public float chainEndYOffset = 0f;
-
-    public Vector2 direction;  // The direction the player is moving in
+    public LineRenderer chainRenderer; 
+    public Material chainMaterial;
     
-
+    [Header ("Dash")]
+    public float dashDuration = 0.5f;  // Fixed duration of the dash in seconds
+    public float minDashDistance = 1f;  // Minimum distance required to initiate a dash
+    
+    private float dashSpeed;            // Calculated speed based on distance and duration
+    private Vector2 dashTarget;         // The target position of the dash
+    private Vector2 dashStart;          // Starting position of the player when the dash begins
+    private bool isDashing = false;     // Flag to indicate if the player is currently dashing
+    private float dashDistanceTravelled = 0f;  // Total distance travelled during the das
+    private float dashStartTime;        // Time when the dash started
+    
+    
     private Vector2 soulTarget; // The position the soul is moving towards
     private Coroutine returnSoulRoutine; // Coroutine for returning the soul to the player
     private bool isSoulActive = false;
 
-    public LineRenderer chainRenderer; 
-    public Material chainMaterial;
+
     
     [Header ("Animation")]
     public Animator animator;
+    public Vector2 direction;  // The direction the player is moving in
+
 
     void Start()
     {
@@ -47,58 +59,56 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            isSoulActive = !isSoulActive;
+            ToggleSoulActive();
             
-            if (isSoulActive)
-            {
-                playerSoul.SetActive(true);
-                Vector2 playerLocationOffset = new Vector2(transform.position.x + soulXOffset, transform.position.y + soulYOffset);
-                playerSoul.transform.position = playerLocationOffset; // Spawn at player's position with offset
-            }
-            
-            if (!isSoulActive)
-            {
-                if (returnSoulRoutine != null)  // Stop the return soul coroutine if it's running
-                {
-                    StopCoroutine(returnSoulRoutine);
-                }
-                returnSoulRoutine = StartCoroutine(ReturnSoulToPlayer());
-            }
-            
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Space) && isSoulActive && !isDashing)
+        {
+            StartDash();
         }
 
-        if (chainRenderer != null && playerSoul.activeSelf)  // Draw the chain between the player and the soul with offsets
+        if (chainRenderer && playerSoul.activeSelf)  // Draw the chain between the player and the soul with offsets
         {
-            chainRenderer.enabled = true;
-            Vector2 soulPosition = playerSoul.transform.position;
-            Vector3 offsetChainEndPosition = new Vector3(soulPosition.x + chainEndXOffset, soulPosition.y + chainEndYOffset, 0);
-            chainRenderer.SetPosition(0, offsetChainEndPosition);
-            Vector3 offsetChainStartPosition = new Vector3(transform.position.x + chainStartXOffset, transform.position.y + chainStartYOffset, 0);
-            chainRenderer.SetPosition(1, offsetChainStartPosition);
+            DrawChain();
         }
+        
         UpdateAnimationStates();
 
     }
 
     void FixedUpdate()
-    {
-        HandlePlayerMovement();
-        MoveSoul();
+    {   
+        if (isDashing)
+        {
+            PerformDash();
+        }
+        else
+        {
+            HandlePlayerMovement();
+            MoveSoul();
+        }
     }
 
     private void UpdateAnimationStates()
     {
-        animator.SetBool("IsRunning", direction != Vector2.zero);
-        
-        // flip the player sprite based on the direction they are moving left or right
-        if (direction.x > 0)
+        bool isMoving = direction != Vector2.zero;
+        animator.SetBool("IsRunning", isMoving && !isDashing);
+
+        if (isMoving && !isDashing)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(Mathf.Sign(direction.x), 1, 1);
         }
-        else if (direction.x < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
+    }
+
+    private void DrawChain()
+    {
+        chainRenderer.enabled = true;
+        Vector2 soulPosition = playerSoul.transform.position;
+        Vector3 offsetChainEndPosition = new Vector3(soulPosition.x + chainEndXOffset, soulPosition.y + chainEndYOffset, 0);
+        chainRenderer.SetPosition(0, offsetChainEndPosition);
+        Vector3 offsetChainStartPosition = new Vector3(transform.position.x + chainStartXOffset, transform.position.y + chainStartYOffset, 0);
+        chainRenderer.SetPosition(1, offsetChainStartPosition);
     }
 
     private void HandlePlayerMovement()
@@ -107,9 +117,31 @@ public class PlayerController : MonoBehaviour
         body.velocity = direction * walkSpeed;
     }
 
+    private void ToggleSoulActive()
+    {
+        isSoulActive = !isSoulActive;
+            
+        if (isSoulActive)
+        {
+            playerSoul.SetActive(true);
+            Vector2 playerLocationOffset = new Vector2(transform.position.x + soulXOffset, transform.position.y + soulYOffset);
+            playerSoul.transform.position = playerLocationOffset; // Spawn at player's position with offset
+        }
+            
+        if (!isSoulActive)
+        {
+            if (returnSoulRoutine != null)  // Stop the return soul coroutine if it's running
+            {
+                StopCoroutine(returnSoulRoutine);
+            }
+            returnSoulRoutine = StartCoroutine(ReturnSoulToPlayer());
+        }
+    }
+    
+
     private void MoveSoul()
     {
-        if (isSoulActive)
+        if (isSoulActive && !isDashing)
         {
             soulTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);  // Set the soul's target to the mouse position
 
@@ -136,4 +168,55 @@ public class PlayerController : MonoBehaviour
         playerSoul.SetActive(false);
         chainRenderer.enabled = false;
     }
+    
+    private void StartDash()
+    {
+        float distanceToSoul = Vector2.Distance(transform.position, playerSoul.transform.position);
+
+        if (distanceToSoul < minDashDistance)
+        {
+            return; // Too close to dash
+        }
+
+        isDashing = true;
+        dashTarget = playerSoul.transform.position;
+        dashStart = transform.position;
+        dashDistanceTravelled = 0f;
+        dashSpeed = distanceToSoul / dashDuration;
+        dashStartTime = Time.time;  // Initialize dash start time
+
+        // Determine the direction to the soul and face the player in that direction
+        float directionToSoul = Mathf.Sign(dashTarget.x - transform.position.x);
+        transform.localScale = new Vector3(directionToSoul * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
+        animator.SetBool("IsDashing", true);
+    }
+
+
+    private void PerformDash()
+    {
+        Vector2 directionToSoul = (dashTarget - body.position).normalized;
+        body.velocity = directionToSoul * dashSpeed;
+
+        if (Vector2.Distance(dashStart, body.position) >= Vector2.Distance(dashStart, dashTarget) || 
+            Time.time - dashStartTime >= dashDuration)
+        {
+            FinishDash();
+        }
+
+        dashDistanceTravelled += Time.fixedDeltaTime * dashSpeed;
+    }
+
+
+    private void FinishDash()
+    {
+        isDashing = false;
+        body.velocity = Vector2.zero;
+        animator.SetBool("IsDashing", false);
+        playerSoul.SetActive(false);
+        chainRenderer.enabled = false;
+        ToggleSoulActive();
+        // Use dashDistanceTravelled for damage calculations if needed
+    }
+
 }

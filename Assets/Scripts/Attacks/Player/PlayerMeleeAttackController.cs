@@ -9,6 +9,10 @@ public class PlayerMeleeAttackController : AttackController
     public float offsetY;
     public AnimationClip attackAnimation; // Assign this in the Inspector
     private float animationPlayTime; // Duration of the attack animation
+    
+    [Header ("Audio")]
+    public AudioClip[] swingSounds;
+    public float swingSoundVolume = 0.5f;
 
     protected void Awake()
     {
@@ -33,6 +37,13 @@ public class PlayerMeleeAttackController : AttackController
             Quaternion effectRotation = isFacingRight ? Quaternion.identity : Quaternion.Euler(0, 180, 0);
 
             GameObject spawnedSlash = Instantiate(slashEffectPrefab, effectPosition, effectRotation, transform);
+            
+            if (AudioManager.Instance)
+            {
+                // Play a random swing sound
+                AudioManager.Instance.PlaySound(swingSounds[Random.Range(0, swingSounds.Length)], swingSoundVolume);
+            }
+            
             Destroy(spawnedSlash, animationPlayTime);
 
             // Alternate attack direction

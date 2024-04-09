@@ -25,6 +25,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
     public Rigidbody2D Rb => rb;
     public float Speed => speed;
     private GameObject player;
+    private bool IsCurrentlyAttacking = false;
 
     private void Awake()
     {
@@ -46,24 +47,27 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         float distanceToTarget = Vector3.Distance(transform.position, TargetDestination.position);
 
         // if the target is within attack range and the enemy is not in attack state, change to attack state
-        if (distanceToTarget <= attackRange && !(stateMachine.currentState is AttackState))
+        if (distanceToTarget <= attackRange && !(stateMachine.currentState is AttackState) && !(stateMachine.currentState is DeathState))
         {
             stateMachine.ChangeState(typeof(AttackState));
         } // else if the target is not within attack range and the enemy is not in walk state, change to walk state
-        else if (distanceToTarget > attackRange && !(stateMachine.currentState is WalkState))
+        else if (distanceToTarget > attackRange && !(stateMachine.currentState is WalkState) && !IsCurrentlyAttacking && !(stateMachine.currentState is DeathState))
         {
             stateMachine.ChangeState(typeof(WalkState));
         }
 
-
-        // Flip sprite on the X axis when the enemy is on either side of the target
-        if (targetDestination.position.x > transform.position.x) {
-            // Target is to the right, ensure sprite is facing right
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        } else {
-            // Target is to the left, flip sprite to face left
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        if (!(stateMachine.currentState is DeathState))
+        {
+            // Flip sprite on the X axis when the enemy is on either side of the target
+            if (targetDestination.position.x > transform.position.x) {
+                // Target is to the right, ensure sprite is facing right
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            } else {
+                // Target is to the left, flip sprite to face left
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
         }
+        
     }
 
     // initialize state machine
@@ -74,6 +78,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         {   // WalkState is responsible for moving the enemy towards its target.
             { typeof(WalkState), new WalkState(this) },
             { typeof(IdleState), new IdleState(this) },
+            { typeof(DeathState), new DeathState(this) },
             { typeof(AttackState), new AttackState(this, new MeleeAttack(animator, warningZone, enemyTransform, targetDestination)) } // MeleeAttack is a reference to the MeleeAttack script
         };
         // set states
@@ -112,6 +117,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         if (stateMachine.currentState is AttackState attackState)
         {   
             // if the attack state is active, perform the attack
+            IsCurrentlyAttacking = true;
             attackState.PerformAttack();
         }
     }
@@ -121,7 +127,15 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         {   
             // if the attack state is active, perform the attack
             attackState.PerformHit();
+            IsCurrentlyAttacking = false;
         }
+    }
+
+    public void TriggerDeathState()
+    {
+        animator.Play("SkeletonWarriorHitDeathFlash");
+        Destroy(warningZone);
+        stateMachine.ChangeState(typeof(DeathState));
     }
 }
 

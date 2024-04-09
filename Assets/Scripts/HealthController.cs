@@ -5,10 +5,25 @@ public class Health : MonoBehaviour
 {
     public float maxHealth = 100f;
     private float currentHealth;
+    private bool isDead = false;
 
+
+    [SerializeField] private Animator animator;
+
+    [Header ("Audio")]
+    public AudioClip[] deathSounds;
+    public AudioClip[] hurtSounds;
+    public float soundVolume = 0.3f;
+
+    [Header ("UnityEvents")]
     // Events that can be triggered on health change or death
     public UnityEvent<float> onHealthChanged;
     public UnityEvent onDeath;
+
+
+    private void Awake() {
+        animator = GetComponent<Animator>();
+    }
 
     void Start()
     {
@@ -19,6 +34,17 @@ public class Health : MonoBehaviour
     {
         currentHealth -= amount;
         onHealthChanged.Invoke(currentHealth / maxHealth); // Invoke with health percentage
+
+        if (currentHealth > 0)
+        {
+            GetComponent<FlashEffect>().Flash(); // Trigger the flash effect.
+            if (AudioManager.Instance && hurtSounds.Length > 0)
+            {
+                // Play a random hurt sound
+                AudioManager.Instance.PlaySound(hurtSounds[Random.Range(0, hurtSounds.Length)], soundVolume);
+            }
+        }
+        
 
         if (currentHealth <= 0)
         {
@@ -38,14 +64,26 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        if (isDead) return;
+        isDead = true;
+        
         onDeath.Invoke();
+
+        // Use SendMessage to call TriggerDeathState on any attached script
+        SendMessage("TriggerDeathState", SendMessageOptions.DontRequireReceiver);
+        
+        if (AudioManager.Instance && deathSounds.Length > 0)
+        {
+            // Play a random Death sound
+            AudioManager.Instance.PlaySound(deathSounds[Random.Range(0, deathSounds.Length)], soundVolume);
+            
+        }
         // Here we would add additional logic for the death of the character such as playing a death animation or disabling the game object
-
-        // This is used to tell the enemy spawner to decrement the number of enemies on the field.
-        EnemySpawner es = FindObjectOfType<EnemySpawner>();
-        es.OnEnemyKilled();
-
-        Destroy(gameObject); // TODO , remove once better death logic is implemented
+        FadeOutAfterDeathAnimation();
     }
 
+    public void FadeOutAfterDeathAnimation()
+    {
+        GetComponent<FadeOutOnDeath>().FadeOut();
+    }
 }
