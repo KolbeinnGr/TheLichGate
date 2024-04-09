@@ -120,11 +120,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves: []
   currentWaveIndex: 0
-  enemiesAlive: 0
-  maxEnemiesAllowed: 0
+  allEnemiesAlive: 0
+  enemiesAliveInWave: 0
+  maxEnemiesAllowed: 30
   maxEnemiesReached: 0
-  waveInterval: 0
-  relativeSpawnPoints: []
+  waveLength: 50
+  waveInterval: 10
+  relativeSpawnPoints:
+  - {fileID: 8956868294821930109}
+  - {fileID: 4712775510377021958}
+  - {fileID: 281207119193428202}
+  - {fileID: 6505236624835929884}
+  - {fileID: 4323708119257512251}
+  - {fileID: 297321784210777096}
+  - {fileID: 1124301743605451173}
+  - {fileID: 7604634424550560642}
+  - {fileID: 4611923954416567527}
+  - {fileID: 952741182153328178}
+  - {fileID: 5610887591742667798}
+  - {fileID: 5005277506717778603}
 --- !u!1 &4163130405301343820
 GameObject:
   m_ObjectHideFlags: 0

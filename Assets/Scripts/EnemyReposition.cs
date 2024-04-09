@@ -9,12 +9,13 @@ public class EnemyReposition : MonoBehaviour
 {
     public float despawnDistance = 15f;
     Transform player;
-    
+    EnemySpawner es;
 
 
     void Start()
     {
         player = FindObjectOfType<PlayerController>().transform;
+        es = FindObjectOfType<EnemySpawner>();
     }
 
 
@@ -28,7 +29,7 @@ public class EnemyReposition : MonoBehaviour
 
     void ReturnEnemy()
     {
-        EnemySpawner es = FindObjectOfType<EnemySpawner>();
+        
         transform.position = player.position + es.relativeSpawnPoints[Random.Range(0, es.relativeSpawnPoints.Count)].position;
     }
 }
