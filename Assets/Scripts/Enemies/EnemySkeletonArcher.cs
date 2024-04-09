@@ -182,6 +182,15 @@ public class EnemySkeletonArcher : MonoBehaviour, IEnemy
         stateMachine.ChangeState(typeof(DeathState));
     }
 
+    void OnDrawGizmosSelected() {
+        // Set the color of the Gizmo
+        Gizmos.color = Color.red;
+
+        // Draw a wire sphere around the GameObject to visualize the attack range
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+
 }
 
 

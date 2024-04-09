@@ -26,9 +26,9 @@ public class AttackState : State
         attackBehavior.Attack();
     }
 
-    public void PerformHit()
+    public void PerformHit(string attackname)
     {
-        attackBehavior.PerformHit();
+        attackBehavior.PerformHit(attackname);
     }
 }
 

@@ -13,7 +13,6 @@ public class DeathState : State
         enemy.Rb.velocity = Vector2.zero;
         enemy.Animator.SetBool("IsWalking", false);
         enemy.Animator.SetBool("IsDead", true);
-        // Additional idle behaviors like playing idle animation can be added here.
     }
 }
 

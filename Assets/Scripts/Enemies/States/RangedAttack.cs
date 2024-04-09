@@ -30,7 +30,7 @@ public class RangedAttack : IAttackBehavior // implements IAttackBehavior to use
         arrow.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
-    public void PerformHit()
+    public void PerformHit(string animationName)
     {
         
     }
