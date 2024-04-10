@@ -12,7 +12,7 @@ public class PlayerMeleeAttackController : AttackController
     
     [Header ("Audio")]
     public AudioClip[] swingSounds;
-    public float swingSoundVolume = 0.5f;
+    //public float swingSoundVolume = 0.5f;
 
     private PlayerStats playerStats;
 
@@ -44,7 +44,7 @@ public class PlayerMeleeAttackController : AttackController
             if (AudioManager.Instance)
             {
                 // Play a random swing sound
-                AudioManager.Instance.PlaySound(swingSounds[Random.Range(0, swingSounds.Length)], swingSoundVolume);
+                AudioManager.Instance.PlaySound(swingSounds[Random.Range(0, swingSounds.Length)]);
             }
             
             Destroy(spawnedSlash, animationPlayTime);

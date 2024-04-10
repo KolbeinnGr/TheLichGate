@@ -231,7 +231,16 @@ public class PlayerController : MonoBehaviour
 
     public void TriggerDeathState()
     {
+        StartCoroutine(Wait());
         animator.SetBool("IsDead", true);
+        walkSpeed = 0;
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(3);
+        GameManager.Instance.endScreen.SetActive(true);
+        GameManager.Instance.PauseGame();
     }
 
 }

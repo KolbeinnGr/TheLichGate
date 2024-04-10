@@ -8,8 +8,7 @@ public class MusicSlider : MonoBehaviour
     public Slider slider;
     void Start()
     {
-        AudioManager.Instance.SetMusicVolume(0.5f);
-        slider.value = AudioManager.Instance._musicSource.volume;
+        slider.value = AudioManager.Instance.musicVolume;
     }
     public void SetLevel(float sliderValue)
     {

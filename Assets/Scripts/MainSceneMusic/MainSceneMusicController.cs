@@ -39,6 +39,13 @@ public class MainSceneMusicController : MonoBehaviour
             counter -= 1;
             AudioManager.Instance._musicSource = loopMusic;
             AudioManager.Instance.PlayMusicDelayed(loopMusic.clip, startMusic.clip.length);
-        }   
+            AudioManager.Instance._musicSource = startMusic;
+        } 
+
+        if(counter == 0 && startMusic.isPlaying == false)
+        {
+            AudioManager.Instance._musicSource = loopMusic;
+            AudioManager.Instance._musicSource.volume = AudioManager.Instance.musicVolume;
+        }  
     }
 }

@@ -8,8 +8,7 @@ public class SFXSlider : MonoBehaviour
     public Slider slider;
     void Start()
     {
-        AudioManager.Instance.SetSfxVolume(0.5f);
-        slider.value = AudioManager.Instance._sfxSource.volume;
+        slider.value = AudioManager.Instance.musicVolume;
     }
     public void SetLevel(float sliderValue)
     {
