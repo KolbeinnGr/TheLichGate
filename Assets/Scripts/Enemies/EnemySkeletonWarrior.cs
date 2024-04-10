@@ -13,6 +13,8 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
     [SerializeField] private float speed = 3f;
     [SerializeField] private float attackRange = 1.5f;
     [SerializeField] private GameObject warningZone;
+    [SerializeField] private GameObject attackSlashGameObject;
+    private Animator attackSlashAnim;
     [SerializeField] private Transform enemyTransform;
 
 
@@ -35,6 +37,8 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
+        attackSlashAnim = attackSlashGameObject.GetComponent<Animator>();
+
         // state machine
         stateMachine = GetComponent<StateMachine>();
         InitializeStateMachine();
@@ -56,7 +60,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
             stateMachine.ChangeState(typeof(WalkState));
         }
 
-        if (!(stateMachine.currentState is DeathState))
+        if (!(stateMachine.currentState is DeathState) && !IsCurrentlyAttacking)
         {
             // Flip sprite on the X axis when the enemy is on either side of the target
             if (targetDestination.position.x > transform.position.x) {
@@ -79,7 +83,7 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
             { typeof(WalkState), new WalkState(this) },
             { typeof(IdleState), new IdleState(this) },
             { typeof(DeathState), new DeathState(this) },
-            { typeof(AttackState), new AttackState(this, new MeleeAttack(animator, warningZone, enemyTransform, targetDestination)) } // MeleeAttack is a reference to the MeleeAttack script
+            { typeof(AttackState), new AttackState(this, new MeleeAttack(this, animator, warningZone, enemyTransform, targetDestination, attackSlashGameObject, attackSlashAnim)) } // MeleeAttack is a reference to the MeleeAttack script
         };
         // set states
         stateMachine.SetStates(states);
@@ -126,7 +130,16 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         if (stateMachine.currentState is AttackState attackState)
         {   
             // if the attack state is active, perform the attack
-            attackState.PerformHit();
+            attackState.PerformHit("SkeletonWarriorSwordSlash");
+            // this is where we used to change IsCurrentlyAttacking to false;
+            
+        }
+    }
+
+    public void OnAttackAnimationEnd()
+    {
+        if (stateMachine.currentState is AttackState attackState)
+        {   
             IsCurrentlyAttacking = false;
         }
     }
@@ -137,6 +150,15 @@ public class EnemySkeletonWarrior : MonoBehaviour, IEnemy
         Destroy(warningZone);
         stateMachine.ChangeState(typeof(DeathState));
     }
+
+    void OnDrawGizmosSelected() {
+        // Set the color of the Gizmo
+        Gizmos.color = Color.red;
+
+        // Draw a wire sphere around the GameObject to visualize the attack range
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
 }
 
 

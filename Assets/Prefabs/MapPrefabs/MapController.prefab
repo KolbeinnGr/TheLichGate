@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3108959998862046988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4103791270647560975}
+  - component: {fileID: 8473843025158848701}
+  m_Layer: 0
+  m_Name: MapController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4103791270647560975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3108959998862046988}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8473843025158848701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3108959998862046988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9f6bc1d7816f44489c1702dc08d478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainChunks:
+  - {fileID: 903122275593872480, guid: 48e472c8257e61c4ea139fbdb4ee3a2e, type: 3}
+  - {fileID: 903122275593872480, guid: 7d716a0d0ddb7ad48870f75b5951c32e, type: 3}
+  - {fileID: 903122275593872480, guid: b03ebe986fbbd5641b006201630d95b9, type: 3}
+  - {fileID: 903122275593872480, guid: 3f33eb66da1f46046b475800fb0f0abb, type: 3}
+  - {fileID: 903122275593872480, guid: 7741c5f118d554746afcad0d96313b9d, type: 3}
+  - {fileID: 903122275593872480, guid: 67111ee844dcfde4182f3ddd7b33344f, type: 3}
+  - {fileID: 903122275593872480, guid: b74436fe99374404bbcc63b916357ddc, type: 3}
+  terrainChunkWeights: 6400000064000000640000003c0000003c0000006400000064000000
+  player: {fileID: 0}
+  checkRadius: 0.1
+  terrainMask:
+    serializedVersion: 2
+    m_Bits: 64
+  currentChunk: {fileID: 0}
+  spawnedChunks:
+  - {fileID: 0}
+  latestChunk: {fileID: 0}
+  maxOpDist: 70
+  opCoolDownDur: 1

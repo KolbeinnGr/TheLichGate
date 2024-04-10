@@ -99,5 +99,10 @@ public class GameManager : MonoBehaviour
             timerCoroutine = StartCoroutine(TimerCoroutine());
         }
     }
+
+    public TimeSpan GetTime()
+    {
+        return currentTime;
+    }
     
 }

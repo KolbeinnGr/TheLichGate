@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
-    [SerializeField] private AudioSource _musicSource, _sfxSource, _ambientSource;
+    public AudioSource _musicSource, _sfxSource, _ambientSource;
     
     void Awake() {
         if (Instance != null && Instance != this) {
@@ -47,10 +47,12 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     
-    public void PlaySound(AudioClip clip, float volume = 1f) {
+    public void PlaySound(AudioClip clip, float volume = -1f) {
         if (clip == null) return;
-        _sfxSource.volume = volume;
-        _sfxSource.PlayOneShot(clip);
+        if (volume >= 0) {
+            _sfxSource.volume = volume;
+        }
+        _sfxSource.Play();
     }
     
     public void PlayMusic(AudioClip clip, float volume = -1f) {
@@ -61,6 +63,16 @@ public class AudioManager : MonoBehaviour
         _musicSource.clip = clip;
         _musicSource.loop = true;
         _musicSource.Play();
+    }
+
+    public void PlayMusicDelayed(AudioClip clip, float time, float volume = -1f) {
+        if (clip == null) return;
+        if (volume >= 0) {
+            _musicSource.volume = volume;
+        }
+        _musicSource.clip = clip;
+        _musicSource.loop = true;
+        _musicSource.PlayDelayed(time);
     }
 
     public void PlayAmbient(AudioClip clip, float volume = -1f) {

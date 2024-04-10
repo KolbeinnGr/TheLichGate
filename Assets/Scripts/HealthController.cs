@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
 
 
     [SerializeField] private Animator animator;
+    private EnemySpawner enemySpawner;
 
     [Header ("Audio")]
     public AudioClip[] deathSounds;
@@ -21,6 +22,7 @@ public class Health : MonoBehaviour
     public UnityEvent onDeath;
 
 
+
     private void Awake() {
         animator = GetComponent<Animator>();
     }
@@ -28,6 +30,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        enemySpawner = FindObjectOfType<EnemySpawner>();
     }
 
     public void TakeDamage(float amount)
@@ -66,7 +69,8 @@ public class Health : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
-        
+        enemySpawner.OnEnemyKilled(); // To help keep track of no. of enemies on the stage in the enemy spawner.
+       
         onDeath.Invoke();
 
         // Use SendMessage to call TriggerDeathState on any attached script
