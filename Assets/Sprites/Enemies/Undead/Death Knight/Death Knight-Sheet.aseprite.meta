@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 55
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638462244568897449
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Death Knight-Sheet_Frame_0
     originalName: 
-    pivot: {x: 0.49999994, y: 0}
+    pivot: {x: 0.44444442, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 288
       width: 27
       height: 49
-    spriteID: 687d8c29a393eb1438046d5584b3ea7c
+    spriteID: 1cedad318bec50f42a17ea0f605ed0e3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,7 +141,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 288}
   - name: Death Knight-Sheet_Frame_1
     originalName: 
-    pivot: {x: 0.49999994, y: 0}
+    pivot: {x: 0.44444442, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -150,7 +150,7 @@ ScriptedImporter:
       y: 121
       width: 27
       height: 48
-    spriteID: aed6f3ce39d88514db67e3ebdd8686b6
+    spriteID: 5b05246df99881b47b5d8b8dcb0406fc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,7 +161,7 @@ ScriptedImporter:
     uvTransform: {x: 438, y: 121}
   - name: Death Knight-Sheet_Frame_2
     originalName: 
-    pivot: {x: 0.49999994, y: 0}
+    pivot: {x: 0.44444442, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -170,7 +170,7 @@ ScriptedImporter:
       y: 232
       width: 27
       height: 48
-    spriteID: 0a67770b80dbd2143926bd4d6bd4e51c
+    spriteID: 7954cf5727a2d4d4d9a0e0f27469e996
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,7 +181,7 @@ ScriptedImporter:
     uvTransform: {x: 148, y: 232}
   - name: Death Knight-Sheet_Frame_3
     originalName: 
-    pivot: {x: 0.49999994, y: 0}
+    pivot: {x: 0.44444442, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 232
       width: 27
       height: 47
-    spriteID: 9a63aea757533f14c8fc416deadd4d82
+    spriteID: be780a9122d79b948bdc64f248e4dec3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,7 +201,7 @@ ScriptedImporter:
     uvTransform: {x: 253, y: 232}
   - name: Death Knight-Sheet_Frame_4
     originalName: 
-    pivot: {x: 0.49999994, y: 0}
+    pivot: {x: 0.44444442, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -210,7 +210,7 @@ ScriptedImporter:
       y: 232
       width: 27
       height: 47
-    spriteID: c8c8ff0e3c776ab46a8f72cfa6b500a7
+    spriteID: c1c17712d66459a4491aa6607fc958e2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -221,7 +221,7 @@ ScriptedImporter:
     uvTransform: {x: 288, y: 232}
   - name: Death Knight-Sheet_Frame_5
     originalName: 
-    pivot: {x: 0.49999994, y: 0}
+    pivot: {x: 0.44444442, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -230,7 +230,7 @@ ScriptedImporter:
       y: 232
       width: 27
       height: 48
-    spriteID: 5fc04b8970f096a48817e26b0d37be59
+    spriteID: 51708e7596809d946a7887a7c21523eb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -241,7 +241,7 @@ ScriptedImporter:
     uvTransform: {x: 183, y: 232}
   - name: Death Knight-Sheet_Frame_6
     originalName: 
-    pivot: {x: 0.49999994, y: 0}
+    pivot: {x: 0.44444442, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -250,7 +250,7 @@ ScriptedImporter:
       y: 232
       width: 27
       height: 48
-    spriteID: 53c59645be5efcf488aa6109cf40f9db
+    spriteID: 1a6c8a0b4974a244f9b3385ea629cbef
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -261,7 +261,7 @@ ScriptedImporter:
     uvTransform: {x: 218, y: 232}
   - name: Death Knight-Sheet_Frame_7
     originalName: 
-    pivot: {x: 0.49999994, y: 0}
+    pivot: {x: 0.44444442, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -270,7 +270,7 @@ ScriptedImporter:
       y: 288
       width: 27
       height: 49
-    spriteID: 45eba00799a1e6f4f9346e6fd9ec33ff
+    spriteID: 34e81e1d6781e67468e0516538f5a332
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -290,7 +290,7 @@ ScriptedImporter:
       y: 121
       width: 33
       height: 48
-    spriteID: 974dfc07e0e577c44883eedd88bd6fa8
+    spriteID: 2bfc9f16b73c405469b720bb734ab360
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -310,7 +310,7 @@ ScriptedImporter:
       y: 121
       width: 33
       height: 47
-    spriteID: 394a4d00faef11144876b6bff97df20e
+    spriteID: caae71cba94cd3744a33b8bb65f5abd1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -330,7 +330,7 @@ ScriptedImporter:
       y: 121
       width: 37
       height: 47
-    spriteID: 88c954b399129a0418f1b240bb95394a
+    spriteID: fa63bb90d79e098439cda9f3dff62cdd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -350,7 +350,7 @@ ScriptedImporter:
       y: 121
       width: 37
       height: 48
-    spriteID: 32438f457d19281479324b225dc819a9
+    spriteID: 8c4f2ff659fe286489eb1408d6204712
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -370,7 +370,7 @@ ScriptedImporter:
       y: 121
       width: 37
       height: 48
-    spriteID: 8da3593a83b0ead439871ca3d60707ba
+    spriteID: 3aa22228cc5291b4cb905bf1e6682a1e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -390,7 +390,7 @@ ScriptedImporter:
       y: 121
       width: 37
       height: 47
-    spriteID: 1d3438ac43e59aa48980bfe4f514e263
+    spriteID: 906390611d5e4fa448a63a8d62045315
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -410,7 +410,7 @@ ScriptedImporter:
       y: 121
       width: 37
       height: 47
-    spriteID: eab7ed0a81fff88449026fc182f97ffb
+    spriteID: bf03c35615fea4046a50ef534eee5a87
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -430,7 +430,7 @@ ScriptedImporter:
       y: 121
       width: 33
       height: 48
-    spriteID: 98e83b23d7c4fa1499552e28b3471f4c
+    spriteID: 8580625cda5e5c94ab5784e4de7b7ae1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -441,7 +441,7 @@ ScriptedImporter:
     uvTransform: {x: 271, y: 121}
   - name: Death Knight-Sheet_Frame_16
     originalName: 
-    pivot: {x: 0.55813956, y: 0}
+    pivot: {x: 0.5333333, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -450,7 +450,7 @@ ScriptedImporter:
       y: 4
       width: 45
       height: 47
-    spriteID: 4505fa0811696ce4ca255d7476b1e851
+    spriteID: 988cd9ee89700924d81e0e56dbc3c4bb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -461,7 +461,7 @@ ScriptedImporter:
     uvTransform: {x: 198, y: 4}
   - name: Death Knight-Sheet_Frame_17
     originalName: 
-    pivot: {x: 0.55813956, y: 0}
+    pivot: {x: 0.5333333, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -470,7 +470,7 @@ ScriptedImporter:
       y: 4
       width: 45
       height: 46
-    spriteID: 3e1aa59a238916f44bbae68b72e3ce78
+    spriteID: 6db55db7de9cc3c46bfe431f2c9b0c6b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -490,7 +490,7 @@ ScriptedImporter:
       y: 66
       width: 40
       height: 46
-    spriteID: d22130d2be7a40b42be334b1ae6574c9
+    spriteID: 4a29674bcccd17e4196c89278eed15e3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -510,7 +510,7 @@ ScriptedImporter:
       y: 66
       width: 44
       height: 47
-    spriteID: c7379cd218c0885409dad1b91ef49266
+    spriteID: 817f084c5e4fc2c4c8988097c1d99019
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -530,7 +530,7 @@ ScriptedImporter:
       y: 66
       width: 44
       height: 47
-    spriteID: 499dfc2d2a15f8f4d91dcdffe03402f1
+    spriteID: a23d1f33f55c6f54690448cff5e8665f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -550,7 +550,7 @@ ScriptedImporter:
       y: 66
       width: 44
       height: 46
-    spriteID: beca29d7a0174b84da32889bca869d2a
+    spriteID: 28a82c7641d80984abf8334042b9e1e6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -570,7 +570,7 @@ ScriptedImporter:
       y: 66
       width: 40
       height: 46
-    spriteID: c6bd1a85274888f4a8fc5536e4f5a709
+    spriteID: e9ed5ef1f7d9df744abfc7f1f57f1e54
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -581,7 +581,7 @@ ScriptedImporter:
     uvTransform: {x: 368, y: 66}
   - name: Death Knight-Sheet_Frame_23
     originalName: 
-    pivot: {x: 0.55813956, y: 0}
+    pivot: {x: 0.5333333, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -590,7 +590,7 @@ ScriptedImporter:
       y: 4
       width: 45
       height: 47
-    spriteID: 188b483833931144cae879fb862c0441
+    spriteID: 04efeb938a971d04d9d3ebf3d081ee2f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -601,7 +601,7 @@ ScriptedImporter:
     uvTransform: {x: 251, y: 4}
   - name: Death Knight-Sheet_Frame_24
     originalName: 
-    pivot: {x: 0.30769226, y: 0}
+    pivot: {x: 0.27586204, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -610,7 +610,7 @@ ScriptedImporter:
       y: 315
       width: 29
       height: 47
-    spriteID: a62941a16af81a94ba9f5b7c91360dab
+    spriteID: 47443e8cf8ba22343a773b882dedc218
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -621,7 +621,7 @@ ScriptedImporter:
     uvTransform: {x: -43, y: 315}
   - name: Death Knight-Sheet_Frame_25
     originalName: 
-    pivot: {x: 0.28, y: 0}
+    pivot: {x: 0.25, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -630,7 +630,7 @@ ScriptedImporter:
       y: 232
       width: 28
       height: 48
-    spriteID: d8bfc23e6f9fa2449a4e4c2cc534487e
+    spriteID: 342c2c546448e594abc457f74118034f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -641,7 +641,7 @@ ScriptedImporter:
     uvTransform: {x: -1, y: 232}
   - name: Death Knight-Sheet_Frame_26
     originalName: 
-    pivot: {x: 0.4230769, y: 0}
+    pivot: {x: 0.3793103, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -650,7 +650,7 @@ ScriptedImporter:
       y: 370
       width: 29
       height: 47
-    spriteID: a38fa6e9e6873fd46a10f7a53766df0d
+    spriteID: 1166eab19a961514e85669e799ac444d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -661,7 +661,7 @@ ScriptedImporter:
     uvTransform: {x: -40, y: 370}
   - name: Death Knight-Sheet_Frame_27
     originalName: 
-    pivot: {x: 0.3846154, y: 0}
+    pivot: {x: 0.3448276, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -670,7 +670,7 @@ ScriptedImporter:
       y: 177
       width: 29
       height: 46
-    spriteID: 7d1ab386d17872647a6cdfe5c80673f9
+    spriteID: ab864308b65fb1a44a73307c4b5e5509
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -681,7 +681,7 @@ ScriptedImporter:
     uvTransform: {x: 271, y: 177}
   - name: Death Knight-Sheet_Frame_28
     originalName: 
-    pivot: {x: 0.30769226, y: 0}
+    pivot: {x: 0.27586204, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -690,7 +690,7 @@ ScriptedImporter:
       y: 425
       width: 29
       height: 47
-    spriteID: e8ced60c8bcef4643bfc7cdd2a42f794
+    spriteID: 91ba9e67816ae4b4eaa8fbfb133b28c8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -701,7 +701,7 @@ ScriptedImporter:
     uvTransform: {x: -43, y: 425}
   - name: Death Knight-Sheet_Frame_29
     originalName: 
-    pivot: {x: 0.28, y: 0}
+    pivot: {x: 0.25, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -710,7 +710,7 @@ ScriptedImporter:
       y: 232
       width: 28
       height: 48
-    spriteID: e0492c75dfd92314a9f90188825e498d
+    spriteID: 945b9cd96c7bb834caafd614882d6bf1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -721,7 +721,7 @@ ScriptedImporter:
     uvTransform: {x: 35, y: 232}
   - name: Death Knight-Sheet_Frame_30
     originalName: 
-    pivot: {x: 0.4230769, y: 0}
+    pivot: {x: 0.3793103, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -730,7 +730,7 @@ ScriptedImporter:
       y: 177
       width: 29
       height: 47
-    spriteID: 19a22be625b367b41aba8795309e7325
+    spriteID: f596684c95961d74c8d2ca50bfc9b006
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -741,7 +741,7 @@ ScriptedImporter:
     uvTransform: {x: 3, y: 177}
   - name: Death Knight-Sheet_Frame_31
     originalName: 
-    pivot: {x: 0.3846154, y: 0}
+    pivot: {x: 0.3448276, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -750,7 +750,7 @@ ScriptedImporter:
       y: 177
       width: 29
       height: 46
-    spriteID: 4f859f0a2c39f9d40b9b8227e4636600
+    spriteID: 102e100085934474e9562c95d2a48903
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -761,7 +761,7 @@ ScriptedImporter:
     uvTransform: {x: 308, y: 177}
   - name: Death Knight-Sheet_Frame_32
     originalName: 
-    pivot: {x: 0.30769226, y: 0}
+    pivot: {x: 0.27586204, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -770,7 +770,7 @@ ScriptedImporter:
       y: 177
       width: 29
       height: 47
-    spriteID: 8829021b8ab77c84db28bb7f1d349acf
+    spriteID: 71385d838e540434f8be49afa6c43a2d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -781,7 +781,7 @@ ScriptedImporter:
     uvTransform: {x: 37, y: 177}
   - name: Death Knight-Sheet_Frame_33
     originalName: 
-    pivot: {x: 0.28, y: 0}
+    pivot: {x: 0.25, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -790,7 +790,7 @@ ScriptedImporter:
       y: 232
       width: 28
       height: 48
-    spriteID: af7793b3ee2d3b74dab2f5e76f2ff65f
+    spriteID: 74a493d0957b83c42817e57d475cc67e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -801,7 +801,7 @@ ScriptedImporter:
     uvTransform: {x: 71, y: 232}
   - name: Death Knight-Sheet_Frame_34
     originalName: 
-    pivot: {x: 0.4230769, y: 0}
+    pivot: {x: 0.3793103, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -810,7 +810,7 @@ ScriptedImporter:
       y: 177
       width: 29
       height: 47
-    spriteID: b02e090e87c2f394a90c1fcffd000423
+    spriteID: 19c830600300eb243bbe355fa0829c86
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -821,7 +821,7 @@ ScriptedImporter:
     uvTransform: {x: 77, y: 177}
   - name: Death Knight-Sheet_Frame_35
     originalName: 
-    pivot: {x: 0.4230769, y: 0}
+    pivot: {x: 0.3793103, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -830,7 +830,7 @@ ScriptedImporter:
       y: 177
       width: 29
       height: 46
-    spriteID: fb5c0564b395a8a48b4b64eafcf50684
+    spriteID: e415bc7511a3269479e7d2b36dbb7c27
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -841,7 +841,7 @@ ScriptedImporter:
     uvTransform: {x: 346, y: 177}
   - name: Death Knight-Sheet_Frame_36
     originalName: 
-    pivot: {x: 0.39285713, y: 0}
+    pivot: {x: 0.36666664, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -850,7 +850,7 @@ ScriptedImporter:
       y: 258
       width: 30
       height: 49
-    spriteID: e7e83ce9f96b4d84ba53202190f169a8
+    spriteID: acc1a22263a19054a9bf2b421cc93c4e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -861,7 +861,7 @@ ScriptedImporter:
     uvTransform: {x: -40, y: 258}
   - name: Death Knight-Sheet_Frame_37
     originalName: 
-    pivot: {x: 0.35483867, y: 0}
+    pivot: {x: 0.3235294, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -870,7 +870,7 @@ ScriptedImporter:
       y: 177
       width: 34
       height: 40
-    spriteID: 5e0fadaa47b688b419ba2738454b4292
+    spriteID: aa71c83fcc692a942be8e6d319b297df
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -881,7 +881,7 @@ ScriptedImporter:
     uvTransform: {x: 188, y: 177}
   - name: Death Knight-Sheet_Frame_38
     originalName: 
-    pivot: {x: 0.3235294, y: 0}
+    pivot: {x: 0.29729727, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -890,7 +890,7 @@ ScriptedImporter:
       y: 121
       width: 37
       height: 37
-    spriteID: ea2c551cc1cd44848b9ca39d8d146279
+    spriteID: 8c1df04a78b7b7a4eb1450078f0e0c31
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -910,7 +910,7 @@ ScriptedImporter:
       y: 232
       width: 38
       height: 33
-    spriteID: 0bf9f046a418c64489d3ff484c92e0be
+    spriteID: 20637c6f6853e5d49a431aa0bef7fae8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -930,7 +930,7 @@ ScriptedImporter:
       y: 288
       width: 54
       height: 17
-    spriteID: 700278831f719a744a28b7d3e1936e98
+    spriteID: 41ec82257ecf2084dbe4b6c55fa01511
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -950,7 +950,7 @@ ScriptedImporter:
       y: 288
       width: 54
       height: 12
-    spriteID: 2fc055292b23cf142a7f28d84af44369
+    spriteID: 1753297d9ffad7a458e74e370dd4fada
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -970,7 +970,7 @@ ScriptedImporter:
       y: 288
       width: 54
       height: 12
-    spriteID: a7b3bcc90f76c9847b61a6c9d35cba40
+    spriteID: 3bbb2c7e2b3f6794ab0b80f14fcca255
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -981,7 +981,7 @@ ScriptedImporter:
     uvTransform: {x: 361, y: 288}
   - name: Death Knight-Sheet_Frame_43
     originalName: 
-    pivot: {x: 0.30769226, y: 0}
+    pivot: {x: 0.27586204, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -990,7 +990,7 @@ ScriptedImporter:
       y: 177
       width: 29
       height: 47
-    spriteID: 7b3efaacb1d572d4088fcea38aa07001
+    spriteID: 015487842433700468c6b35b07dfa701
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1001,7 +1001,7 @@ ScriptedImporter:
     uvTransform: {x: 111, y: 177}
   - name: Death Knight-Sheet_Frame_44
     originalName: 
-    pivot: {x: 0.28, y: 0}
+    pivot: {x: 0.25, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1010,7 +1010,7 @@ ScriptedImporter:
       y: 232
       width: 28
       height: 48
-    spriteID: 532ad8210d1d52b4cb4ad22697cee104
+    spriteID: 75f1becbbdf2b1b49b08a44f71e19cb6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1021,7 +1021,7 @@ ScriptedImporter:
     uvTransform: {x: 107, y: 232}
   - name: Death Knight-Sheet_Frame_45
     originalName: 
-    pivot: {x: 0.4230769, y: 0}
+    pivot: {x: 0.3793103, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1030,7 +1030,7 @@ ScriptedImporter:
       y: 177
       width: 29
       height: 47
-    spriteID: 0f2892fba33dc65438d944739e5ddf93
+    spriteID: 632a1320c75e49b4799bf23900651907
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1041,7 +1041,7 @@ ScriptedImporter:
     uvTransform: {x: 151, y: 177}
   - name: Death Knight-Sheet_Frame_46
     originalName: 
-    pivot: {x: 0.4230769, y: 0}
+    pivot: {x: 0.3793103, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1050,7 +1050,7 @@ ScriptedImporter:
       y: 177
       width: 29
       height: 46
-    spriteID: 5b994679d78b14643864d5e0704c1b18
+    spriteID: 8009cfb88f010af439840e22ad16e1e5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1061,7 +1061,7 @@ ScriptedImporter:
     uvTransform: {x: 383, y: 177}
   - name: Death Knight-Sheet_Frame_47
     originalName: 
-    pivot: {x: 0.39285713, y: 0}
+    pivot: {x: 0.35483867, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1070,7 +1070,7 @@ ScriptedImporter:
       y: 201
       width: 31
       height: 49
-    spriteID: 4d694a8a897275d49a31418d61064c71
+    spriteID: 97a1fbd961f70aa4e88ed2a4eb550185
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1081,7 +1081,7 @@ ScriptedImporter:
     uvTransform: {x: -40, y: 201}
   - name: Death Knight-Sheet_Frame_48
     originalName: 
-    pivot: {x: 0.35483867, y: 0}
+    pivot: {x: 0.3235294, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1090,7 +1090,7 @@ ScriptedImporter:
       y: 177
       width: 34
       height: 40
-    spriteID: ecdb489af62dd0c4097330428d8c7a9d
+    spriteID: c42cd7d2b0cdc984c8bc6d77e1a25b63
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1101,7 +1101,7 @@ ScriptedImporter:
     uvTransform: {x: 230, y: 177}
   - name: Death Knight-Sheet_Frame_49
     originalName: 
-    pivot: {x: 0.3235294, y: 0}
+    pivot: {x: 0.30555555, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1110,7 +1110,7 @@ ScriptedImporter:
       y: 177
       width: 36
       height: 37
-    spriteID: b604d65c8d91d70489455e70c7a11739
+    spriteID: 348117e47be2ba74abcbdacdacbb0a2b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1130,7 +1130,7 @@ ScriptedImporter:
       y: 232
       width: 38
       height: 33
-    spriteID: 0de4be036d097d342aa83cc228d85b85
+    spriteID: 3680144c47006094dac1348aa53e1c7a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1150,7 +1150,7 @@ ScriptedImporter:
       y: 288
       width: 54
       height: 17
-    spriteID: ab107fb0550a6734183e54e55b485277
+    spriteID: 8d24bf92f0144b342bd1ccc3c740ad0a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1170,7 +1170,7 @@ ScriptedImporter:
       y: 313
       width: 54
       height: 12
-    spriteID: 235fb12748e9fe84ca5b41e7ff861f1d
+    spriteID: 375208fc04344f44ca77584e996116d5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1190,7 +1190,7 @@ ScriptedImporter:
       y: 313
       width: 54
       height: 12
-    spriteID: 99ee1cf5e5a14284e999c42c23fd1497
+    spriteID: b5cce6ba60de72a4ebb413b88ef7f8ea
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1201,7 +1201,7 @@ ScriptedImporter:
     uvTransform: {x: 237, y: 313}
   - name: Death Knight-Sheet_Frame_54
     originalName: 
-    pivot: {x: 0.4347826, y: 0}
+    pivot: {x: 0.3846154, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1210,7 +1210,7 @@ ScriptedImporter:
       y: 288
       width: 26
       height: 49
-    spriteID: 5fb7ec824fdb6f04a897e63914a0308c
+    spriteID: ff18455c8fa7bca4ca731d1d249c76a6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1221,7 +1221,7 @@ ScriptedImporter:
     uvTransform: {x: 72, y: 288}
   - name: Death Knight-Sheet_Frame_55
     originalName: 
-    pivot: {x: 0.47826082, y: 0}
+    pivot: {x: 0.4230769, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1230,7 +1230,7 @@ ScriptedImporter:
       y: 288
       width: 26
       height: 49
-    spriteID: a1fb875106ec19e4292b3d2027028619
+    spriteID: 62a6c13bc79203d40919ac8812ee4415
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1241,7 +1241,7 @@ ScriptedImporter:
     uvTransform: {x: 107, y: 288}
   - name: Death Knight-Sheet_Frame_56
     originalName: 
-    pivot: {x: 0.4242424, y: 0}
+    pivot: {x: 0.39999998, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1250,7 +1250,7 @@ ScriptedImporter:
       y: 66
       width: 35
       height: 62
-    spriteID: adcb097ebeba17f48ac6b1239e5cfce6
+    spriteID: 77308c2ed2f236f409f803de5118ec95
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1270,7 +1270,7 @@ ScriptedImporter:
       y: 4
       width: 56
       height: 54
-    spriteID: d10da1560f6fd914d87eac8b29f17ed4
+    spriteID: 510b34363ba146948ad375398dcab2c9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1290,7 +1290,7 @@ ScriptedImporter:
       y: 4
       width: 51
       height: 46
-    spriteID: 520ceeb0b6aebfc4ab214f173451679e
+    spriteID: b28d84880e73ccb4280d0637a59cb81b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1310,7 +1310,7 @@ ScriptedImporter:
       y: 4
       width: 46
       height: 46
-    spriteID: 1463c1e9453ee474d9b29d270cf302e3
+    spriteID: 7ec5005e32abe0d4abf56df3e4213307
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1321,7 +1321,7 @@ ScriptedImporter:
     uvTransform: {x: 127, y: 4}
   - name: Death Knight-Sheet_Frame_60
     originalName: 
-    pivot: {x: 0.47826082, y: 0}
+    pivot: {x: 0.4230769, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1330,7 +1330,7 @@ ScriptedImporter:
       y: 288
       width: 26
       height: 49
-    spriteID: 52fd663b55030f843ade7011de4de59a
+    spriteID: 189e69fac856b0449965867364c9f806
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1341,7 +1341,7 @@ ScriptedImporter:
     uvTransform: {x: 141, y: 288}
   - name: Death Knight-Sheet_Frame_61
     originalName: 
-    pivot: {x: 0.4347826, y: 0}
+    pivot: {x: 0.5777778, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1350,7 +1350,7 @@ ScriptedImporter:
       y: 4
       width: 45
       height: 47
-    spriteID: d267016cda0ab8149ba9a9d128154d20
+    spriteID: e59e0576e1c5a5342bc368ac0555a5b8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1361,7 +1361,7 @@ ScriptedImporter:
     uvTransform: {x: 306, y: 4}
   - name: Death Knight-Sheet_Frame_62
     originalName: 
-    pivot: {x: 0.33333334, y: 0}
+    pivot: {x: 0.5777778, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1370,7 +1370,7 @@ ScriptedImporter:
       y: 4
       width: 45
       height: 47
-    spriteID: bc97bd0411f31454da10c086d1cfd172
+    spriteID: 4d0ed64b0dd73d04c91ca2caea89aef0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1381,7 +1381,7 @@ ScriptedImporter:
     uvTransform: {x: 359, y: 4}
   - name: Death Knight-Sheet_Frame_63
     originalName: 
-    pivot: {x: 0.33333334, y: 0}
+    pivot: {x: 0.53658533, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1390,7 +1390,7 @@ ScriptedImporter:
       y: 66
       width: 41
       height: 47
-    spriteID: 5874e52e0e486db4b897f31f342a7ef0
+    spriteID: 3efefed3856a0d240a62165ece0ccde4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1401,7 +1401,7 @@ ScriptedImporter:
     uvTransform: {x: 222, y: 66}
   - name: Death Knight-Sheet_Frame_64
     originalName: 
-    pivot: {x: 0.33333334, y: 0}
+    pivot: {x: 0.5681818, y: -0.02173913}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1410,7 +1410,7 @@ ScriptedImporter:
       y: 66
       width: 44
       height: 46
-    spriteID: 2085806f71137ea48bc19440a715f2bb
+    spriteID: bd49171030e451743b04179bc012cc67
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1421,7 +1421,7 @@ ScriptedImporter:
     uvTransform: {x: 173, y: 65}
   - name: Death Knight-Sheet_Frame_65
     originalName: 
-    pivot: {x: 0.33333334, y: 0}
+    pivot: {x: 0.6060606, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1430,7 +1430,7 @@ ScriptedImporter:
       y: 121
       width: 33
       height: 45
-    spriteID: 7b51d948226b16843baa5b070a97a24e
+    spriteID: 188439dc5dcedd64eaf79d38cb6bef63
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1441,7 +1441,7 @@ ScriptedImporter:
     uvTransform: {x: 360, y: 118}
   - name: Death Knight-Sheet_Frame_66
     originalName: 
-    pivot: {x: 0.44, y: 0}
+    pivot: {x: 0.64285713, y: -0.044444446}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1450,7 +1450,7 @@ ScriptedImporter:
       y: 66
       width: 42
       height: 45
-    spriteID: ce80730dea0644d419cb0813e872547d
+    spriteID: 846567f003c7815418f3eda045648d3b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1461,7 +1461,7 @@ ScriptedImporter:
     uvTransform: {x: 276, y: 64}
   - name: Death Knight-Sheet_Frame_67
     originalName: 
-    pivot: {x: 0.38095242, y: 0}
+    pivot: {x: 0.6153846, y: -0.021276595}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1470,7 +1470,7 @@ ScriptedImporter:
       y: 66
       width: 39
       height: 47
-    spriteID: cd2ed0b163f16b94c8c7e9db1ea7d54d
+    spriteID: 3224832d25695da408ac2a189ea52cd2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1481,7 +1481,7 @@ ScriptedImporter:
     uvTransform: {x: 419, y: 65}
   - name: Death Knight-Sheet_Frame_68
     originalName: 
-    pivot: {x: 0.27027026, y: 0}
+    pivot: {x: 0.625, y: -0.018867925}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1490,7 +1490,7 @@ ScriptedImporter:
       y: 4
       width: 40
       height: 53
-    spriteID: ad07f198e1b6d1a4bab5de2192903112
+    spriteID: 0e098ce531770cd4387d66493d256883
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1501,7 +1501,7 @@ ScriptedImporter:
     uvTransform: {x: 97, y: 3}
   - name: Death Knight-Sheet_Frame_69
     originalName: 
-    pivot: {x: 0.1818182, y: 0}
+    pivot: {x: 0.5454545, y: -0.01754386}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1510,7 +1510,7 @@ ScriptedImporter:
       y: 136
       width: 33
       height: 57
-    spriteID: 962ee2a4d7f6f8a44bc8be04c163bb5b
+    spriteID: e3be7a257fbd53942bfd8e20d54a1ec4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1535,7 +1535,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 687d8c29a393eb1438046d5584b3ea7c
+      spriteId: 1cedad318bec50f42a17ea0f605ed0e3
     - name: Death Knight-Sheet_Frame_1
       frameIndex: 1
       cellRect:
@@ -1543,7 +1543,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: aed6f3ce39d88514db67e3ebdd8686b6
+      spriteId: 5b05246df99881b47b5d8b8dcb0406fc
     - name: Death Knight-Sheet_Frame_2
       frameIndex: 2
       cellRect:
@@ -1551,7 +1551,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 0a67770b80dbd2143926bd4d6bd4e51c
+      spriteId: 7954cf5727a2d4d4d9a0e0f27469e996
     - name: Death Knight-Sheet_Frame_3
       frameIndex: 3
       cellRect:
@@ -1559,7 +1559,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 9a63aea757533f14c8fc416deadd4d82
+      spriteId: be780a9122d79b948bdc64f248e4dec3
     - name: Death Knight-Sheet_Frame_4
       frameIndex: 4
       cellRect:
@@ -1567,7 +1567,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: c8c8ff0e3c776ab46a8f72cfa6b500a7
+      spriteId: c1c17712d66459a4491aa6607fc958e2
     - name: Death Knight-Sheet_Frame_5
       frameIndex: 5
       cellRect:
@@ -1575,7 +1575,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 5fc04b8970f096a48817e26b0d37be59
+      spriteId: 51708e7596809d946a7887a7c21523eb
     - name: Death Knight-Sheet_Frame_6
       frameIndex: 6
       cellRect:
@@ -1583,7 +1583,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 53c59645be5efcf488aa6109cf40f9db
+      spriteId: 1a6c8a0b4974a244f9b3385ea629cbef
     - name: Death Knight-Sheet_Frame_7
       frameIndex: 7
       cellRect:
@@ -1591,7 +1591,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 45eba00799a1e6f4f9346e6fd9ec33ff
+      spriteId: 34e81e1d6781e67468e0516538f5a332
     - name: Death Knight-Sheet_Frame_8
       frameIndex: 8
       cellRect:
@@ -1599,7 +1599,7 @@ ScriptedImporter:
         y: 0
         width: 33
         height: 48
-      spriteId: 974dfc07e0e577c44883eedd88bd6fa8
+      spriteId: 2bfc9f16b73c405469b720bb734ab360
     - name: Death Knight-Sheet_Frame_9
       frameIndex: 9
       cellRect:
@@ -1607,7 +1607,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 394a4d00faef11144876b6bff97df20e
+      spriteId: caae71cba94cd3744a33b8bb65f5abd1
     - name: Death Knight-Sheet_Frame_10
       frameIndex: 10
       cellRect:
@@ -1615,7 +1615,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 88c954b399129a0418f1b240bb95394a
+      spriteId: fa63bb90d79e098439cda9f3dff62cdd
     - name: Death Knight-Sheet_Frame_11
       frameIndex: 11
       cellRect:
@@ -1623,7 +1623,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 32438f457d19281479324b225dc819a9
+      spriteId: 8c4f2ff659fe286489eb1408d6204712
     - name: Death Knight-Sheet_Frame_12
       frameIndex: 12
       cellRect:
@@ -1631,7 +1631,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 8da3593a83b0ead439871ca3d60707ba
+      spriteId: 3aa22228cc5291b4cb905bf1e6682a1e
     - name: Death Knight-Sheet_Frame_13
       frameIndex: 13
       cellRect:
@@ -1639,7 +1639,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 1d3438ac43e59aa48980bfe4f514e263
+      spriteId: 906390611d5e4fa448a63a8d62045315
     - name: Death Knight-Sheet_Frame_14
       frameIndex: 14
       cellRect:
@@ -1647,7 +1647,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: eab7ed0a81fff88449026fc182f97ffb
+      spriteId: bf03c35615fea4046a50ef534eee5a87
     - name: Death Knight-Sheet_Frame_15
       frameIndex: 15
       cellRect:
@@ -1655,7 +1655,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 98e83b23d7c4fa1499552e28b3471f4c
+      spriteId: 8580625cda5e5c94ab5784e4de7b7ae1
     - name: Death Knight-Sheet_Frame_16
       frameIndex: 16
       cellRect:
@@ -1663,7 +1663,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 4505fa0811696ce4ca255d7476b1e851
+      spriteId: 988cd9ee89700924d81e0e56dbc3c4bb
     - name: Death Knight-Sheet_Frame_17
       frameIndex: 17
       cellRect:
@@ -1671,7 +1671,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 3e1aa59a238916f44bbae68b72e3ce78
+      spriteId: 6db55db7de9cc3c46bfe431f2c9b0c6b
     - name: Death Knight-Sheet_Frame_18
       frameIndex: 18
       cellRect:
@@ -1679,7 +1679,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: d22130d2be7a40b42be334b1ae6574c9
+      spriteId: 4a29674bcccd17e4196c89278eed15e3
     - name: Death Knight-Sheet_Frame_19
       frameIndex: 19
       cellRect:
@@ -1687,7 +1687,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: c7379cd218c0885409dad1b91ef49266
+      spriteId: 817f084c5e4fc2c4c8988097c1d99019
     - name: Death Knight-Sheet_Frame_20
       frameIndex: 20
       cellRect:
@@ -1695,7 +1695,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 499dfc2d2a15f8f4d91dcdffe03402f1
+      spriteId: a23d1f33f55c6f54690448cff5e8665f
     - name: Death Knight-Sheet_Frame_21
       frameIndex: 21
       cellRect:
@@ -1703,7 +1703,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: beca29d7a0174b84da32889bca869d2a
+      spriteId: 28a82c7641d80984abf8334042b9e1e6
     - name: Death Knight-Sheet_Frame_22
       frameIndex: 22
       cellRect:
@@ -1711,7 +1711,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: c6bd1a85274888f4a8fc5536e4f5a709
+      spriteId: e9ed5ef1f7d9df744abfc7f1f57f1e54
     - name: Death Knight-Sheet_Frame_23
       frameIndex: 23
       cellRect:
@@ -1719,7 +1719,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 188b483833931144cae879fb862c0441
+      spriteId: 04efeb938a971d04d9d3ebf3d081ee2f
     - name: Death Knight-Sheet_Frame_24
       frameIndex: 24
       cellRect:
@@ -1727,7 +1727,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: a62941a16af81a94ba9f5b7c91360dab
+      spriteId: 47443e8cf8ba22343a773b882dedc218
     - name: Death Knight-Sheet_Frame_25
       frameIndex: 25
       cellRect:
@@ -1735,7 +1735,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: d8bfc23e6f9fa2449a4e4c2cc534487e
+      spriteId: 342c2c546448e594abc457f74118034f
     - name: Death Knight-Sheet_Frame_26
       frameIndex: 26
       cellRect:
@@ -1743,7 +1743,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: a38fa6e9e6873fd46a10f7a53766df0d
+      spriteId: 1166eab19a961514e85669e799ac444d
     - name: Death Knight-Sheet_Frame_27
       frameIndex: 27
       cellRect:
@@ -1751,7 +1751,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 7d1ab386d17872647a6cdfe5c80673f9
+      spriteId: ab864308b65fb1a44a73307c4b5e5509
     - name: Death Knight-Sheet_Frame_28
       frameIndex: 28
       cellRect:
@@ -1759,7 +1759,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: e8ced60c8bcef4643bfc7cdd2a42f794
+      spriteId: 91ba9e67816ae4b4eaa8fbfb133b28c8
     - name: Death Knight-Sheet_Frame_29
       frameIndex: 29
       cellRect:
@@ -1767,7 +1767,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: e0492c75dfd92314a9f90188825e498d
+      spriteId: 945b9cd96c7bb834caafd614882d6bf1
     - name: Death Knight-Sheet_Frame_30
       frameIndex: 30
       cellRect:
@@ -1775,7 +1775,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 19a22be625b367b41aba8795309e7325
+      spriteId: f596684c95961d74c8d2ca50bfc9b006
     - name: Death Knight-Sheet_Frame_31
       frameIndex: 31
       cellRect:
@@ -1783,7 +1783,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 4f859f0a2c39f9d40b9b8227e4636600
+      spriteId: 102e100085934474e9562c95d2a48903
     - name: Death Knight-Sheet_Frame_32
       frameIndex: 32
       cellRect:
@@ -1791,7 +1791,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 8829021b8ab77c84db28bb7f1d349acf
+      spriteId: 71385d838e540434f8be49afa6c43a2d
     - name: Death Knight-Sheet_Frame_33
       frameIndex: 33
       cellRect:
@@ -1799,7 +1799,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: af7793b3ee2d3b74dab2f5e76f2ff65f
+      spriteId: 74a493d0957b83c42817e57d475cc67e
     - name: Death Knight-Sheet_Frame_34
       frameIndex: 34
       cellRect:
@@ -1807,7 +1807,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: b02e090e87c2f394a90c1fcffd000423
+      spriteId: 19c830600300eb243bbe355fa0829c86
     - name: Death Knight-Sheet_Frame_35
       frameIndex: 35
       cellRect:
@@ -1815,7 +1815,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: fb5c0564b395a8a48b4b64eafcf50684
+      spriteId: e415bc7511a3269479e7d2b36dbb7c27
     - name: Death Knight-Sheet_Frame_36
       frameIndex: 36
       cellRect:
@@ -1823,7 +1823,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: e7e83ce9f96b4d84ba53202190f169a8
+      spriteId: acc1a22263a19054a9bf2b421cc93c4e
     - name: Death Knight-Sheet_Frame_37
       frameIndex: 37
       cellRect:
@@ -1831,7 +1831,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 5e0fadaa47b688b419ba2738454b4292
+      spriteId: aa71c83fcc692a942be8e6d319b297df
     - name: Death Knight-Sheet_Frame_38
       frameIndex: 38
       cellRect:
@@ -1839,7 +1839,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: ea2c551cc1cd44848b9ca39d8d146279
+      spriteId: 8c1df04a78b7b7a4eb1450078f0e0c31
     - name: Death Knight-Sheet_Frame_39
       frameIndex: 39
       cellRect:
@@ -1847,7 +1847,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 0bf9f046a418c64489d3ff484c92e0be
+      spriteId: 20637c6f6853e5d49a431aa0bef7fae8
     - name: Death Knight-Sheet_Frame_40
       frameIndex: 40
       cellRect:
@@ -1855,7 +1855,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 700278831f719a744a28b7d3e1936e98
+      spriteId: 41ec82257ecf2084dbe4b6c55fa01511
     - name: Death Knight-Sheet_Frame_41
       frameIndex: 41
       cellRect:
@@ -1863,7 +1863,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 2fc055292b23cf142a7f28d84af44369
+      spriteId: 1753297d9ffad7a458e74e370dd4fada
     - name: Death Knight-Sheet_Frame_42
       frameIndex: 42
       cellRect:
@@ -1871,7 +1871,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: a7b3bcc90f76c9847b61a6c9d35cba40
+      spriteId: 3bbb2c7e2b3f6794ab0b80f14fcca255
     - name: Death Knight-Sheet_Frame_43
       frameIndex: 43
       cellRect:
@@ -1879,7 +1879,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 7b3efaacb1d572d4088fcea38aa07001
+      spriteId: 015487842433700468c6b35b07dfa701
     - name: Death Knight-Sheet_Frame_44
       frameIndex: 44
       cellRect:
@@ -1887,7 +1887,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 532ad8210d1d52b4cb4ad22697cee104
+      spriteId: 75f1becbbdf2b1b49b08a44f71e19cb6
     - name: Death Knight-Sheet_Frame_45
       frameIndex: 45
       cellRect:
@@ -1895,7 +1895,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 0f2892fba33dc65438d944739e5ddf93
+      spriteId: 632a1320c75e49b4799bf23900651907
     - name: Death Knight-Sheet_Frame_46
       frameIndex: 46
       cellRect:
@@ -1903,7 +1903,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 5b994679d78b14643864d5e0704c1b18
+      spriteId: 8009cfb88f010af439840e22ad16e1e5
     - name: Death Knight-Sheet_Frame_47
       frameIndex: 47
       cellRect:
@@ -1911,7 +1911,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 4d694a8a897275d49a31418d61064c71
+      spriteId: 97a1fbd961f70aa4e88ed2a4eb550185
     - name: Death Knight-Sheet_Frame_48
       frameIndex: 48
       cellRect:
@@ -1919,7 +1919,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: ecdb489af62dd0c4097330428d8c7a9d
+      spriteId: c42cd7d2b0cdc984c8bc6d77e1a25b63
     - name: Death Knight-Sheet_Frame_49
       frameIndex: 49
       cellRect:
@@ -1927,7 +1927,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: b604d65c8d91d70489455e70c7a11739
+      spriteId: 348117e47be2ba74abcbdacdacbb0a2b
     - name: Death Knight-Sheet_Frame_50
       frameIndex: 50
       cellRect:
@@ -1935,7 +1935,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 0de4be036d097d342aa83cc228d85b85
+      spriteId: 3680144c47006094dac1348aa53e1c7a
     - name: Death Knight-Sheet_Frame_51
       frameIndex: 51
       cellRect:
@@ -1943,7 +1943,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: ab107fb0550a6734183e54e55b485277
+      spriteId: 8d24bf92f0144b342bd1ccc3c740ad0a
     - name: Death Knight-Sheet_Frame_52
       frameIndex: 52
       cellRect:
@@ -1951,7 +1951,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 235fb12748e9fe84ca5b41e7ff861f1d
+      spriteId: 375208fc04344f44ca77584e996116d5
     - name: Death Knight-Sheet_Frame_53
       frameIndex: 53
       cellRect:
@@ -1959,7 +1959,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 99ee1cf5e5a14284e999c42c23fd1497
+      spriteId: b5cce6ba60de72a4ebb413b88ef7f8ea
     - name: Death Knight-Sheet_Frame_54
       frameIndex: 54
       cellRect:
@@ -1967,7 +1967,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 5fb7ec824fdb6f04a897e63914a0308c
+      spriteId: ff18455c8fa7bca4ca731d1d249c76a6
     - name: Death Knight-Sheet_Frame_55
       frameIndex: 55
       cellRect:
@@ -1975,7 +1975,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: a1fb875106ec19e4292b3d2027028619
+      spriteId: 62a6c13bc79203d40919ac8812ee4415
     - name: Death Knight-Sheet_Frame_56
       frameIndex: 56
       cellRect:
@@ -1983,7 +1983,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: adcb097ebeba17f48ac6b1239e5cfce6
+      spriteId: 77308c2ed2f236f409f803de5118ec95
     - name: Death Knight-Sheet_Frame_57
       frameIndex: 57
       cellRect:
@@ -1991,7 +1991,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: d10da1560f6fd914d87eac8b29f17ed4
+      spriteId: 510b34363ba146948ad375398dcab2c9
     - name: Death Knight-Sheet_Frame_58
       frameIndex: 58
       cellRect:
@@ -1999,7 +1999,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 520ceeb0b6aebfc4ab214f173451679e
+      spriteId: b28d84880e73ccb4280d0637a59cb81b
     - name: Death Knight-Sheet_Frame_59
       frameIndex: 59
       cellRect:
@@ -2007,7 +2007,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 1463c1e9453ee474d9b29d270cf302e3
+      spriteId: 7ec5005e32abe0d4abf56df3e4213307
     - name: Death Knight-Sheet_Frame_60
       frameIndex: 60
       cellRect:
@@ -2015,7 +2015,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 52fd663b55030f843ade7011de4de59a
+      spriteId: 189e69fac856b0449965867364c9f806
     - name: Death Knight-Sheet_Frame_61
       frameIndex: 61
       cellRect:
@@ -2023,7 +2023,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: d267016cda0ab8149ba9a9d128154d20
+      spriteId: e59e0576e1c5a5342bc368ac0555a5b8
     - name: Death Knight-Sheet_Frame_62
       frameIndex: 62
       cellRect:
@@ -2031,7 +2031,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: bc97bd0411f31454da10c086d1cfd172
+      spriteId: 4d0ed64b0dd73d04c91ca2caea89aef0
     - name: Death Knight-Sheet_Frame_63
       frameIndex: 63
       cellRect:
@@ -2039,7 +2039,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 5874e52e0e486db4b897f31f342a7ef0
+      spriteId: 3efefed3856a0d240a62165ece0ccde4
     - name: Death Knight-Sheet_Frame_64
       frameIndex: 64
       cellRect:
@@ -2047,7 +2047,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 2085806f71137ea48bc19440a715f2bb
+      spriteId: bd49171030e451743b04179bc012cc67
     - name: Death Knight-Sheet_Frame_65
       frameIndex: 65
       cellRect:
@@ -2055,7 +2055,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 7b51d948226b16843baa5b070a97a24e
+      spriteId: 188439dc5dcedd64eaf79d38cb6bef63
     - name: Death Knight-Sheet_Frame_66
       frameIndex: 66
       cellRect:
@@ -2063,7 +2063,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: ce80730dea0644d419cb0813e872547d
+      spriteId: 846567f003c7815418f3eda045648d3b
     - name: Death Knight-Sheet_Frame_67
       frameIndex: 67
       cellRect:
@@ -2071,7 +2071,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: cd2ed0b163f16b94c8c7e9db1ea7d54d
+      spriteId: 3224832d25695da408ac2a189ea52cd2
     - name: Death Knight-Sheet_Frame_68
       frameIndex: 68
       cellRect:
@@ -2079,7 +2079,7 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: ad07f198e1b6d1a4bab5de2192903112
+      spriteId: 0e098ce531770cd4387d66493d256883
     - name: Death Knight-Sheet_Frame_69
       frameIndex: 69
       cellRect:
@@ -2087,58 +2087,10 @@ ScriptedImporter:
         y: 0
         width: 110
         height: 64
-      spriteId: 962ee2a4d7f6f8a44bc8be04c163bb5b
+      spriteId: e3be7a257fbd53942bfd8e20d54a1ec4
     linkedCells: []
     parentIndex: -1
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Server
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: WebGL
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 110, y: 64}

@@ -36,7 +36,6 @@ public class MainSceneMusicController : MonoBehaviour
         Debug.Log(startMusic.clip.length);
         if(counter == 1)
         {   
-            Debug.Log("Here");
             counter -= 1;
             AudioManager.Instance._musicSource = loopMusic;
             AudioManager.Instance.PlayMusicDelayed(loopMusic.clip, startMusic.clip.length);

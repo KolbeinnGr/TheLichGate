@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
             
         }
         
-        if (Input.GetKeyDown(KeyCode.Space) && isSoulActive && !isDashing)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse1)) && isSoulActive && !isDashing)
         {
             StartDash();
         }
@@ -227,6 +227,11 @@ public class PlayerController : MonoBehaviour
         chainRenderer.enabled = false;
         ToggleSoulActive();
         // Use dashDistanceTravelled for damage calculations if needed
+    }
+
+    public void TriggerDeathState()
+    {
+        animator.SetBool("IsDead", true);
     }
 
 }

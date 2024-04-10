@@ -32,6 +32,9 @@ public class PlayerStats : MonoBehaviour
         public int experienceCapIncrease;
     }
     
+      // --- Exp UI ---
+    public UiEXPbar eXPbar;
+
     void LevelUpChecker()
     {
         if (experience >= experienceCap)
@@ -51,6 +54,8 @@ public class PlayerStats : MonoBehaviour
             }
 
             experienceCap += experienceCapIncrease;
+            eXPbar.SetMaxValue(experienceCap);
+            eXPbar.SetExp(experience);
             GameManager.Instance.StartLevelUp();
         }
     }
@@ -61,6 +66,8 @@ public class PlayerStats : MonoBehaviour
     {
         // Initialize experience cap
         experienceCap = levelRanges[0].experienceCapIncrease;
+        eXPbar.SetMaxValue(experienceCap);
+        eXPbar.SetExp(0);
     }
     
     public void UpgradeStat(UpgradeType type, float amount)
@@ -99,6 +106,7 @@ public class PlayerStats : MonoBehaviour
                 break;
             case UpgradeType.increaseExperience:
                 experience += (int)amount;
+                eXPbar.SetExp(experience);
                 LevelUpChecker();
                 break;
         }

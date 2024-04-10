@@ -14,13 +14,14 @@ public class Health : MonoBehaviour
     [Header ("Audio")]
     public AudioClip[] deathSounds;
     public AudioClip[] hurtSounds;
-    public float soundVolume = 0.3f;
 
     [Header ("UnityEvents")]
     // Events that can be triggered on health change or death
     public UnityEvent<float> onHealthChanged;
     public UnityEvent onDeath;
 
+    [Header ("Ui for player")]
+    public UiHealthBar healthBar;
 
 
     private void Awake() {
@@ -30,21 +31,30 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        if(healthBar)
+        {
+            healthBar.SetMaxHealth(maxHealth);
+            healthBar.SetHealth(maxHealth);
+        }
         enemySpawner = FindObjectOfType<EnemySpawner>();
     }
 
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
+        if(healthBar)
+        {
+            healthBar.SetHealth(currentHealth);
+        }
         onHealthChanged.Invoke(currentHealth / maxHealth); // Invoke with health percentage
 
         if (currentHealth > 0)
         {
-            GetComponent<FlashEffect>().Flash(); // Trigger the flash effect.
+            //GetComponent<FlashEffect>().Flash(); // Trigger the flash effect.
             if (AudioManager.Instance && hurtSounds.Length > 0)
             {
                 // Play a random hurt sound
-                AudioManager.Instance.PlaySound(hurtSounds[Random.Range(0, hurtSounds.Length)], soundVolume);
+                AudioManager.Instance.PlaySound(hurtSounds[Random.Range(0, hurtSounds.Length)]);
             }
         }
         
@@ -69,8 +79,8 @@ public class Health : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
-        // enemySpawner.OnEnemyKilled(); // To help keep track of no. of enemies on the stage in the enemy spawner.
-        
+        enemySpawner.OnEnemyKilled(); // To help keep track of no. of enemies on the stage in the enemy spawner.
+       
         onDeath.Invoke();
 
         // Use SendMessage to call TriggerDeathState on any attached script
@@ -79,7 +89,7 @@ public class Health : MonoBehaviour
         if (AudioManager.Instance && deathSounds.Length > 0)
         {
             // Play a random Death sound
-            AudioManager.Instance.PlaySound(deathSounds[Random.Range(0, deathSounds.Length)], soundVolume);
+            AudioManager.Instance.PlaySound(deathSounds[Random.Range(0, deathSounds.Length)]);
             
         }
         // Here we would add additional logic for the death of the character such as playing a death animation or disabling the game object
