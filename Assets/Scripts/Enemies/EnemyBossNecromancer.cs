@@ -11,14 +11,26 @@ public class EnemyBossNecromancer : MonoBehaviour, IEnemy
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed = 3f;
+    [SerializeField] private Transform enemyTransform;
+    [SerializeField] private float minDistanceFromTarget = 1.5f;
+    [Header("Range")]
     [SerializeField] private float attackRange = 1.5f;
+    [SerializeField] private float spellRange = 1.5f;
+    [Header("Spell")]
     [SerializeField] private GameObject warningZoneSpell;
     [SerializeField] private GameObject SpellGameObject;
     private Animator SpellAnimation;
+    [Header("Attack")]
     [SerializeField] private GameObject warningZoneAttack;
     [SerializeField] private GameObject AttackLightningGameObject;
     private Animator attackLightningAnimation;
-    [SerializeField] private Transform enemyTransform;
+
+    [Header("Cooldowns")]
+    [SerializeField] private float attackCooldown = 10f;
+    [SerializeField] private float spellCooldown = 10f;
+    private float lastAttackTime = -Mathf.Infinity;
+    private float lastSpellTime = -Mathf.Infinity;
+
 
 
     // state machine
@@ -51,19 +63,43 @@ public class EnemyBossNecromancer : MonoBehaviour, IEnemy
 
     private void Update()
     {
-        // check if the target is within attack range
         float distanceToTarget = Vector3.Distance(transform.position, TargetDestination.position);
+        float timeSinceLastAttack = Time.time - lastAttackTime;
+        float timeSinceLastSpell = Time.time - lastSpellTime;
 
-        // if the target is within attack range and the enemy is not in attack state, change to attack state
-        if (distanceToTarget <= attackRange && !(stateMachine.currentState is AttackState) && !(stateMachine.currentState is DeathState))
-        {
-            stateMachine.ChangeState(typeof(AttackState));
-        } // else if the target is not within attack range and the enemy is not in walk state, change to walk state
-        else if (distanceToTarget > attackRange && !(stateMachine.currentState is WalkState) && !IsCurrentlyAttacking && !(stateMachine.currentState is DeathState))
+        if (stateMachine.currentState is IdleState && distanceToTarget > attackRange && distanceToTarget <= minDistanceFromTarget)
         {
             stateMachine.ChangeState(typeof(WalkState));
         }
 
+        // Check and perform attack or spell if within range and cooldown has passed
+        if (distanceToTarget <= attackRange && timeSinceLastAttack >= attackCooldown && !(stateMachine.currentState is AttackState) && !(stateMachine.currentState is SpellState))
+        {
+            lastAttackTime = Time.time; // Reset the attack timer
+            stateMachine.ChangeState(typeof(AttackState));
+            return; // Exit early to prevent further logic from executing this frame
+        }
+        if (distanceToTarget <= spellRange && timeSinceLastSpell >= spellCooldown && !(stateMachine.currentState is SpellState) && !(stateMachine.currentState is AttackState))
+        {
+            lastSpellTime = Time.time; // Reset the spell timer
+            stateMachine.ChangeState(typeof(SpellState));
+            return; // Exit early to prevent further logic from executing this frame
+        }
+
+        // Enforce minimum distance without overriding attack/spell actions
+        if (distanceToTarget <= minDistanceFromTarget && !(stateMachine.currentState is SpellState) && !(stateMachine.currentState is AttackState))
+        {
+            stateMachine.ChangeState(typeof(IdleState));
+            return; // Keeps the enemy from moving closer once within min distance
+        }
+
+        // Approach player if not close enough to attack/cast and not currently performing an action
+        if (distanceToTarget > attackRange && !(stateMachine.currentState is WalkState) && !IsCurrentlyAttacking && !(stateMachine.currentState is DeathState))
+        {
+            stateMachine.ChangeState(typeof(WalkState));
+        }
+
+        // Orientation logic for flipping the sprite based on the player's position
         if (!(stateMachine.currentState is DeathState) && !IsCurrentlyAttacking)
         {
             // Flip sprite on the X axis when the enemy is on either side of the target
@@ -75,8 +111,8 @@ public class EnemyBossNecromancer : MonoBehaviour, IEnemy
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
         }
-        
     }
+
 
     // initialize state machine
     private void InitializeStateMachine()
@@ -87,7 +123,8 @@ public class EnemyBossNecromancer : MonoBehaviour, IEnemy
             { typeof(WalkState), new WalkState(this) },
             { typeof(IdleState), new IdleState(this) },
             { typeof(DeathState), new DeathState(this) },
-            { typeof(AttackState), new AttackState(this, new MeleeAttack(this, animator, warningZoneAttack, enemyTransform, targetDestination, AttackLightningGameObject, attackLightningAnimation)) } // MeleeAttack is a reference to the MeleeAttack script
+            { typeof(AttackState), new AttackState(this, new MeleeAttack(this, animator, warningZoneAttack, enemyTransform, targetDestination, AttackLightningGameObject, attackLightningAnimation)) }, // MeleeAttack is a reference to the MeleeAttack script
+            { typeof(SpellState), new SpellState(this, new SpellAttack(this, animator, warningZoneSpell, enemyTransform, targetDestination, SpellGameObject, SpellAnimation)) } // SpellAttack is a reference to the SpellAttack script}
         };
         // set states
         stateMachine.SetStates(states);
@@ -142,10 +179,34 @@ public class EnemyBossNecromancer : MonoBehaviour, IEnemy
 
     public void OnAttackAnimationEnd()
     {
-        if (stateMachine.currentState is AttackState attackState)
+        Idle();
+        IsCurrentlyAttacking = false;
+    }
+
+    public void OnSpellHitboxAnimationEvent()
+    {
+        if (stateMachine.currentState is SpellState spellState)
         {   
-            IsCurrentlyAttacking = false;
+            // if the attack state is active, perform the attack
+            IsCurrentlyAttacking = true;
+            spellState.PerformAttack();
         }
+    }
+    public void OnSpellPerformHitAnimationEvent()
+    {
+        if (stateMachine.currentState is SpellState spellState)
+        {   
+            // if the attack state is active, perform the attack
+            spellState.PerformHit("CircleAttackWave");
+            // this is where we used to change IsCurrentlyAttacking to false;
+            
+        }
+    }
+
+    public void OnSpellAnimationEnd()
+    {
+        Idle();
+        IsCurrentlyAttacking = false;
     }
 
     public void TriggerDeathState()
@@ -161,6 +222,10 @@ public class EnemyBossNecromancer : MonoBehaviour, IEnemy
 
         // Draw a wire sphere around the GameObject to visualize the attack range
         Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, spellRange);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, minDistanceFromTarget);
     }
 
 }
