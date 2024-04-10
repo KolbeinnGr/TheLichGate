@@ -16,6 +16,7 @@ public class PlayerMeleeAttackBehavior : MeleeAttackBehavior
     {
         if (other.CompareTag("Enemy"))
         {
+            Debug.Log("Hit an enemy!");
             Health enemyHealth = other.GetComponent<Health>();
             if (enemyHealth != null)
             {
@@ -25,5 +26,4 @@ public class PlayerMeleeAttackBehavior : MeleeAttackBehavior
     }
 
     // You can call this method from the PlayerMeleeAttackController when instantiating the slash effect
-
 }

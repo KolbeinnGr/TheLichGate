@@ -337,6 +337,7 @@ GameObject:
   - component: {fileID: 5474650703523240625}
   - component: {fileID: 3117729734647020231}
   - component: {fileID: 4229549462385011798}
+  - component: {fileID: 1439226656158585105}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -387,10 +388,12 @@ MonoBehaviour:
   chainStartYOffset: 0.27
   chainEndXOffset: 0
   chainEndYOffset: -0.15
-  direction: {x: 0, y: 0}
   chainRenderer: {fileID: 2949155776394070788}
   chainMaterial: {fileID: -876546973899608171, guid: 3c596b6c49315c042852738b0edd4d41, type: 3}
+  dashDuration: 0.5
+  minDashDistance: 1
   animator: {fileID: 3588944795818922105}
+  direction: {x: 0, y: 0}
 --- !u!50 &9108470645967422330
 Rigidbody2D:
   serializedVersion: 4
@@ -589,6 +592,8 @@ MonoBehaviour:
   offsetX: 0
   offsetY: -0.42
   attackAnimation: {fileID: 7400000, guid: 889ab03e23432ae4f9db43748774a4eb, type: 2}
+  swingSounds: []
+  swingSoundVolume: 0.5
 --- !u!114 &4229549462385011798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,10 +622,22 @@ MonoBehaviour:
   - {x: 0.12844291, y: 0.007951438, z: 0}
   m_ShapePathHash: 2073343765
   m_Mesh: {fileID: 0}
-  m_InstanceId: -291008
+  m_InstanceId: 49038
   m_LocalBounds:
     m_Center: {x: 0.0011758357, y: 0.4475828, z: 0}
     m_Extent: {x: 0.12726708, y: 0.45374113, z: 0}
+--- !u!114 &1439226656158585105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125185204766933283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1dbb47c728be847979a539f9b26983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2996303729984248467
 GameObject:
   m_ObjectHideFlags: 0
@@ -6083,6 +6100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1086794829638588418}
+  - component: {fileID: 77370789141912650}
   m_Layer: 0
   m_Name: PlayerContainer
   m_TagString: Untagged
@@ -6107,3 +6125,41 @@ Transform:
   - {fileID: 4048980179472820724}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &77370789141912650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8640198318693600924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734eceb9284986f43b4e2b4d6b201ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyAttackSpeed: 1
+  bodyAttackDamage: 30
+  bodyAttackSize: 1
+  bodyAttacks: 2
+  bodyArmor: 0
+  soulAttackDamage: 5
+  soulAttackSpeed: 1
+  soulAttackProjectileSpeed: 5
+  soulAttackProjectiles: 1
+  soulAttackPierce: 1
+  experience: 0
+  level: 1
+  experienceCap: 0
+  levelRanges:
+  - startLevel: 1
+    endLevel: 3
+    experienceCapIncrease: 100
+  - startLevel: 4
+    endLevel: 6
+    experienceCapIncrease: 200
+  - startLevel: 7
+    endLevel: 10
+    experienceCapIncrease: 300
+  - startLevel: 11
+    endLevel: 999
+    experienceCapIncrease: 500

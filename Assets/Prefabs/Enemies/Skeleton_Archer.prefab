@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 7823209712094738087}
   - component: {fileID: 4876053561092524939}
   - component: {fileID: 8055256284990047375}
+  - component: {fileID: 1369077642094634136}
   m_Layer: 0
   m_Name: Skeleton_Archer
   m_TagString: Enemy
@@ -345,3 +346,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63570a00d9336394c952510e7d5190c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1369077642094634136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7462539429674757038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5ee41cd539d8741a47d4145d8d9417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Blue Gem
+    itemPrefab: {fileID: 7383057966734078059, guid: 4116e234848efa64cbd058c400748892, type: 3}
+    dropRate: 50

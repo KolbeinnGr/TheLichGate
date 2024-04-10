@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 
 public class GameManager : MonoBehaviour
@@ -10,11 +11,17 @@ public class GameManager : MonoBehaviour
     [Header("Game Manager")]
     public bool isGamePaused = false;
     
+    
     // World Timer 
     public event EventHandler<TimeSpan> WorldTimeChanged;
     private TimeSpan currentTime;
     private bool timerActive = false;
     private Coroutine timerCoroutine;
+
+    [Header("Screens")] 
+    public GameObject levelUpScreen;
+    
+    public bool choosingUpgrade = false;
     
     void Awake()
     {
@@ -35,6 +42,11 @@ public class GameManager : MonoBehaviour
     {
         Destroy(gameObject);
         Instance = null;
+    }
+    
+    void DisableScreens()
+    {
+        levelUpScreen.SetActive(false);
     }
     
     
@@ -103,6 +115,32 @@ public class GameManager : MonoBehaviour
     public TimeSpan GetTime()
     {
         return currentTime;
+    }
+
+    public void StartLevelUp()
+    {
+        
+        choosingUpgrade = true;
+        PauseGame();
+        List<UpgradeManager.UpgradeOption> options = UpgradeManager.Instance.GetRandomUpgrades(4);
+        
+        LevelUpScreen levelUpScript = levelUpScreen.GetComponent<LevelUpScreen>();
+
+        if (levelUpScript)
+        {
+            levelUpScript.SetupUpgradeOptions(options);
+        }
+        
+        levelUpScreen.SetActive(true);
+        
+
+    }
+    
+    public void EndLevelUp()
+    {
+        choosingUpgrade = false;
+        ResumeGame();
+        levelUpScreen.SetActive(false);
     }
     
 }

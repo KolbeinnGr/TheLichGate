@@ -69,8 +69,8 @@ public class Health : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
-        enemySpawner.OnEnemyKilled(); // To help keep track of no. of enemies on the stage in the enemy spawner.
-       
+        // enemySpawner.OnEnemyKilled(); // To help keep track of no. of enemies on the stage in the enemy spawner.
+        
         onDeath.Invoke();
 
         // Use SendMessage to call TriggerDeathState on any attached script

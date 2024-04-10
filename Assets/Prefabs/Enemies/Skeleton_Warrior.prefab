@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 3366998279839880378}
   - component: {fileID: 1639824555787023287}
   - component: {fileID: 6804870369145493897}
+  - component: {fileID: 3311360719103791095}
   m_Layer: 0
   m_Name: Skeleton_Warrior
   m_TagString: Enemy
@@ -537,3 +538,19 @@ CircleCollider2D:
   m_Offset: {x: 0.069935374, y: 0.6800652}
   serializedVersion: 2
   m_Radius: 0.2226687
+--- !u!114 &3311360719103791095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056465319511862673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5ee41cd539d8741a47d4145d8d9417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Blue Gem
+    itemPrefab: {fileID: 7383057966734078059, guid: 4116e234848efa64cbd058c400748892, type: 3}
+    dropRate: 50

@@ -29,7 +29,8 @@ public class EnemyReposition : MonoBehaviour
 
     void ReturnEnemy()
     {
-        
-        transform.position = player.position + es.relativeSpawnPoints[Random.Range(0, es.relativeSpawnPoints.Count)].position;
+        if (es && player ){
+            transform.position = player.position + es.relativeSpawnPoints[Random.Range(0, es.relativeSpawnPoints.Count)].position;
+        }
     }
 }

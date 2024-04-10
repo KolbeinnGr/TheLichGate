@@ -37,7 +37,7 @@ public class PlayerMeleeAttackController : AttackController
             Quaternion effectRotation = isFacingRight ? Quaternion.identity : Quaternion.Euler(0, 180, 0);
 
             GameObject spawnedSlash = Instantiate(slashEffectPrefab, effectPosition, effectRotation, transform);
-            
+
             if (AudioManager.Instance)
             {
                 // Play a random swing sound
@@ -52,7 +52,7 @@ public class PlayerMeleeAttackController : AttackController
             // Wait for 'speed' seconds before performing the next attack
             yield return new WaitForSeconds(speed);
         }
-
+    
         // Wait for the cooldown duration after completing all attacks
         yield return new WaitForSeconds(cooldownDuration);
     }

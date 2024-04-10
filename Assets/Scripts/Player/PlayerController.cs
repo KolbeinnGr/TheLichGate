@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 dashTarget;         // The target position of the dash
     private Vector2 dashStart;          // Starting position of the player when the dash begins
     private bool isDashing = false;     // Flag to indicate if the player is currently dashing
-    private float dashDistanceTravelled = 0f;  // Total distance travelled during the das
+    private float dashDistanceTravelled = 0f;  // Total distance travelled during the dash
     private float dashStartTime;        // Time when the dash started
     
     
@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
     public Vector2 direction;  // The direction the player is moving in
 
 
+    private SpriteRenderer spriteRenderer;
+    
     void Start()
     {
         if (chainRenderer != null)
@@ -53,10 +55,16 @@ public class PlayerController : MonoBehaviour
             chainRenderer.material = chainMaterial;
             chainRenderer.positionCount = 2;
         }
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
     }
 
     void Update()
     {
+        // if (Time.timeScale == 0) return;  // Pause the game if the timescale is 0 (for menus etc.)
+        
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             ToggleSoulActive();
@@ -97,8 +105,10 @@ public class PlayerController : MonoBehaviour
 
         if (isMoving && !isDashing)
         {
-            transform.localScale = new Vector3(Mathf.Sign(direction.x), 1, 1);
+            // transform.localScale = new Vector3(Mathf.Sign(direction.x), 1, 1);
+            spriteRenderer.flipX = direction.x < 0;
         }
+        
     }
 
     private void DrawChain()
@@ -187,11 +197,11 @@ public class PlayerController : MonoBehaviour
 
         // Determine the direction to the soul and face the player in that direction
         float directionToSoul = Mathf.Sign(dashTarget.x - transform.position.x);
-        transform.localScale = new Vector3(directionToSoul * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        spriteRenderer.flipX = directionToSoul < 0;
 
         animator.SetBool("IsDashing", true);
     }
-
+ 
 
     private void PerformDash()
     {
