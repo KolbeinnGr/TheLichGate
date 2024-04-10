@@ -86,7 +86,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         // Check if it's time to spawn the next enemy.
-        if (time.Seconds % waves[currentWaveIndex].spawnInterval == 0)
+        if (time.TotalSeconds % waves[currentWaveIndex].spawnInterval == 0)
         {
             SpawnEnemies();
         }
