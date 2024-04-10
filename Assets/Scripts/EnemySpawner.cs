@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 /// Todo:
 /// * Finish spawning all enemy quota first before moving onto next wave? Have to discuss with team later.
@@ -32,6 +33,7 @@ public class EnemySpawner : MonoBehaviour
         public int enemySpawnCount; // Number of enemies of this type spawned in this wave. 
 
         public GameObject enemyPrefab;
+        public int modifiedHealth; // For enemies that need a different health value for a wave.
     }
 
     public List<Wave> waves; // List of all the waves in the game.
@@ -70,22 +72,22 @@ public class EnemySpawner : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>().transform;
         CalculateWaveQuota();
+        GameManager.Instance.WorldTimeChanged += OnWorldTimeChanged;
     }
 
-    void Update()
+    private void OnWorldTimeChanged(object sender, TimeSpan time)
     {
+       
         // Checks if the current wave has ended to start the next wave.
-        if(currentWaveIndex < waves.Count && canChangeWave == true && GameManager.Instance.GetTime().Seconds >= waveLength)
+        if (currentWaveIndex < waves.Count && canChangeWave == true && time.Seconds >= waveLength)
         {
             StartCoroutine(BeginNextWave());
             canChangeWave = false;
         }
-        spawnTimer += Time.deltaTime;
 
         // Check if it's time to spawn the next enemy.
-        if(spawnTimer >= waves[currentWaveIndex].spawnInterval)
+        if (time.Seconds % waves[currentWaveIndex].spawnInterval == 0)
         {
-            spawnTimer = 0f;
             SpawnEnemies();
         }
     }
@@ -142,7 +144,14 @@ public class EnemySpawner : MonoBehaviour
                         maxEnemiesReached = true;
                     }
                     // Spawning enemies at random positions
-                    Instantiate(enemyGroup.enemyPrefab, player.position + relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
+                    GameObject newEnemy;
+                    newEnemy = Instantiate(enemyGroup.enemyPrefab, player.position + relativeSpawnPoints[UnityEngine.Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
+
+                    if (enemyGroup.modifiedHealth != 0)
+                    {
+                        newEnemy.GetComponent<Health>().maxHealth = enemyGroup.modifiedHealth;
+                    }
+
                     enemyGroup.enemySpawnCount++;
                     waves[currentWaveIndex].totalSpawnCount++;
                     allEnemiesAlive++;
@@ -171,7 +180,7 @@ public class EnemySpawner : MonoBehaviour
             if (enemyGroup.enemySpawnCount < enemyGroup.enemySpawnQuota)
             {
                 // Spawning enemies at random positions
-                Instantiate(enemyGroup.enemyPrefab, player.position + relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
+                Instantiate(enemyGroup.enemyPrefab, player.position + relativeSpawnPoints[UnityEngine.Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
                 enemyGroup.enemySpawnCount++;
                 waves[currentWaveIndex].totalSpawnCount++;
                 allEnemiesAlive++;
