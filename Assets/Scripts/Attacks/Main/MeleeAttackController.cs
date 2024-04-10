@@ -3,14 +3,14 @@ using UnityEngine;
 public class MeleeAttackController : MonoBehaviour
 {
     [Header("Melee Attack Stats")]
-    public float damage;
-    public float attackRange;
-    public float cooldownDuration;
     private float currentCooldown;
+    
+    private PlayerStats playerStats;
 
     protected virtual void Start()
     {
-        currentCooldown = cooldownDuration;
+        playerStats = GameManager.Instance.GetPlayerStats();
+        currentCooldown = playerStats.bodyAttackSpeed;
     }
 
     protected virtual void Update()
@@ -25,6 +25,6 @@ public class MeleeAttackController : MonoBehaviour
     protected virtual void PerformAttack()
     {
         // This method will be overridden in derived classes
-        currentCooldown = cooldownDuration;
+        currentCooldown = playerStats.bodyAttackSpeed;
     }
 }

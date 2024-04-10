@@ -9,6 +9,7 @@ public class PlayerMeleeAttackBehavior : MeleeAttackBehavior
         base.Start();
         hitbox = GetComponent<Collider2D>();
         hitbox.enabled = true;
+
     }
 
     // Override the OnTriggerEnter2D to specify what happens when the hitbox collides with an enemy
@@ -20,7 +21,7 @@ public class PlayerMeleeAttackBehavior : MeleeAttackBehavior
             Health enemyHealth = other.GetComponent<Health>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage(damage);
+                enemyHealth.TakeDamage(playerStats.bodyAttackDamage);
             }
         }
     }

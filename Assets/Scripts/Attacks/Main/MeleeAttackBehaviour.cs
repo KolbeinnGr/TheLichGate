@@ -6,14 +6,18 @@ public class MeleeAttackBehavior : MonoBehaviour
 
     private Animator animator; // To handle attack animations
     private Collider2D attackHitbox; // The Collider used as the hitbox
-    
+
+    protected PlayerStats playerStats;
 
 
     protected virtual void Start()
     {
+        playerStats = GameManager.Instance.GetPlayerStats();
+        
         animator = GetComponent<Animator>();
         attackHitbox = GetComponent<Collider2D>();
         attackHitbox.enabled = false; // Initially disable the hitbox
+        
     }
 
     public virtual void PerformAttack()
@@ -39,7 +43,8 @@ public class MeleeAttackBehavior : MonoBehaviour
             {
                 healthComponent.TakeDamage(damage);
             }
-
+            
+            DisableHitboxAfterDelay(0.2f);
             // Optionally, add logic to handle hit effects, sounds, etc.
         }
     }
@@ -48,5 +53,10 @@ public class MeleeAttackBehavior : MonoBehaviour
     public void DisableHitbox()
     {
         attackHitbox.enabled = false;
+    }
+    
+    public void DisableHitboxAfterDelay(float delay)
+    {
+        Invoke("DisableHitbox", delay);
     }
 }

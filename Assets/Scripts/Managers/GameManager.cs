@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     public GameObject levelUpScreen;
     
     public bool choosingUpgrade = false;
+
+    private PlayerStats playerStats;
     
     void Awake()
     {
@@ -35,7 +37,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+        InitializePlayerStats();
+    }   
     
     // Game Management functions
     public void DestroySelf()
@@ -43,8 +46,31 @@ public class GameManager : MonoBehaviour
         Destroy(gameObject);
         Instance = null;
     }
+
+    private void InitializePlayerStats()
+    {
+        GameObject playerGameObject = GameObject.FindWithTag("PlayerContainer");
+        if (playerGameObject != null)
+        {
+            playerStats = playerGameObject.GetComponent<PlayerStats>();
+            if (playerStats == null)
+            {
+                Debug.LogError("PlayerStats component not found on Player GameObject");
+            }
+        }
+        else
+        {
+            Debug.LogError("Player GameObject not found");
+        }
+        
+    }
+
+    public PlayerStats GetPlayerStats()
+    {
+        return playerStats;
+    }
     
-    void DisableScreens()
+    void DisableScreens()       
     {
         levelUpScreen.SetActive(false);
     }

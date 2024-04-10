@@ -80,7 +80,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4594712498299891911, guid: 07e03a952ee362e4eb78aee2197bf713, type: 3}
-  damage: 20
   speed: 12
   cooldownDuration: 1
   pierce: 1
@@ -583,7 +582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 7127135011321863297, guid: 819e473a5bc43cf468aff65abaed95ae, type: 3}
-  damage: 30
   speed: 0.5
   cooldownDuration: 2
   pierce: 0
@@ -622,7 +620,7 @@ MonoBehaviour:
   - {x: 0.12844291, y: 0.007951438, z: 0}
   m_ShapePathHash: 2073343765
   m_Mesh: {fileID: 0}
-  m_InstanceId: 49038
+  m_InstanceId: 35082
   m_LocalBounds:
     m_Center: {x: 0.0011758357, y: 0.4475828, z: 0}
     m_Extent: {x: 0.12726708, y: 0.45374113, z: 0}
@@ -6103,7 +6101,7 @@ GameObject:
   - component: {fileID: 77370789141912650}
   m_Layer: 0
   m_Name: PlayerContainer
-  m_TagString: Untagged
+  m_TagString: PlayerContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

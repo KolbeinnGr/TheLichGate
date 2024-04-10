@@ -8,9 +8,12 @@ public class SoulAttackController : AttackController
     private List<GameObject> enemiesInRange = new List<GameObject>();
     private AttackController ac; 
     
+    private PlayerStats playerStats;
+
     protected override void Start()
     {
         base.Start();
+        playerStats = GameManager.Instance.GetPlayerStats();
     }
 
     protected void Awake()
@@ -42,14 +45,14 @@ public class SoulAttackController : AttackController
         GameObject closestEnemy = FindClosestEnemy();
         if (closestEnemy)
         {
-            for (int i = 0; i < ac.attacks; i++)
+            for (int i = 0; i < playerStats.soulAttackProjectiles; i++)
             {
                 GameObject spawnedProjectile = Instantiate(prefab, transform.position, Quaternion.identity);
                 Vector3 attackDirection = (closestEnemy.transform.position - transform.position).normalized;
                 ProjectileAttackBehavior projectile = spawnedProjectile.GetComponent<ProjectileAttackBehavior>();
                 if (projectile)
                 {
-                    projectile.InitializeProjectile(attackDirection, ac.pierce, ac.damage);
+                    projectile.InitializeProjectile(attackDirection);
                 }
             }
 

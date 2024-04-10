@@ -14,8 +14,11 @@ public class PlayerMeleeAttackController : AttackController
     public AudioClip[] swingSounds;
     public float swingSoundVolume = 0.5f;
 
+    private PlayerStats playerStats;
+
     protected void Awake()
     {
+        playerStats = GameManager.Instance.GetPlayerStats();
         animationPlayTime = attackAnimation.length;
     }
 
@@ -27,7 +30,7 @@ public class PlayerMeleeAttackController : AttackController
 
     private IEnumerator PerformAttacksWithDelay()
     {
-        for (int i = 0; i < attacks; i++)
+        for (int i = 0; i < playerStats.bodyAttacks; i++)
         {
             Vector3 effectPosition = new Vector3(
                 transform.position.x + (isFacingRight ? offsetX : -offsetX),
@@ -54,6 +57,6 @@ public class PlayerMeleeAttackController : AttackController
         }
     
         // Wait for the cooldown duration after completing all attacks
-        yield return new WaitForSeconds(cooldownDuration);
+        yield return new WaitForSeconds(playerStats.bodyAttackSpeed);
     }
 }

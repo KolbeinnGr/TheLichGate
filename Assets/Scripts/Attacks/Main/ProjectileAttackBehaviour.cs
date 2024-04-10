@@ -11,22 +11,22 @@ public class ProjectileAttackBehavior : MonoBehaviour
     
     // amount of enemies the projectile can pierce
     // ( think of it as the health of the projectile reduced by 1 after hitting an enemy )
-    public int pierce;
-    public float damage; 
-    
-    
+    private int pierce;
+    private float damage;
+    protected PlayerStats playerStats;
 
     protected virtual void Start()
     {
+        playerStats = GameManager.Instance.GetPlayerStats();
         animator = GetComponent<Animator>();
         Destroy(gameObject, destroyAfterSeconds);
     }
     
-    public void InitializeProjectile(Vector3 dir, int initialPierce, float initialDamage)
+    public void InitializeProjectile(Vector3 dir)
     {
         DirectionChecker(dir);
-        pierce = initialPierce;
-        damage = initialDamage;
+        pierce = playerStats.soulAttackPierce;
+        damage = playerStats.soulAttackDamage;
     }
     
     public void DirectionChecker(Vector3 dir) {
@@ -35,10 +35,15 @@ public class ProjectileAttackBehavior : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
         Health healthComponent = other.GetComponent<Health>();
         if (healthComponent != null)
         {
-            healthComponent.TakeDamage(damage); // Consider using a variable for damage
+            healthComponent.TakeDamage(damage); 
             pierce--;
 
             if (pierce <= 0)
