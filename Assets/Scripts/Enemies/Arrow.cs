@@ -8,8 +8,12 @@ public class Arrow : MonoBehaviour {
     }
 
 
-    // private void OnTriggerEnter2D(Collider2D other) {
-    //     // Implement what happens when the arrow hits something
-    //     Destroy(gameObject); // For example, destroying the arrow
-    // }
+    private void OnTriggerEnter2D(Collider2D other) { // this does damage to the player once if they enter while the arrow is active
+        if (other.CompareTag("Player"))
+        {
+            //Debug.Log("Player hit by arrow");
+            other.GetComponent<Health>().TakeDamage(21.3f);
+            Destroy(gameObject);
+        }
+    }
 }

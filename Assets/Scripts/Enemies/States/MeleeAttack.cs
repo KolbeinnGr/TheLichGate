@@ -13,11 +13,11 @@ public class MeleeAttack : IAttackBehavior
     private Animator attackSlashAnim;
     private MonoBehaviour coroutineStarter;
 
-    private float fasterRotationSpeed = 20f;
-    private float slowerRotationSpeed = 5f;
+    private float fasterRotationSpeed = 15f;
+    private float slowerRotationSpeed = 3f;
 
-    private float initialRotationSpeedFast = 40f; // Degrees per second, example value
-    private float initialRotationSpeedSlow = 20f; // Degrees per second, example value
+    private float initialRotationSpeedFast = 30f; // Degrees per second, example value
+    private float initialRotationSpeedSlow = 15f; // Degrees per second, example value
     private float rotationSlowdownDuration = 1.2f; // Seconds, example value
 
 

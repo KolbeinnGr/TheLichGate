@@ -12,7 +12,15 @@ public class IdleState : State
     {
         enemy.Rb.velocity = Vector2.zero;
         enemy.Animator.SetBool("IsWalking", false);
+        enemy.Animator.SetBool("IsAttacking", false);
+        enemy.Animator.SetBool("IsCastingSpell", false);
+        enemy.Animator.SetBool("IsIdle", true);
         // Additional idle behaviors like playing idle animation can be added here.
+    }
+
+    public override void Exit()
+    {
+        enemy.Animator.SetBool("IsIdle", false);
     }
 }
 
