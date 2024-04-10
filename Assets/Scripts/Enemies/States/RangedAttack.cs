@@ -19,8 +19,7 @@ public class RangedAttack : IAttackBehavior // implements IAttackBehavior to use
 
     public void Attack()
     {
-        float spriteHeight = 1f;
-        Vector3 shotpos = shootingPoint.position + Vector3.up * (spriteHeight / 2);
+        Vector3 shotpos = shootingPoint.position + Vector3.up * 0.8f;
         GameObject arrow = GameObject.Instantiate(arrowPrefab, shotpos, Quaternion.identity);
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
         Vector2 direction = (targetDestination.position - shootingPoint.position).normalized;
