@@ -13,6 +13,7 @@ public class MainSceneMusicController : MonoBehaviour
         {
             Debug.Log(startMusic.clip.length);
             AudioManager.Instance._musicSource = startMusic;
+            AudioManager.Instance.PlayMusic(startMusic.clip);
             startMusic.loop = false;
         }
         
@@ -23,6 +24,7 @@ public class MainSceneMusicController : MonoBehaviour
         if(!startMusic.isPlaying)
         {
         AudioManager.Instance._musicSource = startMusic;
+        AudioManager.Instance.PlayMusic(startMusic.clip);
         startMusic.loop = false;
         }
         
@@ -37,7 +39,7 @@ public class MainSceneMusicController : MonoBehaviour
             Debug.Log("Here");
             counter -= 1;
             AudioManager.Instance._musicSource = loopMusic;
-            AudioManager.Instance.PlayMusicDelayed(loopMusic.clip, startMusic.clip.length + 7.5f);
+            AudioManager.Instance.PlayMusicDelayed(loopMusic.clip, startMusic.clip.length);
         }   
     }
 }

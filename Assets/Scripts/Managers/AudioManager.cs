@@ -36,6 +36,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
+    public float musicVolume, sfxVolume, ambientVolume = 0.5f;
+
     public AudioSource _musicSource, _sfxSource, _ambientSource;
     
     void Awake() {
@@ -44,7 +46,6 @@ public class AudioManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
     
     public void PlaySound(AudioClip clip, float volume = -1f) {
@@ -52,13 +53,19 @@ public class AudioManager : MonoBehaviour
         if (volume >= 0) {
             _sfxSource.volume = volume;
         }
-        _sfxSource.Play();
+        else {
+             _sfxSource.volume = sfxVolume;
+        }
+        _sfxSource.PlayOneShot(clip);
     }
     
     public void PlayMusic(AudioClip clip, float volume = -1f) {
         if (clip == null) return;
         if (volume >= 0) {
             _musicSource.volume = volume;
+        }
+        else {
+            _musicSource.volume = musicVolume;
         }
         _musicSource.clip = clip;
         _musicSource.loop = true;
@@ -70,6 +77,9 @@ public class AudioManager : MonoBehaviour
         if (volume >= 0) {
             _musicSource.volume = volume;
         }
+        else {
+            _musicSource.volume = musicVolume;
+        }
         _musicSource.clip = clip;
         _musicSource.loop = true;
         _musicSource.PlayDelayed(time);
@@ -79,6 +89,9 @@ public class AudioManager : MonoBehaviour
         if (clip == null) return;
         if (volume >= 0) {
             _ambientSource.volume = volume;
+        }
+        else{
+            _ambientSource.volume = ambientVolume;
         }
         _ambientSource.clip = clip;
         _ambientSource.loop = true;
@@ -110,14 +123,17 @@ public class AudioManager : MonoBehaviour
     
     public void SetMusicVolume(float volume) {
         _musicSource.volume = volume;
+        musicVolume = volume;
     }
     
     public void SetSfxVolume(float volume) {
         _sfxSource.volume = volume;
+        sfxVolume = volume;
     }
 
     public void SetAmbientVolume(float volume) {
         _ambientSource.volume = volume;
+        ambientVolume = volume;
     }
     
     public void ToggleMute() {
