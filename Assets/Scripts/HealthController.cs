@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,6 +24,12 @@ public class Health : MonoBehaviour
     [Header ("Ui for player")]
     public UiHealthBar healthBar;
 
+    [Header ("Floating Text Prefab")]
+    public GameObject floatingTextPrefab;
+
+    
+    private Canvas canvas;
+    private Camera mainCamera;
 
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -37,6 +44,24 @@ public class Health : MonoBehaviour
             healthBar.SetHealth(maxHealth);
         }
         enemySpawner = FindObjectOfType<EnemySpawner>();
+        canvas = FindObjectOfType<Canvas>();
+        mainCamera = Camera.main;
+    }
+    
+
+    private void ShowFloatingText(float amount, Color col)
+    {
+        if (floatingTextPrefab && canvas != null)
+        {
+            // World position for the text
+            Vector3 textWorldPosition = transform.position + new Vector3(0, 1f, 0); // Adjust for offset
+
+            // Instantiate and setup
+            GameObject textObj = Instantiate(floatingTextPrefab, canvas.transform);
+            FloatingText floatingText = textObj.GetComponent<FloatingText>();
+            floatingText.SetText(amount.ToString(), col);
+            floatingText.SetWorldPosition(textWorldPosition);
+        }
     }
 
     public void TakeDamage(float amount)
@@ -58,6 +83,14 @@ public class Health : MonoBehaviour
             }
         }
         
+        if (gameObject.CompareTag("Player"))
+        {
+            ShowFloatingText(-amount, Color.red);
+        }
+        else
+        {
+            ShowFloatingText(-amount, Color.white);
+        }
 
         if (currentHealth <= 0)
         {
@@ -76,6 +109,7 @@ public class Health : MonoBehaviour
         {
             healthBar.SetHealth(currentHealth);
         }
+        ShowFloatingText(amount, Color.green);
         onHealthChanged.Invoke(currentHealth / maxHealth); // Invoke with health percentage
     }
 

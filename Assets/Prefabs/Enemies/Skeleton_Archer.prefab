@@ -270,6 +270,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   healthBar: {fileID: 0}
+  floatingTextPrefab: {fileID: 6597250921811002607, guid: 9add882d458db334da295c9900bb4334, type: 3}
 --- !u!114 &5166797456885992850
 MonoBehaviour:
   m_ObjectHideFlags: 0

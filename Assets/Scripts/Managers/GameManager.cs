@@ -84,7 +84,6 @@ public class GameManager : MonoBehaviour
 
     public PlayerStats GetPlayerStats()
     {
-        Debug.Log("PlayerStats Here", playerStats);
         return playerStats;
     }
     
