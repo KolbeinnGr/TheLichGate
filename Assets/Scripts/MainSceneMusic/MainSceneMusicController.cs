@@ -33,7 +33,6 @@ public class MainSceneMusicController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(startMusic.clip.length);
         if(counter == 1)
         {   
             counter -= 1;

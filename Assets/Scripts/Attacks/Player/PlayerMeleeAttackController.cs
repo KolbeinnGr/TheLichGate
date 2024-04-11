@@ -18,6 +18,7 @@ public class PlayerMeleeAttackController : AttackController
 
     protected void Awake()
     {
+        GameManager.Instance.InitializePlayerStats();
         playerStats = GameManager.Instance.GetPlayerStats();
         animationPlayTime = attackAnimation.length;
     }

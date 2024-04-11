@@ -30,14 +30,13 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            StartTimer();
             DontDestroyOnLoad(gameObject);
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
         }
-        InitializePlayerStats();
+        //InitializePlayerStats();
     }   
     
     // Game Management functions
@@ -47,8 +46,10 @@ public class GameManager : MonoBehaviour
         Instance = null;
     }
 
-    private void InitializePlayerStats()
+    public void InitializePlayerStats()
     {
+        GetLevelUpScreen();
+        StartTimer();
         GameObject playerGameObject = GameObject.FindWithTag("PlayerContainer");
         if (playerGameObject != null)
         {
@@ -63,6 +64,12 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Player GameObject not found");
         }
         
+    }
+
+    private void GetLevelUpScreen()
+    {
+        levelUpScreen = GameObject.FindWithTag("LevelUpScreen");
+        levelUpScreen.SetActive(false);
     }
 
     public PlayerStats GetPlayerStats()

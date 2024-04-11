@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - ExperienceGem
   - PlayerContainer
+  - LevelUpScreen
   layers:
   - Default
   - TransparentFX
