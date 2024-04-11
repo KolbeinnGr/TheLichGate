@@ -109,7 +109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 20.4}
+  m_AnchoredPosition: {x: 13, y: 18.5}
   m_SizeDelta: {x: 217.42, y: 13.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7171724003084325356
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -11.921562, y: 0, z: -15.73642, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1548,7 +1548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 20.4}
+  m_AnchoredPosition: {x: 13, y: 18}
   m_SizeDelta: {x: 217.42, y: 13.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6186902991798285365
@@ -1606,8 +1606,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1642,7 +1642,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -11.44471, y: 0, z: -16.213257, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1879,7 +1879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 20.4}
+  m_AnchoredPosition: {x: 13, y: 18.5}
   m_SizeDelta: {x: 217.42, y: 13.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6153122893656313132
@@ -1937,8 +1937,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1973,7 +1973,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -10.967819, y: 0, z: -14.782669, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2605,7 +2605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 20.4}
+  m_AnchoredPosition: {x: 13, y: 19}
   m_SizeDelta: {x: 217.42, y: 13.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5313125002570218994
@@ -2663,8 +2663,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2699,7 +2699,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -12.875305, y: 0, z: -14.782669, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2802,31 +2802,50 @@ MonoBehaviour:
     icon: {fileID: 8567095490083146982}
     upgradeName: {fileID: 1889578493205889604}
     upgradeDescription: {fileID: 9057136969483060499}
-    background: {fileID: 4545080603235346470}
+    background: {fileID: 2514860133550654894}
     selectButton: {fileID: 354876010802551561}
   upgradeOption2:
     icon: {fileID: 6216519109333350960}
     upgradeName: {fileID: 6842809584714584502}
     upgradeDescription: {fileID: 7370153395652209747}
-    background: {fileID: 5133795519958103232}
+    background: {fileID: 7646084325299429089}
     selectButton: {fileID: 8501927288589579992}
   upgradeOption3:
     icon: {fileID: 1204475188251283981}
     upgradeName: {fileID: 5236049218434865606}
     upgradeDescription: {fileID: 661807251824937776}
-    background: {fileID: 6305745730501119751}
+    background: {fileID: 3377998213233826311}
     selectButton: {fileID: 5610784899552163137}
   upgradeOption4:
     icon: {fileID: 316374882043234814}
     upgradeName: {fileID: 5030969173405074186}
     upgradeDescription: {fileID: 6983883157303406231}
-    background: {fileID: 4734318890143218634}
+    background: {fileID: 6032150162319489730}
     selectButton: {fileID: 4134036527628571262}
   rarityFrames:
   - {fileID: -4467720601148597220, guid: f7bc918cb7653004a9744f1fac70a8df, type: 3}
   - {fileID: 5928315460014745287, guid: f632c7bfcef514c4bb6b7a70c31f46af, type: 3}
   - {fileID: -4558110360258019876, guid: fe8d791cd316c2b4b8663de1acd8bdcc, type: 3}
   - {fileID: -3798010630984517701, guid: 40ddb4f852da2f04192ea87adf7f3829, type: 3}
+  upgradeIcon:
+  - type: 0
+    icon: {fileID: 421748006185148402, guid: ba2b2cbca4184844b837c6f85d4502ce, type: 3}
+  - type: 1
+    icon: {fileID: -2239192852473045083, guid: ba2b2cbca4184844b837c6f85d4502ce, type: 3}
+  - type: 2
+    icon: {fileID: 7805959276245068890, guid: ba2b2cbca4184844b837c6f85d4502ce, type: 3}
+  - type: 4
+    icon: {fileID: 8088198413518413367, guid: ba2b2cbca4184844b837c6f85d4502ce, type: 3}
+  - type: 5
+    icon: {fileID: -4576633823861911075, guid: ba2b2cbca4184844b837c6f85d4502ce, type: 3}
+  - type: 6
+    icon: {fileID: 7987731096189647728, guid: ba2b2cbca4184844b837c6f85d4502ce, type: 3}
+  - type: 7
+    icon: {fileID: -434860824586210957, guid: ba2b2cbca4184844b837c6f85d4502ce, type: 3}
+  - type: 8
+    icon: {fileID: 8643403307270560452, guid: ba2b2cbca4184844b837c6f85d4502ce, type: 3}
+  - type: 9
+    icon: {fileID: -1339186665547191541, guid: ba2b2cbca4184844b837c6f85d4502ce, type: 3}
 --- !u!1 &7946907263472586163
 GameObject:
   m_ObjectHideFlags: 0
