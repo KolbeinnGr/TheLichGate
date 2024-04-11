@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     private PlayerStats playerStats;
     private Health playerHealth;
+    private UIPlayerStatus uiPlayerStatus;
     
     void Awake()
     {
@@ -50,6 +51,8 @@ public class GameManager : MonoBehaviour
     public void InitializePlayerStats()
     {
         GetLevelUpScreen();
+        GetUIPlayerStats();
+        DisableScreens();
         StartTimer();
         GameObject playerGameObject = GameObject.FindWithTag("PlayerContainer");
         playerHealth = playerGameObject.GetComponentInChildren<Health>();
@@ -74,6 +77,11 @@ public class GameManager : MonoBehaviour
         levelUpScreen.SetActive(false);
     }
 
+    private void GetUIPlayerStats()
+    {
+        uiPlayerStatus = GameObject.FindWithTag("PlayerStatusScreen").GetComponent<UIPlayerStatus>();
+    }
+
     public PlayerStats GetPlayerStats()
     {
         Debug.Log("PlayerStats Here", playerStats);
@@ -83,6 +91,7 @@ public class GameManager : MonoBehaviour
     void DisableScreens()       
     {
         levelUpScreen.SetActive(false);
+        uiPlayerStatus.gameObject.SetActive(false);
     }
     
     
@@ -155,7 +164,7 @@ public class GameManager : MonoBehaviour
 
     public void StartLevelUp()
     {
-        
+        uiPlayerStatus.UpdatePlayerStats();
         choosingUpgrade = true;
         PauseGame();
         playerHealth.Heal(15f);
@@ -169,7 +178,7 @@ public class GameManager : MonoBehaviour
         }
         
         levelUpScreen.SetActive(true);
-        
+        uiPlayerStatus.gameObject.SetActive(true);
     }
     
     public void EndLevelUp()
@@ -177,6 +186,7 @@ public class GameManager : MonoBehaviour
         choosingUpgrade = false;
         ResumeGame();
         levelUpScreen.SetActive(false);
+        uiPlayerStatus.gameObject.SetActive(false);
     }
     
 }

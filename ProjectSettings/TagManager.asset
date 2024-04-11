@@ -8,6 +8,7 @@ TagManager:
   - ExperienceGem
   - PlayerContainer
   - LevelUpScreen
+  - PlayerStatusScreen
   layers:
   - Default
   - TransparentFX

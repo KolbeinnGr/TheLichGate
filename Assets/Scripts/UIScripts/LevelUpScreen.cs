@@ -33,7 +33,20 @@ public class LevelUpScreen : MonoBehaviour
 
     private UpgradeOptionUI[] upgradeOptions;
 
-    private static readonly Color[] RarityColors = { Color.gray, Color.green, Color.blue, Color.magenta }; // Common, Uncommon, Rare, Epic
+    [Header("Rarity Frames")]
+    public Sprite[] rarityFrames; // Common, Uncommon, Rare, Epic
+    
+    
+    [Header("Upgrade Icon")]
+    public List<UpgradeIconMapping> upgradeIcon;
+    
+    [System.Serializable]
+    public class UpgradeIconMapping
+    {
+        public PlayerStats.UpgradeType type;
+        public Sprite icon;
+    }
+
     
     public void InitializeIfNeeded()
     {
@@ -55,17 +68,34 @@ public class LevelUpScreen : MonoBehaviour
                 UpgradeOptionUI ui = upgradeOptions[i];
                 UpgradeManager.UpgradeOption option = options[i];
 
-                // Assign the values from options to the UI elements
-                // ui.icon.sprite = option.icon;
                 ui.upgradeName.text = option.name;
                 ui.upgradeDescription.text = option.description;
-                ui.background.color = RarityColors[(int)option.rarity];
+                
+                // Find the icon for the upgrade
+                foreach (UpgradeIconMapping iconMapping in upgradeIcon)
+                {
+                    if (iconMapping.type == option.type)
+                    {
+                        ui.icon.sprite = iconMapping.icon;
+                        break;
+                    }
+                }
+                
+                if (option.rarity >= 0 && (int)option.rarity < rarityFrames.Length)
+                {
+                    ui.background.sprite = rarityFrames[(int)option.rarity];
+                }
+                else
+                {
+                    Debug.LogError("Rarity index out of range for upgrade option.");
+                }
 
                 ui.icon.gameObject.SetActive(true);
                 
+                
                 ui.selectButton.onClick.RemoveAllListeners();
                 ui.selectButton.onClick.AddListener(() => SelectUpgradeOption(option));
-                ui.selectButton.gameObject.SetActive(true); 
+                ui.selectButton.gameObject.SetActive(true);
             }
             else
             {
