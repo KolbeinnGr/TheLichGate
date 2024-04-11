@@ -28,6 +28,7 @@ public class RandomVoiceLines : MonoBehaviour
                 voiceLine = voiceLines[numberOfVoiceline];
                 if(oldVoiceline)
                 {
+                    
                     while(voiceLine == oldVoiceline)
                     {
                         randomTime = Random.Range(10, 20);
