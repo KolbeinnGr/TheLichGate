@@ -17,7 +17,6 @@ public class PlayerMeleeAttackBehavior : MeleeAttackBehavior
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Hit an enemy!");
             Health enemyHealth = other.GetComponent<Health>();
             if (enemyHealth != null)
             {

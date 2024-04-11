@@ -47,13 +47,7 @@ public class SoulAttackController : AttackController
         {
             for (int i = 0; i < playerStats.soulAttackProjectiles; i++)
             {
-                GameObject spawnedProjectile = Instantiate(prefab, transform.position, Quaternion.identity);
-                Vector3 attackDirection = ((closestEnemy.transform.position + (Vector3.up * 0.8f)) - transform.position).normalized;
-                ProjectileAttackBehavior projectile = spawnedProjectile.GetComponent<ProjectileAttackBehavior>();
-                if (projectile)
-                {
-                    projectile.InitializeProjectile(attackDirection);
-                }
+                StartCoroutine(LaunchProjectilesWithDelay(closestEnemy));
             }
 
         }
@@ -74,4 +68,48 @@ public class SoulAttackController : AttackController
         }
         return closestEnemy;
     }
+    
+    
+    private IEnumerator LaunchProjectilesWithDelay(GameObject target)
+    {
+        for (int i = 0; i < playerStats.soulAttackProjectiles; i++)
+        {
+            GameObject spawnedProjectile = Instantiate(prefab, transform.position, Quaternion.identity);
+            Vector3 attackDirection = ((target.transform.position + (Vector3.up * 0.8f)) - transform.position).normalized;
+            ProjectileAttackBehavior projectile = spawnedProjectile.GetComponent<ProjectileAttackBehavior>();
+            if (projectile)
+            {
+                projectile.InitializeProjectile(attackDirection);
+            }
+
+            yield return new WaitForSeconds(0.2f); // Delay between projectiles
+        }
+    }
+    
+    
+    private void SpreadShot(GameObject target)
+    {
+        float spreadAngle = 10f; // Total spread angle
+        float angleStep = spreadAngle / (playerStats.soulAttackProjectiles - 1);
+
+        for (int i = 0; i < playerStats.soulAttackProjectiles; i++)
+        {
+            GameObject spawnedProjectile = Instantiate(prefab, transform.position, Quaternion.identity);
+            Vector3 attackDirection = ((target.transform.position + (Vector3.up * 0.8f)) - transform.position).normalized;
+
+            // Calculate the rotation for the current projectile
+            float currentAngle = -spreadAngle / 2 + angleStep * i;
+            Quaternion rotation = Quaternion.Euler(0, 0, currentAngle);
+            Vector3 rotatedDirection = rotation * attackDirection;
+
+            ProjectileAttackBehavior projectile = spawnedProjectile.GetComponent<ProjectileAttackBehavior>();
+            if (projectile)
+            {
+                projectile.InitializeProjectile(rotatedDirection);
+            }
+        }
+    }
+
+    
+    
 }
