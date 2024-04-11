@@ -41,7 +41,14 @@ public class PlayerMeleeAttackController : AttackController
             Quaternion effectRotation = isFacingRight ? Quaternion.identity : Quaternion.Euler(0, 180, 0);
 
             GameObject spawnedSlash = Instantiate(slashEffectPrefab, effectPosition, effectRotation, transform);
+            
+            // Scale the effect based on bodyAttackSize
+            float sizeMultiplier = playerStats.bodyAttackSize;
+            spawnedSlash.transform.localScale = new Vector3(sizeMultiplier, sizeMultiplier, sizeMultiplier);
 
+            // Offset the effect to align with the player's position
+            spawnedSlash.transform.localPosition -= new Vector3(0, spawnedSlash.transform.localScale.y / 2, 0);
+            
             if (AudioManager.Instance)
             {
                 // Play a random swing sound
