@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MusicSlider : MonoBehaviour
 {
+    public AudioClip slideSound;
     public Slider slider;
     void Start()
     {
@@ -13,5 +14,6 @@ public class MusicSlider : MonoBehaviour
     public void SetLevel(float sliderValue)
     {
         AudioManager.Instance.SetMusicVolume(sliderValue);
+        AudioManager.Instance.PlaySound(slideSound);
     }
 }

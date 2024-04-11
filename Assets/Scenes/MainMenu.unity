@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a776ac28e33e1244e9b3522deeaa2425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slideSound: {fileID: 8300000, guid: 7116de527c5534743adc82d163b81671, type: 3}
   slider: {fileID: 60155499}
 --- !u!1 &78617728
 GameObject:
@@ -352,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f65cf9c871a3845bd7e8d58d1cdce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slideSound: {fileID: 8300000, guid: 7116de527c5534743adc82d163b81671, type: 3}
   slider: {fileID: 78617730}
 --- !u!1 &119656466
 GameObject:
