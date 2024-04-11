@@ -72,6 +72,10 @@ public class Health : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+        if(healthBar)
+        {
+            healthBar.SetHealth(currentHealth);
+        }
         onHealthChanged.Invoke(currentHealth / maxHealth); // Invoke with health percentage
     }
 
