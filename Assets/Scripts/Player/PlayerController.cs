@@ -44,10 +44,12 @@ public class PlayerController : MonoBehaviour
     [Header ("Animation")]
     public Animator animator;
     public Vector2 direction;  // The direction the player is moving in
-
-
     private SpriteRenderer spriteRenderer;
-    
+
+
+    [Header ("Death UI")]
+    public GameObject endScreen;
+
     void Start()
     {
         if (chainRenderer != null)
@@ -67,13 +69,19 @@ public class PlayerController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            ToggleSoulActive();
-            
+            if (!GameManager.Instance.isGamePaused)
+            {
+                ToggleSoulActive();
+            }
         }
         
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse1)) && isSoulActive && !isDashing)
         {
-            StartDash();
+            if (!GameManager.Instance.isGamePaused)
+            {
+                StartDash();
+            }
+            
         }
 
         if (chainRenderer && playerSoul.activeSelf)  // Draw the chain between the player and the soul with offsets
@@ -239,7 +247,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(3);
-        GameManager.Instance.endScreen.SetActive(true);
+        endScreen.SetActive(true);
         GameManager.Instance.PauseGame();
     }
 

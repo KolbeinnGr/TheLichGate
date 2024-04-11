@@ -24,10 +24,6 @@ public class GameManager : MonoBehaviour
     public bool choosingUpgrade = false;
 
     private PlayerStats playerStats;
-
-    public GameObject settingsScreen;
-
-    public GameObject endScreen;
     
     void Awake()
     {
@@ -71,6 +67,7 @@ public class GameManager : MonoBehaviour
 
     public PlayerStats GetPlayerStats()
     {
+        Debug.Log("PlayerStats Here", playerStats);
         return playerStats;
     }
     

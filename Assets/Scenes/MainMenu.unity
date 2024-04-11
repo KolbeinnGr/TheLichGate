@@ -1976,6 +1976,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 370614704639112609, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
+      propertyPath: endScreen
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 370614704639112609, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
+      propertyPath: levelUpScreen
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 370614704639112609, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
+      propertyPath: settingsScreen
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7639636282756677878, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
       propertyPath: sfxVolume
       value: 0.1

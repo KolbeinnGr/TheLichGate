@@ -7,6 +7,7 @@ public class AudioMenuController : MonoBehaviour
     public AudioSource music;
     void Start()
     {
+        AudioManager.Instance._musicSource = music;
         AudioManager.Instance.PlayMusic(music.clip);
     }
 }

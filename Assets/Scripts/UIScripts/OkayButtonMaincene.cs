@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class OkayButtonSettings : MonoBehaviour
 {
+    public GameObject settingsScreen;
     public AudioSource buttonClick;
-    public void closeSettings()
+    public void CloseSettings()
     {
+        AudioManager.Instance._sfxSource = buttonClick;
         AudioManager.Instance.PlaySound(buttonClick.clip);
-        GameManager.Instance.settingsScreen.SetActive(false);
+        settingsScreen.SetActive(false);
         GameManager.Instance.ResumeGame();
     }
 }
