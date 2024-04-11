@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3556e0a7f7bbe004399ee8d3de6cd122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 2
   fadeDuration: 1.5
   textMesh: {fileID: 310755358613390886}
   worldPositionOffset: {x: 0, y: 0.5, z: 0}

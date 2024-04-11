@@ -85,7 +85,7 @@ public class Health : MonoBehaviour
 
         if (gameObject.CompareTag("Player"))
         {
-            ShowFloatingText(amount, Color.red, 20);
+            ShowFloatingText((int)amount, Color.red, 20);
             CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
             if (cameraShake)
             {
@@ -94,7 +94,7 @@ public class Health : MonoBehaviour
         }
         else
         {
-            ShowFloatingText(amount, Color.white, 16);
+            ShowFloatingText((int)amount, Color.white, 16);
         }
 
         if (currentHealth <= 0)
