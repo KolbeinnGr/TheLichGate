@@ -205,10 +205,10 @@ MonoBehaviour:
   animator: {fileID: 1770982539948373164}
   rb: {fileID: 6833907460290484738}
   speed: 1.5
-  attackRange: 5
+  attackRange: 8.5
   arrowPrefab: {fileID: 890317872891169616, guid: 23a2f893048955c4daad9468e7a35511, type: 3}
   shootingPoint: {fileID: 5373955964845084738}
-  arrowSpeed: 3
+  arrowSpeed: 5
 --- !u!114 &7436804832587627936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +271,7 @@ MonoBehaviour:
       m_Calls: []
   healthBar: {fileID: 0}
   floatingTextPrefab: {fileID: 6597250921811002607, guid: 9add882d458db334da295c9900bb4334, type: 3}
+  isDashing: 0
 --- !u!114 &5166797456885992850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2809046469094384331}
   flashColor: {r: 1, g: 0, b: 0, a: 1}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.1
 --- !u!114 &7823209712094738087
 MonoBehaviour:
