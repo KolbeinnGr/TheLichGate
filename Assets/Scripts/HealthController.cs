@@ -49,7 +49,7 @@ public class Health : MonoBehaviour
     }
     
 
-    private void ShowFloatingText(float amount, Color col)
+    private void ShowFloatingText(float amount, Color col, int fontSize = 10)
     {
         if (floatingTextPrefab && canvas != null)
         {
@@ -59,7 +59,7 @@ public class Health : MonoBehaviour
             // Instantiate and setup
             GameObject textObj = Instantiate(floatingTextPrefab, canvas.transform);
             FloatingText floatingText = textObj.GetComponent<FloatingText>();
-            floatingText.SetText(amount.ToString(), col);
+            floatingText.SetText(amount.ToString(), col, fontSize);
             floatingText.SetWorldPosition(textWorldPosition);
         }
     }
@@ -82,14 +82,19 @@ public class Health : MonoBehaviour
                 AudioManager.Instance.PlaySound(hurtSounds[Random.Range(0, hurtSounds.Length)]);
             }
         }
-        
+
         if (gameObject.CompareTag("Player"))
         {
-            ShowFloatingText(-amount, Color.red);
+            ShowFloatingText(amount, Color.red, 20);
+            CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
+            if (cameraShake)
+            {
+                cameraShake.TriggerShake(0.1f, 0.1f); // Shake duration 0.5 seconds, magnitude 0.7
+            }
         }
         else
         {
-            ShowFloatingText(-amount, Color.white);
+            ShowFloatingText(amount, Color.white, 16);
         }
 
         if (currentHealth <= 0)
@@ -118,7 +123,7 @@ public class Health : MonoBehaviour
         if (isDead) return;
         isDead = true;
         enemySpawner.OnEnemyKilled(); // To help keep track of no. of enemies on the stage in the enemy spawner.
-       
+
         onDeath.Invoke();
 
         // Use SendMessage to call TriggerDeathState on any attached script

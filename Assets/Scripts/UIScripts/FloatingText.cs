@@ -17,9 +17,17 @@ public class FloatingText : MonoBehaviour
     {
         startTime = Time.time;
         mainCamera = Camera.main;
-        if (transform.parent != null)
+        // if (transform.parent != null)
+        // {
+        //     canvasRectTransform = transform.parent.GetComponent<RectTransform>();
+        // }
+        
+        // Set the parent to the FloatingTextCanvas
+        var floatingTextCanvas = GameObject.Find("FloatingTextCanvas").GetComponent<Canvas>();
+        if (floatingTextCanvas)
         {
-            canvasRectTransform = transform.parent.GetComponent<RectTransform>();
+            transform.SetParent(floatingTextCanvas.transform, false);
+            canvasRectTransform = floatingTextCanvas.GetComponent<RectTransform>();
         }
     }
 
@@ -49,10 +57,11 @@ public class FloatingText : MonoBehaviour
         }
     }
 
-    public void SetText(string text, Color color)
+    public void SetText(string text, Color color, int fontSize = 14)
     {
         textMesh.text = text;
         textMesh.color = color;
+        textMesh.fontSize = fontSize;
     }
 
     public void SetWorldPosition(Vector3 position)
