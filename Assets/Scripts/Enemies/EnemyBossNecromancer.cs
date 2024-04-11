@@ -67,19 +67,22 @@ public class EnemyBossNecromancer : MonoBehaviour, IEnemy
         float timeSinceLastAttack = Time.time - lastAttackTime;
         float timeSinceLastSpell = Time.time - lastSpellTime;
 
-        if (stateMachine.currentState is IdleState && distanceToTarget > attackRange && distanceToTarget <= minDistanceFromTarget)
+        bool attackOnCooldown = timeSinceLastAttack < attackCooldown;
+        bool spellOnCooldown = timeSinceLastSpell < spellCooldown;
+        
+        if (stateMachine.currentState is IdleState && distanceToTarget >= minDistanceFromTarget)
         {
             stateMachine.ChangeState(typeof(WalkState));
         }
 
         // Check and perform attack or spell if within range and cooldown has passed
-        if (distanceToTarget <= attackRange && timeSinceLastAttack >= attackCooldown && !(stateMachine.currentState is AttackState) && !(stateMachine.currentState is SpellState))
+        if (distanceToTarget <= attackRange && !attackOnCooldown && !(stateMachine.currentState is AttackState) && !(stateMachine.currentState is SpellState))
         {
             lastAttackTime = Time.time; // Reset the attack timer
             stateMachine.ChangeState(typeof(AttackState));
             return; // Exit early to prevent further logic from executing this frame
         }
-        if (distanceToTarget <= spellRange && timeSinceLastSpell >= spellCooldown && !(stateMachine.currentState is SpellState) && !(stateMachine.currentState is AttackState))
+        if (distanceToTarget <= spellRange && !spellOnCooldown && !(stateMachine.currentState is SpellState) && !(stateMachine.currentState is AttackState))
         {
             lastSpellTime = Time.time; // Reset the spell timer
             stateMachine.ChangeState(typeof(SpellState));

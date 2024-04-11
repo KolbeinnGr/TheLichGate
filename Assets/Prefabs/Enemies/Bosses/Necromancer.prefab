@@ -311,8 +311,8 @@ MonoBehaviour:
   SpellGameObject: {fileID: 6753051379927159176}
   warningZoneAttack: {fileID: 88896891217649129}
   AttackLightningGameObject: {fileID: 7789060916449563378}
-  attackCooldown: 6
-  spellCooldown: 5
+  attackCooldown: 5
+  spellCooldown: 8
 --- !u!50 &6475966216576870217
 Rigidbody2D:
   serializedVersion: 4
@@ -433,6 +433,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   healthBar: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
 --- !u!114 &2608238116575140248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7927372146605099959}
   flashColor: {r: 1, g: 0, b: 0, a: 1}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.1
 --- !u!114 &982931094277971677
 MonoBehaviour:
