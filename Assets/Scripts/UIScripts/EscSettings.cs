@@ -5,6 +5,7 @@ using UnityEngine;
 public class EscSettings : MonoBehaviour
 {
     public GameObject settingsScreen;
+    public UIPlayerStatus playerStatScreen;
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -13,6 +14,7 @@ public class EscSettings : MonoBehaviour
             {
                 GameManager.Instance.PauseGame();
                 settingsScreen.SetActive(true);
+                playerStatScreen.UpdatePlayerStats();
             }
             else{
                 closeSettings();
