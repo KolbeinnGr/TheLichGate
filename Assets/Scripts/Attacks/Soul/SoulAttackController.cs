@@ -48,7 +48,7 @@ public class SoulAttackController : AttackController
             for (int i = 0; i < playerStats.soulAttackProjectiles; i++)
             {
                 GameObject spawnedProjectile = Instantiate(prefab, transform.position, Quaternion.identity);
-                Vector3 attackDirection = (closestEnemy.transform.position - transform.position).normalized;
+                Vector3 attackDirection = ((closestEnemy.transform.position + (Vector3.up * 0.8f)) - transform.position).normalized;
                 ProjectileAttackBehavior projectile = spawnedProjectile.GetComponent<ProjectileAttackBehavior>();
                 if (projectile)
                 {
