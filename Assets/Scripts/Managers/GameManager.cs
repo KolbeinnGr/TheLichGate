@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public bool choosingUpgrade = false;
 
     private PlayerStats playerStats;
+    private Health playerHealth;
     
     void Awake()
     {
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
         GetLevelUpScreen();
         StartTimer();
         GameObject playerGameObject = GameObject.FindWithTag("PlayerContainer");
+        playerHealth = playerGameObject.GetComponentInChildren<Health>();
         if (playerGameObject != null)
         {
             playerStats = playerGameObject.GetComponent<PlayerStats>();
@@ -156,6 +158,7 @@ public class GameManager : MonoBehaviour
         
         choosingUpgrade = true;
         PauseGame();
+        playerHealth.Heal(15f);
         List<UpgradeManager.UpgradeOption> options = UpgradeManager.Instance.GetRandomUpgrades(4);
         
         LevelUpScreen levelUpScript = levelUpScreen.GetComponent<LevelUpScreen>();
@@ -167,7 +170,6 @@ public class GameManager : MonoBehaviour
         
         levelUpScreen.SetActive(true);
         
-
     }
     
     public void EndLevelUp()
