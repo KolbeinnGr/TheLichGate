@@ -337,6 +337,8 @@ GameObject:
   - component: {fileID: 3117729734647020231}
   - component: {fileID: 4229549462385011798}
   - component: {fileID: 1439226656158585105}
+  - component: {fileID: 6229760158362386918}
+  - component: {fileID: 1230532067177371577}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -384,15 +386,16 @@ MonoBehaviour:
   soulXOffset: 0
   soulYOffset: 0.39
   chainStartXOffset: 0
-  chainStartYOffset: 0.27
+  chainStartYOffset: 0.84
   chainEndXOffset: 0
-  chainEndYOffset: -0.15
+  chainEndYOffset: 0
   chainRenderer: {fileID: 2949155776394070788}
   chainMaterial: {fileID: -876546973899608171, guid: 3c596b6c49315c042852738b0edd4d41, type: 3}
   dashDuration: 0.5
   minDashDistance: 1
   animator: {fileID: 3588944795818922105}
   direction: {x: 0, y: 0}
+  endScreen: {fileID: 0}
 --- !u!50 &9108470645967422330
 Rigidbody2D:
   serializedVersion: 4
@@ -587,11 +590,16 @@ MonoBehaviour:
   pierce: 0
   attacks: 2
   slashEffectPrefab: {fileID: 7127135011321863297, guid: 819e473a5bc43cf468aff65abaed95ae, type: 3}
-  offsetX: 0
-  offsetY: -0.42
+  offsetX: -1
+  offsetY: -1.81
   attackAnimation: {fileID: 7400000, guid: 889ab03e23432ae4f9db43748774a4eb, type: 2}
-  swingSounds: []
-  swingSoundVolume: 0.5
+  swingSounds:
+  - {fileID: 8300000, guid: 54c48e6196cb8f245a06a73b74fa8d6e, type: 3}
+  - {fileID: 8300000, guid: 3d77eac71e44ab7499172ee62925e3db, type: 3}
+  - {fileID: 8300000, guid: dce158b91394365439ce5531e06e5c8c, type: 3}
+  - {fileID: 8300000, guid: 9dea7c16e8d99154fbca98918af17920, type: 3}
+  - {fileID: 8300000, guid: 2bd26990418b9164d843db75c94d76b9, type: 3}
+  - {fileID: 8300000, guid: 63957bc376448824abce4a687c8de267, type: 3}
 --- !u!114 &4229549462385011798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,7 +628,7 @@ MonoBehaviour:
   - {x: 0.12844291, y: 0.007951438, z: 0}
   m_ShapePathHash: 2073343765
   m_Mesh: {fileID: 0}
-  m_InstanceId: 35082
+  m_InstanceId: -40568
   m_LocalBounds:
     m_Center: {x: 0.0011758357, y: 0.4475828, z: 0}
     m_Extent: {x: 0.12726708, y: 0.45374113, z: 0}
@@ -636,6 +644,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1dbb47c728be847979a539f9b26983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6229760158362386918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125185204766933283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4e27db750952e647bffe51f3cd1be3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  flashColor: {r: 0.7735849, g: 0.18609823, b: 0.18609823, a: 1}
+  flashDuration: 0.1
+--- !u!114 &1230532067177371577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125185204766933283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c19b0b582ca7c49a4dbe5ea7b91f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  animator: {fileID: 3588944795818922105}
+  deathSounds:
+  - {fileID: 8300000, guid: a8c21da19ad019e479c156c27d76064a, type: 3}
+  hurtSounds:
+  - {fileID: 8300000, guid: b64924d4a51241c48b07b4aa4357d623, type: 3}
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  healthBar: {fileID: 0}
 --- !u!1 &2996303729984248467
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +755,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6148,6 +6197,7 @@ MonoBehaviour:
   experience: 0
   level: 1
   experienceCap: 0
+  eXPbar: {fileID: 0}
   levelRanges:
   - startLevel: 1
     endLevel: 3
