@@ -21,7 +21,7 @@ public class ButtonFadeAway : MonoBehaviour
             tmp.a = alphaVal;
             yourSpriteRenderer.color = tmp;
 
-            yield return new WaitForSeconds(0.05f); // update interval
+            yield return new WaitForSeconds(0.15f); // update interval
         }
     }
 }

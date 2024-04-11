@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        //InitializePlayerStats();
     }   
     
     // Game Management functions

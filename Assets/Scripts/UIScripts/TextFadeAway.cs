@@ -24,7 +24,7 @@ public class TextFadeAway : MonoBehaviour
             tmp.a = alphaVal;
             fadeAwayText.color = tmp;
 
-            yield return new WaitForSeconds(0.05f); // update interval
+            yield return new WaitForSeconds(0.15f); // update interval
         }
     }
 }
