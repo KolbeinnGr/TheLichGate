@@ -49,6 +49,14 @@ public class PlayerController : MonoBehaviour
 
     [Header ("Death UI")]
     public GameObject endScreen;
+    
+    [Header("Dash Landing Effect")]
+    public GameObject dashLandingEffectPrefab;
+    public float dashEffectYOffset = 0.5f;
+    public AudioClip jumpSFX;
+    public AudioClip landSFX;
+
+    private Health health;
 
     void Start()
     {
@@ -61,6 +69,7 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         }
+        health = GetComponent<Health>();
     }
 
     void Update()
@@ -197,6 +206,8 @@ public class PlayerController : MonoBehaviour
         }
 
         isDashing = true;
+        health.isDashing = true;
+
         dashTarget = playerSoul.transform.position;
         dashStart = transform.position;
         dashDistanceTravelled = 0f;
@@ -208,8 +219,10 @@ public class PlayerController : MonoBehaviour
         spriteRenderer.flipX = directionToSoul < 0;
 
         animator.SetBool("IsDashing", true);
+        
+        AudioManager.Instance.PlaySound(jumpSFX, 0.2f);
+        
     }
- 
 
     private void PerformDash()
     {
@@ -229,12 +242,16 @@ public class PlayerController : MonoBehaviour
     private void FinishDash()
     {
         isDashing = false;
+        health.isDashing = false;
+
         body.velocity = Vector2.zero;
         animator.SetBool("IsDashing", false);
         playerSoul.SetActive(false);
         chainRenderer.enabled = false;
         ToggleSoulActive();
         // Use dashDistanceTravelled for damage calculations if needed
+        AudioManager.Instance.PlaySound(landSFX, 0.2f);
+        CreateSmokeEffect();
     }
 
     public void TriggerDeathState()
@@ -250,5 +267,20 @@ public class PlayerController : MonoBehaviour
         endScreen.SetActive(true);
         GameManager.Instance.PauseGame();
     }
+    
+    void CreateSmokeEffect() {
+        Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + dashEffectYOffset, transform.position.z);
+        GameObject effect = Instantiate(dashLandingEffectPrefab, spawnPosition, Quaternion.identity);
+        
+        CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
+        if (cameraShake)
+        {
+            cameraShake.TriggerShake(0.3f, 0.4f); // Shake duration 0.3 seconds, magnitude 0.4
+        }
+        
+        Destroy(effect, effect.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        
+    }
+
 
 }

@@ -30,6 +30,8 @@ public class Health : MonoBehaviour
     
     private Canvas canvas;
     private Camera mainCamera;
+    
+    public bool isDashing = false;
 
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -66,6 +68,8 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        if (isDashing && gameObject.CompareTag("Player")) return; // Player is invulnerable while dashing
+        
         currentHealth -= amount;
         if(healthBar)
         {
