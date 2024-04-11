@@ -410,6 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 500
+  currentHealth: 0
   animator: {fileID: 2645705874232252540}
   deathSounds:
   - {fileID: 8300000, guid: e6b2383b1a5afbe4296aec97872d9422, type: 3}
@@ -425,13 +426,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e42c168d3db24cc4e9ab7b1813e40746, type: 3}
   - {fileID: 8300000, guid: a6ffc2dffa63ba6428ba182998ac7c56, type: 3}
   - {fileID: 8300000, guid: a829665438767ee4db1414492ad8b172, type: 3}
-  soundVolume: 0.3
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  healthBar: {fileID: 0}
 --- !u!114 &2608238116575140248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,6 +522,7 @@ GameObject:
   - component: {fileID: 542748571620041435}
   - component: {fileID: 7219388524271633315}
   - component: {fileID: 8136910855541749918}
+  - component: {fileID: 1454665073239473338}
   m_Layer: 0
   m_Name: NecroCircleWave_96x96_0
   m_TagString: Untagged
@@ -651,6 +653,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.4223192
+--- !u!114 &1454665073239473338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6753051379927159176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e9e9fbfb770a66498e5089b984971ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7789060916449563378
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +677,7 @@ GameObject:
   - component: {fileID: 5352910444626468169}
   - component: {fileID: 2523345918340584964}
   - component: {fileID: 7696209332358842535}
+  - component: {fileID: 4155308786330547743}
   m_Layer: 0
   m_Name: Necromancer_lightning_attack_0
   m_TagString: Untagged
@@ -810,3 +825,15 @@ PolygonCollider2D:
       - {x: 0.6484397, y: 0.025904179}
       - {x: 1.5526327, y: 1.0172693}
   m_UseDelaunayMesh: 0
+--- !u!114 &4155308786330547743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789060916449563378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2edc20a94c3571448c5fbff84f49ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
