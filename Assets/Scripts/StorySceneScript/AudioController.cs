@@ -7,12 +7,12 @@ public class AudioController : MonoBehaviour
     [SerializeField] private AudioSource newMusicClip;
     void Awake()
     {
-        AudioManager.Instance._musicSource = newMusicClip;
+        //AudioManager.Instance._musicSource = newMusicClip;
     }
 
     void Start()
     {
-        AudioManager.Instance.PlayMusic(newMusicClip.clip);
+        //AudioManager.Instance.PlayMusic(newMusicClip.clip);
     }
 
 }

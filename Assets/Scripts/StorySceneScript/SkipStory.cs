@@ -1,42 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SkipStory : MonoBehaviour
 {
-    private float timeOfCutscene;
-    int counter = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        timeOfCutscene = 99;
-        StartCoroutine(time());
-    }
+    public GameObject partOne;
+    public GameObject partTwo;
+    public GameObject partThree;
+    public GameObject partFour;
+    public GameObject logo;
+
+    public TextMeshProUGUI textMeshProUGUI;
+
+    int counter = 4;
 
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyUp("space"))
         {
-            timeOfCutscene = -1;
-        }
-        if (timeOfCutscene > 0 && timeOfCutscene < 10 && counter == 1)
-        {
-            counter -= 1;
-            StartCoroutine(AudioManager.Instance.FadeOutMusic(2500));
-        }
-        if (timeOfCutscene < 0)
-        {
-            SceneManager.LoadScene("RichardScene");
-        }
-    }
+            if(counter == 4)
+            {
+                partOne.SetActive(false);
+                partTwo.SetActive(true);
+                counter--;
+            }
 
-    IEnumerator time(){
-    while (true)
-    {
-        yield return new WaitForSeconds(1);
-        timeOfCutscene -= 1;
+            else if(counter == 3)
+            {
+                partTwo.SetActive(false);
+                partThree.SetActive(true);
+                counter--;
+            }
+
+            else if(counter == 2)
+            {
+                partThree.SetActive(false);
+                partFour.SetActive(true);
+                counter--;
+            }
+
+            else if(counter == 1)
+            {
+                partFour.SetActive(false);
+                textMeshProUGUI.text = "Press spacebar to start game";
+                logo.SetActive(true); 
+                counter--;
+            }
+
+            else if(counter == 0)
+            {
+                AudioManager.Instance.StopMusic();
+                SceneManager.LoadScene("RichardScene");
+            }
+        }
     }
-}
 
 }

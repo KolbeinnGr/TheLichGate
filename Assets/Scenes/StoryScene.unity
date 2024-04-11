@@ -148,11 +148,16 @@ Transform:
   m_GameObject: {fileID: 24135146}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -827, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 44.965897, y: 44.965897, z: 44.965897}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 846510347}
+  - {fileID: 1826330628}
+  - {fileID: 254378172}
+  - {fileID: 852049065}
+  - {fileID: 364863720}
+  - {fileID: 99932701}
   m_Father: {fileID: 1496041304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &87709771
@@ -168,7 +173,7 @@ GameObject:
   - component: {fileID: 87709773}
   - component: {fileID: 87709775}
   m_Layer: 5
-  m_Name: Skip
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +187,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87709771}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -606.7828}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.009710824, y: 0.009710824, z: 0.009710824}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -213,10 +218,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Spacebar to skip
+  m_text: Press spacebar for next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 89f8d861642abd840b3c5366db052d4c, type: 2}
-  m_sharedMaterial: {fileID: -5477439302287475442, guid: 89f8d861642abd840b3c5366db052d4c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
+  m_sharedMaterial: {fileID: -3796396303305576834, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -302,6 +307,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063c3c5841b8cd44b96d69162eda2d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partOne: {fileID: 846510346}
+  partTwo: {fileID: 1826330627}
+  partThree: {fileID: 254378171}
+  partFour: {fileID: 852049064}
+  logo: {fileID: 364863719}
+  textMeshProUGUI: {fileID: 87709773}
 --- !u!1 &99932699
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +341,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d40fb4ca2e3252d46a75692fa3a8464a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 36b1510193f79914e8c43d7b3b2dbedf, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -425,11 +436,11 @@ Transform:
   m_GameObject: {fileID: 99932699}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 69.3484, y: -216.83842, z: 89860.734}
-  m_LocalScale: {x: 44.95868, y: 44.95868, z: 44.95868}
+  m_LocalPosition: {x: 1.5422444, y: -4.9322863, z: 2087.4539}
+  m_LocalScale: {x: 0.99983954, y: 0.99983954, z: 0.99983954}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 846510347}
+  m_Father: {fileID: 24135147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &99932702
 MonoBehaviour:
@@ -444,7 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMusicClip: {fileID: 99932700}
---- !u!1 &313406917
+--- !u!1 &254378171
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -452,48 +463,136 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 313406919}
-  - component: {fileID: 313406918}
-  m_Layer: 0
-  m_Name: AudioManager
+  - component: {fileID: 254378172}
+  - component: {fileID: 254378175}
+  - component: {fileID: 254378174}
+  m_Layer: 5
+  m_Name: Story Part 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &313406918
+  m_IsActive: 0
+--- !u!224 &254378172
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254378171}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.022239076, y: 0.022239076, z: 0.022239076}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 24135147}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.31}
+  m_SizeDelta: {x: 606.2463, y: 1067.7904}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &254378174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313406917}
+  m_GameObject: {fileID: 254378171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e1c7a71501475040891560843ec8ff4, type: 3}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicVolume: 0
-  sfxVolume: 0
-  ambientVolume: 0.5
-  _musicSource: {fileID: 99932700}
-  _sfxSource: {fileID: 0}
-  _ambientSource: {fileID: 0}
---- !u!4 &313406919
-Transform:
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "When Sir Rhogar awoke, it was not to the golden halls of the valorous,
+    but to the same fog-choked graveyard, with a coldness in his bones that spoke
+    of undeath. He rose, not as the knight he once was, but as a lich, his soul now
+    bound to the flickering flame within the lantern he carried\u2014a beacon in
+    the eternal twilight. \n"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
+  m_sharedMaterial: {fileID: -3796396303305576834, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294959611
+  m_fontColor: {r: 0.98315364, g: 0.8820755, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -0.046302784, y: -33.948303, z: 0.5082855, w: -1.8531113}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &254378175
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313406917}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5424917, y: -24.84799, z: 2177.7888}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 254378171}
+  m_CullTransparentMesh: 1
 --- !u!1 &364863719
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &364863720
 Transform:
   m_ObjectHideFlags: 0
@@ -520,11 +619,11 @@ Transform:
   m_GameObject: {fileID: 364863719}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -770, z: -8050.4277}
-  m_LocalScale: {x: 77.95288, y: 77.95288, z: 77.95288}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.7336001, y: 1.7336001, z: 1.7336001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 846510347}
+  m_Father: {fileID: 24135147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &364863721
 SpriteRenderer:
@@ -588,7 +687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 424809054}
   m_Layer: 0
-  m_Name: Skip
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,6 +722,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2980903623218135461, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2980903623218135461, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 36b1510193f79914e8c43d7b3b2dbedf, type: 3}
+    - target: {fileID: 2980903623218135461, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837602314333960364, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088543186331804900, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7639636282756677878, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
       propertyPath: sfxVolume
       value: 0.5
@@ -634,7 +753,7 @@ PrefabInstance:
     - target: {fileID: 7639636282756677878, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
       propertyPath: _musicSource
       value: 
-      objectReference: {fileID: 99932700}
+      objectReference: {fileID: 493557121}
     - target: {fileID: 9194775730790950115, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -143.08063
@@ -681,6 +800,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
+--- !u!82 &493557121 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2980903623218135461, guid: 7ac876aa5589c2441aae1f371412f3bd, type: 3}
+  m_PrefabInstance: {fileID: 493557120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &846510346
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,9 +816,8 @@ GameObject:
   - component: {fileID: 846510347}
   - component: {fileID: 846510350}
   - component: {fileID: 846510349}
-  - component: {fileID: 846510348}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Story Part 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -708,40 +831,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846510346}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 89.034065}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.022239076, y: 0.022239076, z: 0.022239076}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 364863720}
-  - {fileID: 99932701}
+  m_Children: []
   m_Father: {fileID: 24135147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1.63}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 606.2463, y: 1067.7904}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &846510348
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846510346}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b995e7b60f222a14e9e9fd9c891d9850, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &846510349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,30 +866,17 @@ MonoBehaviour:
     beyond sight, Sir Rhogar, the valorous paladin, met his demise under the mournful
     gaze of a thousand forgotten tombstones. His final battle was a spectacle of
     light and shadow, as his gleaming sword cleaved through the relentless undead,
-    his oath to protect the realm unwavering until the very end. As he fell, the
-    world seemed to hold its breath, and the fog thickened, as if to claim him for
-    its own. The last thing his fading sight beheld was the ethereal glow of an ancient
-    tomb, its cryptic runes shimmering with an otherworldly light.\r\n\r\nWhen Sir
-    Rhogar awoke, it was not to the golden halls of the valorous, but to the same
-    fog-choked graveyard, with a coldness in his bones that spoke of undeath. He
-    rose, not as the knight he once was, but as a lich, his soul now bound to the
-    flickering flame within the lantern he carried\u2014a beacon in the eternal twilight.
-    The tomb that had marked his fall now stood as the threshold to his cursed existence,
-    its glow a grim reminder of his new reality. Yet, even in this dark form, Sir
-    Rhogar's resolve did not waver. Clutching his lantern, the soulflame casting
-    eerie shadows upon decayed stones, he drew his sword once more. The fight against
-    the undead continued, but now from the other side of the veil, as he sought redemption
-    and a path back to the light, through the endless night of \n"
+    his oath to protect the realm unwavering until the very \n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 84124ca86a566584cb4b8d09b7395671, type: 2}
-  m_sharedMaterial: {fileID: -6965954159585838679, guid: 84124ca86a566584cb4b8d09b7395671, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
+  m_sharedMaterial: {fileID: -3796396303305576834, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284500829
-  m_fontColor: {r: 0.3647059, g: 0.29411766, b: 0.37647063, a: 1}
+    rgba: 4294959611
+  m_fontColor: {r: 0.98315364, g: 0.8820755, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -842,7 +929,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.046302784, y: -133.84204, z: 0.5082855, w: -1.8531113}
+  m_margin: {x: -0.046302784, y: -22.332764, z: 0.5082855, w: -1.8531113}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -855,6 +942,146 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846510346}
+  m_CullTransparentMesh: 1
+--- !u!1 &852049064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852049065}
+  - component: {fileID: 852049068}
+  - component: {fileID: 852049067}
+  m_Layer: 5
+  m_Name: Story Part 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &852049065
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852049064}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.022239076, y: 0.022239076, z: 0.022239076}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 24135147}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.1}
+  m_SizeDelta: {x: 606.2463, y: 1067.7904}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &852049067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852049064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "The tomb that had marked his fall now stood as the threshold to his cursed
+    existence, its glow a grim reminder of his new reality. Yet, even in this dark
+    form, Sir Rhogar's resolve did not waver. Clutching his lantern, the soulflame
+    casting eerie shadows upon decayed stones, he drew his sword once more. The fight
+    against the undead continued, but now from the other side of the veil, as he
+    sought redemption and a path back to the light, through the endless night of
+    \r"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
+  m_sharedMaterial: {fileID: -3796396303305576834, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294959611
+  m_fontColor: {r: 0.98315364, g: 0.8820755, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -0.046302784, y: -33.948303, z: 0.5082855, w: -1.8531113}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &852049068
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852049064}
   m_CullTransparentMesh: 1
 --- !u!1 &1034865881
 GameObject:
@@ -1027,6 +1254,145 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1826330627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1826330628}
+  - component: {fileID: 1826330631}
+  - component: {fileID: 1826330630}
+  m_Layer: 5
+  m_Name: Story Part 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1826330628
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826330627}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.022239076, y: 0.022239076, z: 0.022239076}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 24135147}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.21}
+  m_SizeDelta: {x: 606.2463, y: 1067.7904}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1826330630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826330627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'As he fell, the world seemed to hold its breath, and the fog thickened,
+    as if to claim him for its own. The last thing his fading sight beheld was the
+    ethereal glow of an ancient tomb, its cryptic runes shimmering with an otherworldly
+    light.
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
+  m_sharedMaterial: {fileID: -3796396303305576834, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294959611
+  m_fontColor: {r: 0.98315364, g: 0.8820755, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -0.046302784, y: -33.948303, z: 0.5082855, w: -1.8531113}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1826330631
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826330627}
+  m_CullTransparentMesh: 1
 --- !u!1 &1870745268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,7 +1578,7 @@ Transform:
   m_GameObject: {fileID: 2046538382}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4100001, z: -696.7827}
+  m_LocalPosition: {x: 0, y: 0.4100001, z: 0}
   m_LocalScale: {x: 1.2652, y: 1.2652, z: 1.2652}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1277,5 +1643,4 @@ SceneRoots:
   - {fileID: 1870745272}
   - {fileID: 1496041304}
   - {fileID: 1034865884}
-  - {fileID: 313406919}
   - {fileID: 493557120}

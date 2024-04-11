@@ -10,7 +10,11 @@ public class StartButtonMenu : MonoBehaviour
     public void StartGame()
     {
         AudioManager.Instance.PlaySound(buttonClick.clip);
-        AudioManager.Instance.StopMusic();
+        if(GameManager.Instance.isGamePaused)
+        {
+            GameManager.Instance.ResumeGame();
+        }
+        
         SceneManager.LoadScene("StoryScene");
     }
 

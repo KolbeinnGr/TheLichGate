@@ -13,6 +13,10 @@ public class FlashEffect : MonoBehaviour
         if (spriteRenderer == null)
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
+            if(!spriteRenderer)
+            {
+                spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            }
         }
     }
 
