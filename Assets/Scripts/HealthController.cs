@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,6 +24,12 @@ public class Health : MonoBehaviour
     [Header ("Ui for player")]
     public UiHealthBar healthBar;
 
+    [Header ("Floating Text Prefab")]
+    public GameObject floatingTextPrefab;
+
+    
+    private Canvas canvas;
+    private Camera mainCamera;
 
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -37,6 +44,24 @@ public class Health : MonoBehaviour
             healthBar.SetHealth(maxHealth);
         }
         enemySpawner = FindObjectOfType<EnemySpawner>();
+        canvas = FindObjectOfType<Canvas>();
+        mainCamera = Camera.main;
+    }
+    
+
+    private void ShowFloatingText(float amount, Color col, int fontSize = 10)
+    {
+        if (floatingTextPrefab && canvas != null)
+        {
+            // World position for the text
+            Vector3 textWorldPosition = transform.position + new Vector3(0, 1f, 0); // Adjust for offset
+
+            // Instantiate and setup
+            GameObject textObj = Instantiate(floatingTextPrefab, canvas.transform);
+            FloatingText floatingText = textObj.GetComponent<FloatingText>();
+            floatingText.SetText(amount.ToString(), col, fontSize);
+            floatingText.SetWorldPosition(textWorldPosition);
+        }
     }
 
     public void TakeDamage(float amount)
@@ -57,7 +82,20 @@ public class Health : MonoBehaviour
                 AudioManager.Instance.PlaySound(hurtSounds[Random.Range(0, hurtSounds.Length)]);
             }
         }
-        
+
+        if (gameObject.CompareTag("Player"))
+        {
+            ShowFloatingText((int)amount, Color.red, 20);
+            CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
+            if (cameraShake)
+            {
+                cameraShake.TriggerShake(0.1f, 0.1f); // Shake duration 0.5 seconds, magnitude 0.7
+            }
+        }
+        else
+        {
+            ShowFloatingText((int)amount, Color.white, 16);
+        }
 
         if (currentHealth <= 0)
         {
@@ -76,6 +114,7 @@ public class Health : MonoBehaviour
         {
             healthBar.SetHealth(currentHealth);
         }
+        ShowFloatingText(amount, Color.green);
         onHealthChanged.Invoke(currentHealth / maxHealth); // Invoke with health percentage
     }
 
@@ -84,7 +123,7 @@ public class Health : MonoBehaviour
         if (isDead) return;
         isDead = true;
         enemySpawner.OnEnemyKilled(); // To help keep track of no. of enemies on the stage in the enemy spawner.
-       
+
         onDeath.Invoke();
 
         // Use SendMessage to call TriggerDeathState on any attached script

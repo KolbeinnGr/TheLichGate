@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 1439226656158585105}
   - component: {fileID: 6229760158362386918}
   - component: {fileID: 1230532067177371577}
+  - component: {fileID: 8443385837837557602}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -628,7 +629,7 @@ MonoBehaviour:
   - {x: 0.12844291, y: 0.007951438, z: 0}
   m_ShapePathHash: 2073343765
   m_Mesh: {fileID: 0}
-  m_InstanceId: -40568
+  m_InstanceId: 109406
   m_LocalBounds:
     m_Center: {x: 0.0011758357, y: 0.4475828, z: 0}
     m_Extent: {x: 0.12726708, y: 0.45374113, z: 0}
@@ -656,10 +657,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e27db750952e647bffe51f3cd1be3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 3306108239447825918}
   flashColor: {r: 0.7735849, g: 0.18609823, b: 0.18609823, a: 1}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.1
 --- !u!114 &1230532067177371577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125185204766933283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c19b0b582ca7c49a4dbe5ea7b91f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
+  animator: {fileID: 3588944795818922105}
+  deathSounds:
+  - {fileID: 8300000, guid: a8c21da19ad019e479c156c27d76064a, type: 3}
+  hurtSounds:
+  - {fileID: 8300000, guid: b64924d4a51241c48b07b4aa4357d623, type: 3}
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  healthBar: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+--- !u!114 &8443385837837557602
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -685,6 +714,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   healthBar: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
 --- !u!1 &2996303729984248467
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,9 +6219,9 @@ MonoBehaviour:
   bodyAttackSize: 1
   bodyAttacks: 2
   bodyArmor: 0
-  soulAttackDamage: 5
+  soulAttackDamage: 15
   soulAttackSpeed: 1
-  soulAttackProjectileSpeed: 5
+  soulAttackProjectileSpeed: 10
   soulAttackProjectiles: 1
   soulAttackPierce: 1
   experience: 0

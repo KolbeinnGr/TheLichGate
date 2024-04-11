@@ -64,6 +64,9 @@ TagManager:
   - name: Attacks
     uniqueID: 228541129
     locked: 0
+  - name: FloatingText
+    uniqueID: 171004447
+    locked: 0
   - name: UI
     uniqueID: 781741921
     locked: 0
