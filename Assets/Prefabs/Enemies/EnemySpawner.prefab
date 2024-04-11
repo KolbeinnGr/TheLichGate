@@ -122,10 +122,35 @@ MonoBehaviour:
   - waveName: One
     enemyGroups:
     - enemyName: Skeleton
-      enemySpawnQuota: 10
+      enemySpawnQuota: 20
       enemySpawnCount: 0
       enemyPrefab: {fileID: 4056465319511862673, guid: 83a12daeb9d9b444bbbf0a73673c1161, type: 3}
-      modifiedHealth: 1
+      modifiedHealth: 50
+    enemyWaveQuota: 0
+    spawnInterval: 3
+    totalSpawnCount: 0
+  - waveName: Two
+    enemyGroups:
+    - enemyName: Skeleton
+      enemySpawnQuota: 20
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 4056465319511862673, guid: 83a12daeb9d9b444bbbf0a73673c1161, type: 3}
+      modifiedHealth: 50
+    - enemyName: Skeleton
+      enemySpawnQuota: 10
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 7462539429674757038, guid: 81ff6607ae2a9dd4b802ab0899f98524, type: 3}
+      modifiedHealth: 30
+    enemyWaveQuota: 0
+    spawnInterval: 2
+    totalSpawnCount: 0
+  - waveName: Boss Wave
+    enemyGroups:
+    - enemyName: Boss
+      enemySpawnQuota: 1
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 5461582176557530268, guid: 5bfe993cb843f2e499dece5284035075, type: 3}
+      modifiedHealth: 250
     enemyWaveQuota: 0
     spawnInterval: 1
     totalSpawnCount: 0
