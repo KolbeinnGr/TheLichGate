@@ -50,7 +50,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0)
         {
-            //GetComponent<FlashEffect>().Flash(); // Trigger the flash effect.
+            GetComponent<FlashEffect>().Flash(); // Trigger the flash effect.
             if (AudioManager.Instance && hurtSounds.Length > 0)
             {
                 // Play a random hurt sound
