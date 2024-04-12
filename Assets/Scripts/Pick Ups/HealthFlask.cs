@@ -9,7 +9,8 @@ public class HealthFlask : MonoBehaviour
 
     public void Collect()
     {
-        Health health = FindObjectOfType<Health>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Health health = player.GetComponent<Health>();
         health.Heal(healthGranted);
 
         if (drinkSound)

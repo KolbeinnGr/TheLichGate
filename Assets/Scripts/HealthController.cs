@@ -147,4 +147,12 @@ public class Health : MonoBehaviour
     {
         GetComponent<FadeOutOnDeath>().FadeOut();
     }
+
+    private void updateHealthBar()
+    {
+        if(healthBar)
+        {
+            healthBar.SetHealth(currentHealth);
+        }
+    }
 }
