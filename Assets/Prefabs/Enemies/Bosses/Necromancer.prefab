@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 982931094277971677}
   - component: {fileID: 5420760973462866040}
   - component: {fileID: 3112648437691162904}
+  - component: {fileID: 6765926778173363824}
   m_Layer: 0
   m_Name: Necromancer
   m_TagString: Enemy
@@ -434,6 +435,7 @@ MonoBehaviour:
       m_Calls: []
   healthBar: {fileID: 0}
   floatingTextPrefab: {fileID: 0}
+  isDashing: 0
 --- !u!114 &2608238116575140248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,6 +514,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63570a00d9336394c952510e7d5190c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6765926778173363824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5461582176557530268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5ee41cd539d8741a47d4145d8d9417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Chest
+    itemPrefab: {fileID: 1945199222921699885, guid: 532b278d1b85b1541bbc2949ac806bd0, type: 3}
+    dropRate: 100
 --- !u!1 &6753051379927159176
 GameObject:
   m_ObjectHideFlags: 0
