@@ -8,7 +8,7 @@ public class EscSettings : MonoBehaviour
     public UIPlayerStatus playerStatScreen;
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Tab))
         {
             if(!GameManager.Instance.isGamePaused)
             {
