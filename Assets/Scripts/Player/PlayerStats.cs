@@ -70,7 +70,7 @@ public class PlayerStats : MonoBehaviour
         eXPbar.SetExp(0);
     }
     
-    public void UpgradeStat(UpgradeType type, float amount)
+    public void UpgradeStat(UpgradeType type, float amount = 0)
     {
         switch (type)
         {
@@ -106,7 +106,12 @@ public class PlayerStats : MonoBehaviour
                 break;
             case UpgradeType.increaseExperience:
                 experience += (int)amount;
-                eXPbar.SetExp(experience);
+                // eXPbar.SetExp(experience);
+                LevelUpChecker();
+                break;
+            case UpgradeType.increaseLevel:
+                experience += experienceCap;
+                // eXPbar.SetExp(experience);
                 LevelUpChecker();
                 break;
         }
@@ -125,6 +130,7 @@ public class PlayerStats : MonoBehaviour
         soulAttackProjectileSpeed,
         soulAttackProjectiles,
         soulAttackPierce,
-        increaseExperience
+        increaseExperience,
+        increaseLevel
     }
 }

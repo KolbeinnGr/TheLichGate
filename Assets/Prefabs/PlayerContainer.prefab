@@ -84,6 +84,7 @@ MonoBehaviour:
   cooldownDuration: 1
   pierce: 1
   attacks: 1
+  soulAttackSound: {fileID: 8300000, guid: 50bbb456d22072f409f543d419469ffa, type: 3}
 --- !u!58 &1148796285473301687
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -338,8 +339,7 @@ GameObject:
   - component: {fileID: 4229549462385011798}
   - component: {fileID: 1439226656158585105}
   - component: {fileID: 6229760158362386918}
-  - component: {fileID: 1230532067177371577}
-  - component: {fileID: 8443385837837557602}
+  - component: {fileID: 683510039649081828}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 9108470645967422330}
   walkSpeed: 6
-  soulMoveSpeed: 12
+  soulMoveSpeed: 15
   playerSoul: {fileID: 161158174814010996}
   maxSoulDistance: 8
   soulXOffset: 0
@@ -394,9 +394,15 @@ MonoBehaviour:
   chainMaterial: {fileID: -876546973899608171, guid: 3c596b6c49315c042852738b0edd4d41, type: 3}
   dashDuration: 0.5
   minDashDistance: 1
+  dashCooldown: 2
+  dashCooldownSlider: {fileID: 0}
   animator: {fileID: 3588944795818922105}
   direction: {x: 0, y: 0}
   endScreen: {fileID: 0}
+  dashLandingEffectPrefab: {fileID: 5670430001109120053, guid: b9b67d055538a2344bf014a83a3006e3, type: 3}
+  dashEffectYOffset: 0.35
+  jumpSFX: {fileID: 8300000, guid: d52cc65a0110b8244b3b2c11d6883540, type: 3}
+  landSFX: {fileID: 8300000, guid: 3301ed5091945a54d8e7e48d315690ba, type: 3}
 --- !u!50 &9108470645967422330
 Rigidbody2D:
   serializedVersion: 4
@@ -591,8 +597,8 @@ MonoBehaviour:
   pierce: 0
   attacks: 2
   slashEffectPrefab: {fileID: 7127135011321863297, guid: 819e473a5bc43cf468aff65abaed95ae, type: 3}
-  offsetX: -1
-  offsetY: -1.81
+  offsetX: 0
+  offsetY: -1
   attackAnimation: {fileID: 7400000, guid: 889ab03e23432ae4f9db43748774a4eb, type: 2}
   swingSounds:
   - {fileID: 8300000, guid: 54c48e6196cb8f245a06a73b74fa8d6e, type: 3}
@@ -629,7 +635,7 @@ MonoBehaviour:
   - {x: 0.12844291, y: 0.007951438, z: 0}
   m_ShapePathHash: 2073343765
   m_Mesh: {fileID: 0}
-  m_InstanceId: 109406
+  m_InstanceId: -12612
   m_LocalBounds:
     m_Center: {x: 0.0011758357, y: 0.4475828, z: 0}
     m_Extent: {x: 0.12726708, y: 0.45374113, z: 0}
@@ -661,34 +667,7 @@ MonoBehaviour:
   flashColor: {r: 0.7735849, g: 0.18609823, b: 0.18609823, a: 1}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.1
---- !u!114 &1230532067177371577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125185204766933283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c19b0b582ca7c49a4dbe5ea7b91f0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
-  animator: {fileID: 3588944795818922105}
-  deathSounds:
-  - {fileID: 8300000, guid: a8c21da19ad019e479c156c27d76064a, type: 3}
-  hurtSounds:
-  - {fileID: 8300000, guid: b64924d4a51241c48b07b4aa4357d623, type: 3}
-  onHealthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  healthBar: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
---- !u!114 &8443385837837557602
+--- !u!114 &683510039649081828
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -714,7 +693,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   healthBar: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
+  floatingTextPrefab: {fileID: 6597250921811002607, guid: 9add882d458db334da295c9900bb4334, type: 3}
+  isDashing: 0
 --- !u!1 &2996303729984248467
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +707,7 @@ GameObject:
   - component: {fileID: 6961582126902786957}
   - component: {fileID: 2620535381408234235}
   - component: {fileID: 1596066796845984977}
+  - component: {fileID: 6874891552556604423}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -853,6 +834,20 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &6874891552556604423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996303729984248467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b50c41af909ee4f873f850237098af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0
+  shakeMagnitude: 0
 --- !u!1 &3924794082258001678
 GameObject:
   m_ObjectHideFlags: 0
@@ -6214,14 +6209,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 734eceb9284986f43b4e2b4d6b201ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyAttackSpeed: 1
+  bodyAttackSpeed: 3
   bodyAttackDamage: 30
   bodyAttackSize: 1
   bodyAttacks: 2
   bodyArmor: 0
   soulAttackDamage: 15
-  soulAttackSpeed: 1
-  soulAttackProjectileSpeed: 10
+  soulAttackSpeed: 2
+  soulAttackProjectileSpeed: 7
   soulAttackProjectiles: 1
   soulAttackPierce: 1
   experience: 0

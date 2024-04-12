@@ -18,5 +18,11 @@ public class PlayerCollector : MonoBehaviour
             HealthFlask healthFlask = other.GetComponent<HealthFlask>();
             healthFlask.Collect();
         }
+
+        if (other.CompareTag("Chest"))
+        {
+            ChestOpenScript chest = other.GetComponent<ChestOpenScript>();
+            chest.Collect();
+        }
     }
 }
