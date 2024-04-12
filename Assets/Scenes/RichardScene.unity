@@ -5336,6 +5336,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 429206590}
     - target: {fileID: 4099520916891494187, guid: b48032e35f5aef246ae643c7bd4ded57, type: 3}
+      propertyPath: soulMoveSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099520916891494187, guid: b48032e35f5aef246ae643c7bd4ded57, type: 3}
       propertyPath: chainEndYOffset
       value: 0
       objectReference: {fileID: 0}
@@ -5383,6 +5387,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.43837085
       objectReference: {fileID: 0}
+    - target: {fileID: 6084090015392976318, guid: b48032e35f5aef246ae643c7bd4ded57, type: 3}
+      propertyPath: soulAttackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 50bbb456d22072f409f543d419469ffa, type: 3}
     - target: {fileID: 6229760158362386918, guid: b48032e35f5aef246ae643c7bd4ded57, type: 3}
       propertyPath: flashColor.b
       value: 0.18609823

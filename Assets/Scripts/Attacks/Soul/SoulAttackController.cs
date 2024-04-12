@@ -9,6 +9,7 @@ public class SoulAttackController : AttackController
     private AttackController ac; 
     
     private PlayerStats playerStats;
+    public AudioClip soulAttackSound;
 
     protected override void Start()
     {
@@ -82,6 +83,10 @@ public class SoulAttackController : AttackController
         if (projectile)
         {
             projectile.InitializeProjectile(attackDirection);
+            if (AudioManager.Instance && soulAttackSound)
+            {
+                AudioManager.Instance.PlaySound(soulAttackSound, 0.2f);
+            }
         }
 
         yield return new WaitForSeconds(0.2f); // Delay between projectiles within the same attack
@@ -110,7 +115,4 @@ public class SoulAttackController : AttackController
             }
         }
     }
-
-    
-    
 }
