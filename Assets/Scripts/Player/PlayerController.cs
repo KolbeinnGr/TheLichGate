@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
     [Header ("Dash")]
     public float dashDuration = 0.5f;  // Fixed duration of the dash in seconds
     public float minDashDistance = 1f;  // Minimum distance required to initiate a dash
+    public float dashCooldown = 2.0f;
+    private float lastDashTime;
+    private bool isDashOnCooldown = false;
+    public UnityEngine.UI.Slider dashCooldownSlider;
     
     private float dashSpeed;            // Calculated speed based on distance and duration
     private Vector2 dashTarget;         // The target position of the dash
@@ -60,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        lastDashTime = -dashCooldown;
         if (chainRenderer != null)
         {
             chainRenderer.material = chainMaterial;
@@ -74,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // if (Time.timeScale == 0) return;  // Pause the game if the timescale is 0 (for menus etc.)
+        if (Time.timeScale == 0) return;  // Pause the game if the timescale is 0 (for menus etc.)
         
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -84,13 +89,23 @@ public class PlayerController : MonoBehaviour
             }
         }
         
+        if (isDashOnCooldown)
+        {
+            float cooldownLeft = lastDashTime + dashCooldown - Time.time;
+            if (cooldownLeft < 0)
+            {
+                isDashOnCooldown = false;
+                dashCooldownSlider.gameObject.SetActive(false);
+            }
+            dashCooldownSlider.value = cooldownLeft / dashCooldown;
+        }
+        
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse1)) && isSoulActive && !isDashing)
         {
             if (!GameManager.Instance.isGamePaused)
             {
                 StartDash();
             }
-            
         }
 
         if (chainRenderer && playerSoul.activeSelf)  // Draw the chain between the player and the soul with offsets
@@ -99,7 +114,6 @@ public class PlayerController : MonoBehaviour
         }
         
         UpdateAnimationStates();
-
     }
 
     void FixedUpdate()
@@ -198,6 +212,12 @@ public class PlayerController : MonoBehaviour
     
     private void StartDash()
     {
+        
+        if (Time.time - lastDashTime < dashCooldown)
+        {
+            return;  // Dash is on cooldown
+        }
+        
         float distanceToSoul = Vector2.Distance(transform.position, playerSoul.transform.position);
 
         if (distanceToSoul < minDashDistance)
@@ -207,12 +227,13 @@ public class PlayerController : MonoBehaviour
 
         isDashing = true;
         health.isDashing = true;
-
+        
         dashTarget = playerSoul.transform.position;
         dashStart = transform.position;
         dashDistanceTravelled = 0f;
         dashSpeed = distanceToSoul / dashDuration;
         dashStartTime = Time.time;  // Initialize dash start time
+        lastDashTime = Time.time;
 
         // Determine the direction to the soul and face the player in that direction
         float directionToSoul = Mathf.Sign(dashTarget.x - transform.position.x);
@@ -221,6 +242,14 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsDashing", true);
         
         AudioManager.Instance.PlaySound(jumpSFX, 0.2f);
+        
+        // Cooldown UI
+        if (dashCooldownSlider){
+            dashCooldownSlider.maxValue = dashCooldown;
+            dashCooldownSlider.value = dashCooldown;
+            dashCooldownSlider.gameObject.SetActive(true);
+            isDashOnCooldown = true;
+        }
         
     }
 
@@ -249,9 +278,7 @@ public class PlayerController : MonoBehaviour
         playerSoul.SetActive(false);
         chainRenderer.enabled = false;
         ToggleSoulActive();
-        // Use dashDistanceTravelled for damage calculations if needed
-        AudioManager.Instance.PlaySound(landSFX, 0.2f);
-
+        
         if (dashDistanceTravelled > maxSoulDistance * 0.7f)
         {
             CreateSmokeEffect();
@@ -275,7 +302,7 @@ public class PlayerController : MonoBehaviour
     void CreateSmokeEffect() {
         Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + dashEffectYOffset, transform.position.z);
         GameObject effect = Instantiate(dashLandingEffectPrefab, spawnPosition, Quaternion.identity);
-        
+        AudioManager.Instance.PlaySound(landSFX, 0.4f);
         CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
         if (cameraShake)
         {

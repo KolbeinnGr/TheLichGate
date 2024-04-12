@@ -158,10 +158,10 @@ public class UpgradeManager : MonoBehaviour
         
         // Body upgrades
         // Attack speed
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.bodyAttackSpeed, rarity = UpgradeRarity.Common, effectValue = 10f, name = "Melee Weapon Attack Speed (Common)", description = "Increases the speed of your Melee attacks by 10%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.bodyAttackSpeed, rarity = UpgradeRarity.Uncommon, effectValue = 15f, name = "Melee Weapon Attack Speed (Uncommon)", description = "Increases the speed of your Melee attacks by 15%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.bodyAttackSpeed, rarity = UpgradeRarity.Rare, effectValue = 20f, name = "Melee Weapon Attack Speed (Rare)", description = "Increases the speed of your Melee attacks by 20%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.bodyAttackSpeed, rarity = UpgradeRarity.Epic, effectValue = 25f, name = "Melee Weapon Attack Speed (Epic)", description = "Increases the speed of your Melee attacks by 25%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.bodyAttackSpeed, rarity = UpgradeRarity.Common, effectValue = 10f, name = "Melee Weapon Attack Speed (Common)", description = "Increases the attack speed of your Melee by 10%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.bodyAttackSpeed, rarity = UpgradeRarity.Uncommon, effectValue = 15f, name = "Melee Weapon Attack Speed (Uncommon)", description = "Increases the attack speed of your Melee by 15%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.bodyAttackSpeed, rarity = UpgradeRarity.Rare, effectValue = 20f, name = "Melee Weapon Attack Speed (Rare)", description = "Increases the attack speed of your Melee by 20%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.bodyAttackSpeed, rarity = UpgradeRarity.Epic, effectValue = 25f, name = "Melee Weapon Attack Speed (Epic)", description = "Increases the attack speed of your Melee by 25%."});
         
         // Attack damage
         possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.bodyAttackDamage, rarity = UpgradeRarity.Common, effectValue = 10f, name = "Melee Weapon Attack Damage (Common)", description = "Increases the damage of your Melee attacks by 10%."});
@@ -187,26 +187,26 @@ public class UpgradeManager : MonoBehaviour
         
         // Soul upgrades
         // Attack Speed
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackSpeed, rarity = UpgradeRarity.Common, effectValue = 10f, name = "Soul Weapon Attack Speed (Common)", description = "Increases the speed of your Soul attacks by 10%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackSpeed, rarity = UpgradeRarity.Uncommon, effectValue = 15f, name = "Soul Weapon Attack Speed (Uncommon)", description = "Increases the speed of your Soul attacks by 15%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackSpeed, rarity = UpgradeRarity.Rare, effectValue = 20f, name = "Soul Weapon Attack Speed (Rare)", description = "Increases the speed of your Soul attacks by 20%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackSpeed, rarity = UpgradeRarity.Epic, effectValue = 25f, name = "Soul Weapon Attack Speed (Epic)", description = "Increases the speed of your Soul attacks by 25%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackSpeed, rarity = UpgradeRarity.Common, effectValue = 10f, name = "Soul Weapon Attack Speed (Common)", description = "Increases the attack speed of your Soul by 10%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackSpeed, rarity = UpgradeRarity.Uncommon, effectValue = 15f, name = "Soul Weapon Attack Speed (Uncommon)", description = "Increases the attack speed of your Soul by 15%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackSpeed, rarity = UpgradeRarity.Rare, effectValue = 20f, name = "Soul Weapon Attack Speed (Rare)", description = "Increases the attack speed of your Soul by 20%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackSpeed, rarity = UpgradeRarity.Epic, effectValue = 25f, name = "Soul Weapon Attack Speed (Epic)", description = "Increases the attack speed of your Soul by 25%."});
         
         // Attack Damage
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackDamage, rarity = UpgradeRarity.Common, effectValue = 10f, name = "Soul Weapon Attack Damage (Common)", description = "Increases the damage of your Soul attacks by 10%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackDamage, rarity = UpgradeRarity.Uncommon, effectValue = 15f, name = "Soul Weapon Attack Damage (Uncommon)", description = "Increases the damage of your Soul attacks by 15%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackDamage, rarity = UpgradeRarity.Rare, effectValue = 20f, name = "Soul Weapon Attack Damage (Rare)", description = "Increases the damage of your Soul attacks by 20%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackDamage, rarity = UpgradeRarity.Epic, effectValue = 25f, name = "Soul Weapon Attack Damage (Epic)", description = "Increases the damage of your Soul attacks by 25%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackDamage, rarity = UpgradeRarity.Common, effectValue = 10f, name = "Soul Weapon Attack Damage (Common)", description = "Increases the attack damage of your Soul by 10%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackDamage, rarity = UpgradeRarity.Uncommon, effectValue = 15f, name = "Soul Weapon Attack Damage (Uncommon)", description = "Increases the attack damage of your Soul by 15%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackDamage, rarity = UpgradeRarity.Rare, effectValue = 20f, name = "Soul Weapon Attack Damage (Rare)", description = "Increases the attack damage of your Soul by 20%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackDamage, rarity = UpgradeRarity.Epic, effectValue = 25f, name = "Soul Weapon Attack Damage (Epic)", description = "Increases the attack damage of your Soul by 25%."});
         
         // Projectiles
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectiles, rarity = UpgradeRarity.Rare, effectValue = 1f, name = "Soul Weapon Projectiles (Rare)", description = "Increases the number of Soul projectiles you can shoot by 1."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectiles, rarity = UpgradeRarity.Epic, effectValue = 2f, name = "Soul Weapon Projectiles (Epic)", description = "Increases the number of Soul projectiles you can shoot by 2."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectiles, rarity = UpgradeRarity.Rare, effectValue = 1f, name = "Soul Weapon Projectiles (Rare)", description = "Increases the number of projectiles that your soul will shoot by 1."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectiles, rarity = UpgradeRarity.Epic, effectValue = 2f, name = "Soul Weapon Projectiles (Epic)", description = "Increases the number of projectiles that your soul will shoot by 2."});
         
         // Projectile Speed
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectileSpeed, rarity = UpgradeRarity.Common, effectValue = 10f, name = "Soul Weapon Projectile Speed (Common)", description = "Increases the speed of your Soul projectiles by 10%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectileSpeed, rarity = UpgradeRarity.Uncommon, effectValue = 15f, name = "Soul Weapon Projectile Speed (Uncommon)", description = "Increases the speed of your Soul projectiles by 15%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectileSpeed, rarity = UpgradeRarity.Rare, effectValue = 20f, name = "Soul Weapon Projectile Speed (Rare)", description = "Increases the speed of your Soul projectiles by 20%."});
-        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectileSpeed, rarity = UpgradeRarity.Epic, effectValue = 25f, name = "Soul Weapon Projectile Speed (Epic)", description = "Increases the speed of your Soul projectiles by 25%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectileSpeed, rarity = UpgradeRarity.Common, effectValue = 10f, name = "Soul Weapon Projectile Speed (Common)", description = "Increases the projectile speed of your Soul attacks by 10%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectileSpeed, rarity = UpgradeRarity.Uncommon, effectValue = 15f, name = "Soul Weapon Projectile Speed (Uncommon)", description = "Increases the projectile speed of your Soul attacks by 15%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectileSpeed, rarity = UpgradeRarity.Rare, effectValue = 20f, name = "Soul Weapon Projectile Speed (Rare)", description = "Increases the projectile speed of your Soul attacks by 20%."});
+        possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackProjectileSpeed, rarity = UpgradeRarity.Epic, effectValue = 25f, name = "Soul Weapon Projectile Speed (Epic)", description = "Increases the projectile speed of your Soul attacks by 25%."});
         
         // Pierce
         possibleUpgrades.Add(new UpgradeOption { type = PlayerStats.UpgradeType.soulAttackPierce, rarity = UpgradeRarity.Rare, effectValue = 1f, name = "Soul Weapon Pierce (Rare)", description = "Increases the number of enemies your Soul projectiles can pierce by 1."});
