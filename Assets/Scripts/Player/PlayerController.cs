@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public float minDashDistance = 1f;  // Minimum distance required to initiate a dash
     public float dashCooldown = 2.0f;
     private float lastDashTime;
+    private float dashcooldowntimer;
     private bool isDashOnCooldown = false;
     public UnityEngine.UI.Slider dashCooldownSlider;
     
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;     // Flag to indicate if the player is currently dashing
     private float dashDistanceTravelled = 0f;  // Total distance travelled during the dash
     private float dashStartTime;        // Time when the dash started
+
     
     
     private Vector2 soulTarget; // The position the soul is moving towards
@@ -64,7 +66,9 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        lastDashTime = -dashCooldown;
+        dashCooldownSlider.maxValue = dashCooldown;
+        dashCooldownSlider.value = dashCooldown;
+        lastDashTime = 0;
         if (chainRenderer != null)
         {
             chainRenderer.material = chainMaterial;
@@ -91,15 +95,15 @@ public class PlayerController : MonoBehaviour
         
         if (isDashOnCooldown)
         {
-            float cooldownLeft = lastDashTime + dashCooldown - Time.time;
+            float cooldownLeft = Time.time - dashcooldowntimer;
             Debug.Log(cooldownLeft);
-
-            if (cooldownLeft < 0)
+            dashCooldownSlider.value = cooldownLeft;
+            if (cooldownLeft >= dashCooldown)
             {
                 isDashOnCooldown = false;
-                dashCooldownSlider.gameObject.SetActive(false);
             }
-            dashCooldownSlider.value = cooldownLeft / dashCooldown;
+            
+            
         }
         
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse1)) && isSoulActive && !isDashing)
@@ -251,6 +255,7 @@ public class PlayerController : MonoBehaviour
             dashCooldownSlider.value = dashCooldown;
             dashCooldownSlider.gameObject.SetActive(true);
             isDashOnCooldown = true;
+            dashcooldowntimer = Time.time;
         }
         
     }
