@@ -92,6 +92,8 @@ public class PlayerController : MonoBehaviour
         if (isDashOnCooldown)
         {
             float cooldownLeft = lastDashTime + dashCooldown - Time.time;
+            Debug.Log(cooldownLeft);
+
             if (cooldownLeft < 0)
             {
                 isDashOnCooldown = false;
