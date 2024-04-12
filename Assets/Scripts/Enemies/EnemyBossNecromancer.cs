@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBossNecromancer : MonoBehaviour, IEnemy
 {
@@ -217,6 +218,7 @@ public class EnemyBossNecromancer : MonoBehaviour, IEnemy
         animator.Play("Necromancer_DeadFlash");
         Destroy(warningZoneAttack);
         stateMachine.ChangeState(typeof(DeathState));
+        SceneManager.LoadScene("MainMenu");
     }
 
     void OnDrawGizmosSelected() {
@@ -232,6 +234,3 @@ public class EnemyBossNecromancer : MonoBehaviour, IEnemy
     }
 
 }
-
-
-
