@@ -251,6 +251,7 @@ public class PlayerController : MonoBehaviour
         ToggleSoulActive();
         // Use dashDistanceTravelled for damage calculations if needed
         AudioManager.Instance.PlaySound(landSFX, 0.2f);
+        Debug.Log("Distance travelled: " + dashDistanceTravelled);
         CreateSmokeEffect();
     }
 

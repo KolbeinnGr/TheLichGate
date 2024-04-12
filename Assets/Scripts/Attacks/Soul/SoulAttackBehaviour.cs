@@ -17,8 +17,7 @@ public class SoulAttackBehaviour : ProjectileAttackBehavior
     {
         if (isMoving)
         {
-            transform.position += playerStats.soulAttackProjectileSpeed * Time.deltaTime * direction;        
-
+            transform.position += playerStats.soulAttackProjectileSpeed * Time.deltaTime * direction;
         }
     }
 }

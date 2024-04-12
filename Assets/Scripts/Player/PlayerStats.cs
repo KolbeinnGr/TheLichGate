@@ -75,7 +75,7 @@ public class PlayerStats : MonoBehaviour
         switch (type)
         {
             case UpgradeType.bodyAttackSpeed:
-                bodyAttackSpeed *= 1 + amount/100f;
+                bodyAttackSpeed /= 1 + amount/100f;
                 break;
             case UpgradeType.bodyAttackDamage:
                 bodyAttackDamage *= 1 + amount/100f;
@@ -93,7 +93,7 @@ public class PlayerStats : MonoBehaviour
                 soulAttackDamage *= 1 + amount/100f;
                 break;
             case UpgradeType.soulAttackSpeed:
-                soulAttackSpeed *= 1 + amount/100f;
+                soulAttackSpeed /= 1 + amount/100f;
                 break;
             case UpgradeType.soulAttackProjectileSpeed:
                 soulAttackProjectileSpeed += 1 + amount/100f;

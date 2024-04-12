@@ -37,21 +37,6 @@ public class SoulAttackController : AttackController
             enemiesInRange.Remove(other.gameObject);
         }
     }
-
-    protected override void Attack()
-    {
-        base.Attack();
-        
-        GameObject closestEnemy = FindClosestEnemy();
-        if (closestEnemy)
-        {
-            for (int i = 0; i < playerStats.soulAttackProjectiles; i++)
-            {
-                StartCoroutine(LaunchProjectilesWithDelay(closestEnemy));
-            }
-
-        }
-    }
     
     private GameObject FindClosestEnemy()
     {
@@ -69,21 +54,37 @@ public class SoulAttackController : AttackController
         return closestEnemy;
     }
     
-    
-    private IEnumerator LaunchProjectilesWithDelay(GameObject target)
+    protected override void Attack()
+    {
+        base.Attack();
+        ac.cooldownDuration = playerStats.soulAttackSpeed;
+        GameObject closestEnemy = FindClosestEnemy();
+        if (closestEnemy)
+        {
+            StartCoroutine(AttackSequence(closestEnemy));
+        }
+    }
+
+    private IEnumerator AttackSequence(GameObject target)
     {
         for (int i = 0; i < playerStats.soulAttackProjectiles; i++)
         {
-            GameObject spawnedProjectile = Instantiate(prefab, transform.position, Quaternion.identity);
-            Vector3 attackDirection = ((target.transform.position + (Vector3.up * 0.8f)) - transform.position).normalized;
-            ProjectileAttackBehavior projectile = spawnedProjectile.GetComponent<ProjectileAttackBehavior>();
-            if (projectile)
-            {
-                projectile.InitializeProjectile(attackDirection);
-            }
-
-            yield return new WaitForSeconds(0.2f); // Delay between projectiles
+            StartCoroutine(LaunchProjectilesWithDelay(target));
         }
+        yield return new WaitForSeconds(playerStats.soulAttackSpeed);
+    }
+
+    private IEnumerator LaunchProjectilesWithDelay(GameObject target)
+    {
+        GameObject spawnedProjectile = Instantiate(prefab, transform.position, Quaternion.identity);
+        Vector3 attackDirection = ((target.transform.position + (Vector3.up * 0.8f)) - transform.position).normalized;
+        ProjectileAttackBehavior projectile = spawnedProjectile.GetComponent<ProjectileAttackBehavior>();
+        if (projectile)
+        {
+            projectile.InitializeProjectile(attackDirection);
+        }
+
+        yield return new WaitForSeconds(0.2f); // Delay between projectiles within the same attack
     }
     
     

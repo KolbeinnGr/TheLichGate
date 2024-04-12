@@ -9,6 +9,7 @@ public class PlayerMeleeAttackController : AttackController
     public float offsetY;
     public AnimationClip attackAnimation; // Assign this in the Inspector
     private float animationPlayTime; // Duration of the attack animation
+    private AttackController ac; 
     
     [Header ("Audio")]
     public AudioClip[] swingSounds;
@@ -18,6 +19,7 @@ public class PlayerMeleeAttackController : AttackController
 
     protected void Awake()
     {
+        ac = GetComponent<AttackController>();
         GameManager.Instance.InitializePlayerStats();
         playerStats = GameManager.Instance.GetPlayerStats();
         animationPlayTime = attackAnimation.length;
@@ -25,7 +27,9 @@ public class PlayerMeleeAttackController : AttackController
 
     protected override void Attack()
     {
+        ac.cooldownDuration = playerStats.bodyAttackSpeed;
         base.Attack();
+        
         StartCoroutine(PerformAttacksWithDelay());
     }
 
@@ -61,7 +65,7 @@ public class PlayerMeleeAttackController : AttackController
             isFacingRight = !isFacingRight;
 
             // Wait for 'speed' seconds before performing the next attack
-            yield return new WaitForSeconds(speed);
+            yield return new WaitForSeconds(playerStats.bodyAttackSpeed / playerStats.bodyAttacks);
         }
     
         // Wait for the cooldown duration after completing all attacks
