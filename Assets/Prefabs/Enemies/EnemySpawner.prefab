@@ -119,13 +119,118 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - waveName: One
+  - waveName: Level 1
     enemyGroups:
-    - enemyName: Skeleton
-      enemySpawnQuota: 10
+    - enemyName: Skeleton Warrior
+      enemySpawnQuota: 30
       enemySpawnCount: 0
       enemyPrefab: {fileID: 4056465319511862673, guid: 83a12daeb9d9b444bbbf0a73673c1161, type: 3}
-      modifiedHealth: 1
+      modifiedHealth: 30
+    enemyWaveQuota: 0
+    spawnInterval: 2
+    totalSpawnCount: 0
+  - waveName: Level 2
+    enemyGroups:
+    - enemyName: Skeleton Warrior
+      enemySpawnQuota: 20
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 4056465319511862673, guid: 83a12daeb9d9b444bbbf0a73673c1161, type: 3}
+      modifiedHealth: 35
+    - enemyName: Skeleton Warrior
+      enemySpawnQuota: 20
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 4056465319511862673, guid: 83a12daeb9d9b444bbbf0a73673c1161, type: 3}
+      modifiedHealth: 35
+    enemyWaveQuota: 0
+    spawnInterval: 1
+    totalSpawnCount: 0
+  - waveName: Level 3
+    enemyGroups:
+    - enemyName: Skeleton Warrior
+      enemySpawnQuota: 30
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 4056465319511862673, guid: 83a12daeb9d9b444bbbf0a73673c1161, type: 3}
+      modifiedHealth: 40
+    - enemyName: Skeleton Archer
+      enemySpawnQuota: 10
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 7462539429674757038, guid: 81ff6607ae2a9dd4b802ab0899f98524, type: 3}
+      modifiedHealth: 30
+    enemyWaveQuota: 0
+    spawnInterval: 1
+    totalSpawnCount: 0
+  - waveName: Level 4
+    enemyGroups:
+    - enemyName: Skeleton Warrior
+      enemySpawnQuota: 20
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 4056465319511862673, guid: 83a12daeb9d9b444bbbf0a73673c1161, type: 3}
+      modifiedHealth: 50
+    - enemyName: Skeleton Archer
+      enemySpawnQuota: 5
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 7462539429674757038, guid: 81ff6607ae2a9dd4b802ab0899f98524, type: 3}
+      modifiedHealth: 35
+    - enemyName: Skeleton miniboss
+      enemySpawnQuota: 5
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 4056465319511862673, guid: 37bd46b952a44d547ae15e8c5108ddd3, type: 3}
+      modifiedHealth: 150
+    enemyWaveQuota: 0
+    spawnInterval: 1
+    totalSpawnCount: 0
+  - waveName: Level 5
+    enemyGroups:
+    - enemyName: Skeleton Warrior
+      enemySpawnQuota: 40
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 4056465319511862673, guid: 83a12daeb9d9b444bbbf0a73673c1161, type: 3}
+      modifiedHealth: 70
+    - enemyName: Skeleton Archer
+      enemySpawnQuota: 10
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 7462539429674757038, guid: 81ff6607ae2a9dd4b802ab0899f98524, type: 3}
+      modifiedHealth: 40
+    enemyWaveQuota: 0
+    spawnInterval: 1
+    totalSpawnCount: 0
+  - waveName: Level 6
+    enemyGroups:
+    - enemyName: Skeleton Warrior
+      enemySpawnQuota: 40
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 4056465319511862673, guid: 83a12daeb9d9b444bbbf0a73673c1161, type: 3}
+      modifiedHealth: 80
+    - enemyName: Skeleton Archer
+      enemySpawnQuota: 20
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 7462539429674757038, guid: 81ff6607ae2a9dd4b802ab0899f98524, type: 3}
+      modifiedHealth: 50
+    - enemyName: Skeleton miniboss
+      enemySpawnQuota: 1
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 4056465319511862673, guid: 37bd46b952a44d547ae15e8c5108ddd3, type: 3}
+      modifiedHealth: 200
+    enemyWaveQuota: 0
+    spawnInterval: 1
+    totalSpawnCount: 0
+  - waveName: Level 7
+    enemyGroups:
+    - enemyName: Skeleton Warrior
+      enemySpawnQuota: 30
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 4056465319511862673, guid: 83a12daeb9d9b444bbbf0a73673c1161, type: 3}
+      modifiedHealth: 90
+    - enemyName: Skeleton Archer
+      enemySpawnQuota: 10
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 7462539429674757038, guid: 81ff6607ae2a9dd4b802ab0899f98524, type: 3}
+      modifiedHealth: 60
+    - enemyName: Boss
+      enemySpawnQuota: 1
+      enemySpawnCount: 0
+      enemyPrefab: {fileID: 5461582176557530268, guid: 5bfe993cb843f2e499dece5284035075, type: 3}
+      modifiedHealth: 500
     enemyWaveQuota: 0
     spawnInterval: 1
     totalSpawnCount: 0
