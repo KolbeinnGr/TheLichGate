@@ -12,5 +12,11 @@ public class PlayerCollector : MonoBehaviour
             ExperienceGem experienceGem = other.GetComponent<ExperienceGem>();
             experienceGem.Collect();
         }
+        
+        if (other.CompareTag("HealthFlask"))
+        {
+            HealthFlask healthFlask = other.GetComponent<HealthFlask>();
+            healthFlask.Collect();
+        }
     }
 }

@@ -366,3 +366,6 @@ MonoBehaviour:
   - name: Blue Gem
     itemPrefab: {fileID: 7383057966734078059, guid: 4116e234848efa64cbd058c400748892, type: 3}
     dropRate: 50
+  - name: Health Flask
+    itemPrefab: {fileID: 7383057966734078059, guid: 0606fa89915e0594cb2137a8f9b5d7f4, type: 3}
+    dropRate: 20

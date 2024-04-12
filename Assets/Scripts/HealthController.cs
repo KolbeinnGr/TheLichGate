@@ -89,7 +89,7 @@ public class Health : MonoBehaviour
 
         if (gameObject.CompareTag("Player"))
         {
-            ShowFloatingText((int)amount, Color.red, 20);
+            ShowFloatingText((int)amount, Color.red, 22);
             CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
             if (cameraShake)
             {
@@ -98,7 +98,7 @@ public class Health : MonoBehaviour
         }
         else
         {
-            ShowFloatingText((int)amount, Color.white, 16);
+            ShowFloatingText((int)amount, Color.white, 18);
         }
 
         if (currentHealth <= 0)
@@ -118,7 +118,7 @@ public class Health : MonoBehaviour
         {
             healthBar.SetHealth(currentHealth);
         }
-        ShowFloatingText(amount, Color.green);
+        ShowFloatingText(amount, Color.green, 22);
         onHealthChanged.Invoke(currentHealth / maxHealth); // Invoke with health percentage
     }
 
