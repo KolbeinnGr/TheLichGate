@@ -10,7 +10,10 @@ public class EndScreen : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            GameManager.Instance.ResumeGame();
+            GameManager.Instance.DestroySelf();
             SceneManager.LoadScene("MainMenu");
+            
         }
     }
 }

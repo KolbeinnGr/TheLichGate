@@ -59,7 +59,7 @@ public class EnemySpawner : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else if (Instance != this)
         {
@@ -67,6 +67,13 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    void OnDestroy()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.WorldTimeChanged -= OnWorldTimeChanged;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

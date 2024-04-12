@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }   
+    }
     
     // Game Management functions
     public void DestroySelf()
@@ -53,7 +53,9 @@ public class GameManager : MonoBehaviour
         GetLevelUpScreen();
         GetUIPlayerStats();
         DisableScreens();
+        ResetTimer();
         StartTimer();
+        Debug.Log("Initializing Player Stats");
         GameObject playerGameObject = GameObject.FindWithTag("PlayerContainer");
         playerHealth = playerGameObject.GetComponentInChildren<Health>();
         if (playerGameObject != null)
