@@ -106,12 +106,12 @@ public class PlayerStats : MonoBehaviour
                 break;
             case UpgradeType.increaseExperience:
                 experience += (int)amount;
-                // eXPbar.SetExp(experience);
+                eXPbar.SetExp(experience);
                 LevelUpChecker();
                 break;
             case UpgradeType.increaseLevel:
                 experience += experienceCap;
-                // eXPbar.SetExp(experience);
+                eXPbar.SetExp(experience);
                 LevelUpChecker();
                 break;
         }
