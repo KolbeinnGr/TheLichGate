@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [Header("Game Manager")]
     public bool isGamePaused = false;
     
+    public AudioClip levelUpSound;
     
     // World Timer 
     public event EventHandler<TimeSpan> WorldTimeChanged;
@@ -162,6 +163,12 @@ public class GameManager : MonoBehaviour
 
     public void StartLevelUp()
     {
+        
+        if (levelUpSound)
+        {
+            AudioManager.Instance.PlaySound(levelUpSound, 0.3f);
+        }
+        
         uiPlayerStatus.UpdatePlayerStats();
         choosingUpgrade = true;
         PauseGame();

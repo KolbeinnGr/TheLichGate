@@ -548,6 +548,7 @@ MonoBehaviour:
       m_Calls: []
   healthBar: {fileID: 0}
   floatingTextPrefab: {fileID: 6597250921811002607, guid: 9add882d458db334da295c9900bb4334, type: 3}
+  isDashing: 0
 --- !u!114 &8516074526463391342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,6 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1213173963553044068}
   flashColor: {r: 1, g: 0, b: 0, a: 1}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.1
 --- !u!114 &3366998279839880378
 MonoBehaviour:
@@ -641,3 +643,6 @@ MonoBehaviour:
   - name: Blue Gem
     itemPrefab: {fileID: 7383057966734078059, guid: 4116e234848efa64cbd058c400748892, type: 3}
     dropRate: 50
+  - name: Health Flask
+    itemPrefab: {fileID: 7383057966734078059, guid: 0606fa89915e0594cb2137a8f9b5d7f4, type: 3}
+    dropRate: 20

@@ -9,6 +9,7 @@ TagManager:
   - PlayerContainer
   - LevelUpScreen
   - PlayerStatusScreen
+  - HealthFlask
   layers:
   - Default
   - TransparentFX

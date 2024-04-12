@@ -29,7 +29,6 @@ public class DropRateManager : MonoBehaviour
             if (randNum <= drop.dropRate)
             {
                 possibleDrops.Add(drop);
-                break;
             }
         }
         
