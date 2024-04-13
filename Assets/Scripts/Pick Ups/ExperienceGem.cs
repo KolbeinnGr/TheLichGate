@@ -13,7 +13,7 @@ public class ExperienceGem : MonoBehaviour
         player.UpgradeStat(PlayerStats.UpgradeType.increaseExperience, experienceGranted);
         if (collectSound)
         {
-            AudioManager.Instance.PlaySound(collectSound, 0.15f);
+            AudioManager.Instance.PlaySound(collectSound);
         }
         Destroy(gameObject);
     }

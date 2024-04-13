@@ -85,7 +85,7 @@ public class SoulAttackController : AttackController
             projectile.InitializeProjectile(attackDirection);
             if (AudioManager.Instance && soulAttackSound)
             {
-                AudioManager.Instance.PlaySound(soulAttackSound, 0.2f);
+                AudioManager.Instance.PlaySound(soulAttackSound);
             }
         }
 

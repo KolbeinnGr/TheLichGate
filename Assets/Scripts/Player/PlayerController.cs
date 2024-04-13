@@ -247,7 +247,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("IsDashing", true);
         
-        AudioManager.Instance.PlaySound(jumpSFX, 0.2f);
+        AudioManager.Instance.PlaySound(jumpSFX);
         
         // Cooldown UI
         if (dashCooldownSlider){
@@ -309,7 +309,7 @@ public class PlayerController : MonoBehaviour
     void CreateSmokeEffect() {
         Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + dashEffectYOffset, transform.position.z);
         GameObject effect = Instantiate(dashLandingEffectPrefab, spawnPosition, Quaternion.identity);
-        AudioManager.Instance.PlaySound(landSFX, 0.4f);
+        AudioManager.Instance.PlaySound(landSFX);
         CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
         if (cameraShake)
         {

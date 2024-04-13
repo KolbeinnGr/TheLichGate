@@ -168,7 +168,7 @@ public class GameManager : MonoBehaviour
         
         if (levelUpSound)
         {
-            AudioManager.Instance.PlaySound(levelUpSound, 0.3f);
+            AudioManager.Instance.PlaySound(levelUpSound);
         }
         
         uiPlayerStatus.UpdatePlayerStats();
