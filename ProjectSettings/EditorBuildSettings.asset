@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RichardScene.unity
     guid: 53c90da5781730649a450722d36379fd
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 1ae8cb3fe2908cd4ba2c415ce368dbf0
   m_configObjects: {}

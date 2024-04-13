@@ -15,7 +15,7 @@ public class HealthFlask : MonoBehaviour
 
         if (drinkSound)
         {
-            AudioManager.Instance.PlaySound(drinkSound, 0.3f);
+            AudioManager.Instance.PlaySound(drinkSound);
         }
         
         Destroy(gameObject);

@@ -218,7 +218,13 @@ public class EnemyBossNecromancer : MonoBehaviour, IEnemy
         animator.Play("Necromancer_DeadFlash");
         Destroy(warningZoneAttack);
         stateMachine.ChangeState(typeof(DeathState));
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(Wait());
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(0.7f);
+        SceneManager.LoadScene("EndScene");
     }
 
     void OnDrawGizmosSelected() {
