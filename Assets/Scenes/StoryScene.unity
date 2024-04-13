@@ -862,11 +862,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In the endless, fog-enshrouded expanse of the graveyard that stretches
+  m_text: 'In the endless, fog-enshrouded expanse of the graveyard that stretches
     beyond sight, Sir Rhogar, the valorous paladin, met his demise under the mournful
     gaze of a thousand forgotten tombstones. His final battle was a spectacle of
     light and shadow, as his gleaming sword cleaved through the relentless undead,
-    his oath to protect the realm unwavering until the very \n"
+    his oath to protect the realm unwavering until the very end.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
   m_sharedMaterial: {fileID: -3796396303305576834, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
@@ -1005,7 +1007,7 @@ MonoBehaviour:
     form, Sir Rhogar's resolve did not waver. Clutching his lantern, the soulflame
     casting eerie shadows upon decayed stones, he drew his sword once more. The fight
     against the undead continued, but now from the other side of the veil, as he
-    sought redemption and a path back to the light, through the endless night of
+    sought redemption and a path back to the light, through the endless night of...
     \r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1133bba3bbb433b4b9a52d5e9562a372, type: 2}
